@@ -268,32 +268,32 @@ def bootstrap_confidence_interval_filter(df, meal_type, preprocess_log, n_iterat
         preprocess_log.error("Error in bootstrap confidence interval filtering: " + str(e))
         
 def preprocessing(meal_type, preprocess_log):
-    #try:
-    preprocess_log.info(f"Preprocessing for meal type: {meal_type}")
-    outlier_file = f'data/processed/meals/dataframes/{meal_type}_outliers_removed.pkl'
-    bci_file = f'data/processed/meals/dataframes/{meal_type}_bci_filtered.pkl'
-    sparsity_file = f'data/processed/meals/dataframes/{meal_type}_sparsity_filtered.pkl'
+    try:
+        preprocess_log.info(f"Preprocessing for meal type: {meal_type}")
+        outlier_file = f'data/processed/meals/dataframes/{meal_type}_outliers_removed.pkl'
+        bci_file = f'data/processed/meals/dataframes/{meal_type}_bci_filtered.pkl'
+        sparsity_file = f'data/processed/meals/dataframes/{meal_type}_sparsity_filtered.pkl'
 
-    if not os.path.exists(outlier_file):
-        meal_df = pd.read_pickle(f'data/processed/meals/dataframes/{meal_type}_food_codes_standardized.pkl')
-        outlier_df  = remove_outliers(meal_df, meal_type, preprocess_log)
-    else:
-        preprocess_log.info(f'{outlier_file} exists, using cached results.')
-        outlier_df = pd.read_pickle(outlier_file)
-    
-    if not os.path.exists(bci_file):
-        bootstrap_confidence_interval_filter(outlier_df, meal_type, preprocess_log)
-    else:
-        preprocess_log.info(f'{bci_file} exists, using cached results.')
-        bci_df = pd.read_pickle(bci_file)
+        if not os.path.exists(outlier_file):
+            meal_df = pd.read_pickle(f'data/processed/meals/dataframes/{meal_type}_food_codes_standardized.pkl')
+            outlier_df  = remove_outliers(meal_df, meal_type, preprocess_log)
+        else:
+            preprocess_log.info(f'{outlier_file} exists, using cached results.')
+            outlier_df = pd.read_pickle(outlier_file)
         
-    if not os.path.exists(sparsity_file):
-        train_models_by_sparsity(bci_df, meal_type, preprocess_log)
-    else:
-        preprocess_log.info(f'{sparsity_file} exists, using cached results.')
+        if not os.path.exists(bci_file):
+            bootstrap_confidence_interval_filter(outlier_df, meal_type, preprocess_log)
+        else:
+            preprocess_log.info(f'{bci_file} exists, using cached results.')
+            bci_df = pd.read_pickle(bci_file)
+            
+        if not os.path.exists(sparsity_file):
+            train_models_by_sparsity(bci_df, meal_type, preprocess_log)
+        else:
+            preprocess_log.info(f'{sparsity_file} exists, using cached results.')
 
-   # except Exception as e:
-    #    preprocess_log.error("Error in preprocessing: " + str(e))
+    except Exception as e:
+        preprocess_log.error("Error in preprocessing: " + str(e))
         
 def create_meal_df(meal_type, preprocess_log):
     try:
@@ -377,10 +377,11 @@ def standardize_food_codes(preprocess_log):
 def main():
     configure_gpu(-1)
     preprocess_log = setup_logger('preprocess_log', 'logs/data_preprocessing.log')
+    
     try:
         preprocess_log.info("Creating dataset...")
         standardize_food_codes(preprocess_log)
-
+        
         meal_types = ['breakfast', 'lunch', 'dinner']
         processing_types = ['raw', 'food_codes_standardized', 'outliers_removed', 'bci_filtered', 'sparsity_filtered']
         for meal_type in meal_types:
@@ -388,7 +389,7 @@ def main():
                 create_meal_df(meal_type, preprocess_log)
             preprocessing(meal_type, preprocess_log)
         preprocessing_summary(meal_types, processing_types, preprocess_log)
-
+        
     except Exception as e:
         preprocess_log.error(f"An error occurred: {e}", exc_info=True)
 
