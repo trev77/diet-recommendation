@@ -8,8 +8,9 @@ preprocess:
 
 train:
 	@echo "Training models..."
-	python src/training/train_portion_model.py
-	python src/training/train_presence_model.py
+	python src/training/train_presence_model.py breakfast
+	python src/training/train_presence_model.py lunch
+	python src/training/train_presence_model.py dinner
 	python src/training/train_embedding_model.py
 
 evaluate:
