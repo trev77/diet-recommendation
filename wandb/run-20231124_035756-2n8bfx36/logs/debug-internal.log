@@ -1,0 +1,747 @@
+2023-11-24 03:57:56,670 INFO    StreamThr :14456 [internal.py:wandb_internal():86] W&B internal server running at pid: 14456, started at: 2023-11-24 03:57:56.668791
+2023-11-24 03:57:56,672 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status
+2023-11-24 03:57:56,674 INFO    WriterThread:14456 [datastore.py:open_for_write():85] open: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/run-2n8bfx36.wandb
+2023-11-24 03:57:56,676 DEBUG   SenderThread:14456 [sender.py:send():380] send: header
+2023-11-24 03:57:56,677 DEBUG   SenderThread:14456 [sender.py:send():380] send: run
+2023-11-24 03:57:57,093 INFO    SenderThread:14456 [dir_watcher.py:__init__():211] watching files in: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files
+2023-11-24 03:57:57,093 INFO    SenderThread:14456 [sender.py:_start_run_threads():1122] run started: 2n8bfx36 with start time 1700827076.129691
+2023-11-24 03:57:57,114 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: check_version
+2023-11-24 03:57:57,115 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: check_version
+2023-11-24 03:57:57,252 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: run_start
+2023-11-24 03:57:57,252 DEBUG   HandlerThread:14456 [system_info.py:__init__():32] System info init
+2023-11-24 03:57:57,252 DEBUG   HandlerThread:14456 [system_info.py:__init__():47] System info init done
+2023-11-24 03:57:57,253 INFO    HandlerThread:14456 [system_monitor.py:start():181] Starting system monitor
+2023-11-24 03:57:57,253 INFO    SystemMonitor:14456 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-11-24 03:57:57,253 INFO    HandlerThread:14456 [system_monitor.py:probe():201] Collecting system info
+2023-11-24 03:57:57,254 INFO    SystemMonitor:14456 [interfaces.py:start():190] Started cpu monitoring
+2023-11-24 03:57:57,255 INFO    SystemMonitor:14456 [interfaces.py:start():190] Started disk monitoring
+2023-11-24 03:57:57,257 INFO    SystemMonitor:14456 [interfaces.py:start():190] Started gpu monitoring
+2023-11-24 03:57:57,258 INFO    SystemMonitor:14456 [interfaces.py:start():190] Started memory monitoring
+2023-11-24 03:57:57,259 INFO    SystemMonitor:14456 [interfaces.py:start():190] Started network monitoring
+2023-11-24 03:57:57,265 DEBUG   HandlerThread:14456 [system_info.py:probe():196] Probing system
+2023-11-24 03:57:57,276 DEBUG   HandlerThread:14456 [system_info.py:_probe_git():181] Probing git
+2023-11-24 03:57:57,360 DEBUG   HandlerThread:14456 [system_info.py:_probe_git():189] Probing git done
+2023-11-24 03:57:57,361 DEBUG   HandlerThread:14456 [system_info.py:probe():244] Probing system done
+2023-11-24 03:57:57,361 DEBUG   HandlerThread:14456 [system_monitor.py:probe():210] {'os': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.27', 'python': '3.10.13', 'heartbeatAt': '2023-11-24T11:57:57.265955', 'startedAt': '2023-11-24T11:57:56.089032', 'docker': None, 'cuda': None, 'args': ('dinner',), 'state': 'running', 'program': '/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/training/portion_model.py', 'codePathLocal': 'src/training/portion_model.py', 'codePath': 'src/training/portion_model.py', 'git': {'remote': 'https://github.com/trev77/diet-recommendation.git', 'commit': 'ad72c6e0b2e6c7b03e587ed57f3aa5ad9864bf26'}, 'email': 'tchchan@ucdavis.edu', 'root': '/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender', 'host': 'DESKTOP-5T3OD0P', 'username': 'unixftwx', 'executable': '/home/unixftwx/anaconda3/envs/drp/bin/python3', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 3695.9970000000008, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 3695.997, 'min': 0.0, 'max': 0.0}, {'current': 3695.997, 'min': 0.0, 'max': 0.0}, {'current': 3695.997, 'min': 0.0, 'max': 0.0}, {'current': 3695.997, 'min': 0.0, 'max': 0.0}, {'current': 3695.997, 'min': 0.0, 'max': 0.0}, {'current': 3695.997, 'min': 0.0, 'max': 0.0}, {'current': 3695.997, 'min': 0.0, 'max': 0.0}, {'current': 3695.997, 'min': 0.0, 'max': 0.0}, {'current': 3695.997, 'min': 0.0, 'max': 0.0}, {'current': 3695.997, 'min': 0.0, 'max': 0.0}, {'current': 3695.997, 'min': 0.0, 'max': 0.0}, {'current': 3695.997, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 250.98248672485352, 'used': 70.37386703491211}}, 'gpu': 'NVIDIA GeForce RTX 4090', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}], 'memory': {'total': 50.13833236694336}}
+2023-11-24 03:57:57,361 INFO    HandlerThread:14456 [system_monitor.py:probe():211] Finished collecting system info
+2023-11-24 03:57:57,361 INFO    HandlerThread:14456 [system_monitor.py:probe():214] Publishing system info
+2023-11-24 03:57:57,361 DEBUG   HandlerThread:14456 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-24 03:57:57,364 DEBUG   HandlerThread:14456 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-24 03:57:57,364 DEBUG   HandlerThread:14456 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-11-24 03:57:58,099 INFO    Thread-266:14456 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/requirements.txt
+2023-11-24 03:57:58,100 INFO    Thread-266:14456 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/conda-environment.yaml
+2023-11-24 03:58:02,864 DEBUG   HandlerThread:14456 [system_info.py:_save_conda():87] Saving conda packages done
+2023-11-24 03:58:02,866 INFO    HandlerThread:14456 [system_monitor.py:probe():216] Finished publishing system info
+2023-11-24 03:58:02,866 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:58:02,867 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: keepalive
+2023-11-24 03:58:02,867 DEBUG   SenderThread:14456 [sender.py:send():380] send: files
+2023-11-24 03:58:02,867 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-11-24 03:58:02,881 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 03:58:02,882 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 03:58:02,882 DEBUG   SenderThread:14456 [sender.py:send():380] send: telemetry
+2023-11-24 03:58:02,883 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 03:58:03,112 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/conda-environment.yaml
+2023-11-24 03:58:03,113 INFO    Thread-266:14456 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-metadata.json
+2023-11-24 03:58:03,420 INFO    wandb-upload_0:14456 [upload_job.py:push():131] Uploaded file /tmp/tmpyaruzh_swandb/ws69gh39-wandb-metadata.json
+2023-11-24 03:58:07,395 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:58:12,397 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:58:17,405 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:58:17,878 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 03:58:17,879 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 03:58:17,881 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 03:58:23,001 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:58:28,009 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:58:28,406 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/config.yaml
+2023-11-24 03:58:32,877 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 03:58:32,880 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 03:58:32,920 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 03:58:34,054 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:58:36,142 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 03:58:36,143 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 03:58:36,144 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 03:58:36,148 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 03:58:36,493 INFO    Thread-266:14456 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 03:58:39,151 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:58:44,153 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:58:47,878 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 03:58:47,880 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 03:58:47,883 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 03:58:50,079 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:58:55,081 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:58:57,259 DEBUG   SystemMonitor:14456 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-11-24 03:58:57,263 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 03:59:00,027 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 03:59:00,028 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 03:59:00,029 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 03:59:00,031 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 03:59:00,865 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 03:59:01,033 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:59:02,877 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 03:59:02,878 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 03:59:02,882 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 03:59:07,003 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:59:12,007 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:59:17,012 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:59:17,878 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 03:59:17,880 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 03:59:17,921 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 03:59:22,077 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:59:24,044 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 03:59:24,045 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 03:59:24,046 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 03:59:24,049 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 03:59:24,181 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 03:59:27,276 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 03:59:27,278 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:59:32,283 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:59:32,879 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 03:59:32,880 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 03:59:32,882 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 03:59:38,078 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:59:43,079 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:59:47,458 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 03:59:47,460 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 03:59:47,460 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 03:59:47,463 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 03:59:47,463 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 03:59:47,878 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 03:59:47,879 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 03:59:47,883 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 03:59:48,475 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 03:59:49,025 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:59:54,032 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 03:59:57,276 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 03:59:59,279 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:00:02,878 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:00:02,878 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:00:02,920 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:00:05,035 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:00:10,051 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:00:15,052 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:00:17,879 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:00:17,880 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:00:17,884 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:00:19,629 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:00:19,630 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:00:19,631 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:00:19,634 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:00:20,142 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:00:20,638 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:00:25,647 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:00:27,282 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:00:31,290 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:00:32,879 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:00:32,881 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:00:32,884 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:00:37,081 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:00:42,088 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:00:45,772 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:00:45,773 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:00:45,773 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:00:45,776 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:00:46,597 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:00:47,778 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:00:47,880 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:00:47,885 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:00:47,886 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:00:53,044 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:00:57,278 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:00:58,280 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:01:02,885 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:01:02,889 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:01:02,890 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:01:04,096 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:01:09,097 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:01:09,701 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:01:09,703 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:01:09,703 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:01:09,705 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:01:09,954 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:01:14,709 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:01:17,886 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:01:17,890 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:01:17,892 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:01:20,015 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:01:25,017 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:01:27,279 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:01:30,282 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:01:32,885 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:01:32,888 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:01:32,889 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:01:32,963 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:01:33,019 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:01:33,021 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:01:33,028 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:01:33,283 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:01:36,039 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:01:41,042 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:01:46,044 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:01:47,887 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:01:47,890 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:01:47,891 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:01:51,091 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:01:55,514 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:01:55,515 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:01:55,516 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:01:55,519 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:01:55,693 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:01:56,522 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:01:57,282 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:02:02,287 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:02:02,886 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:02:02,890 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:02:02,891 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:02:08,092 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:02:13,095 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:02:17,886 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:02:17,889 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:02:17,890 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:02:18,375 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:02:18,380 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:02:18,381 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:02:18,381 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:02:18,385 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:02:18,992 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:02:23,391 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:02:27,284 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:02:29,289 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:02:32,887 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:02:32,890 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:02:32,891 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:02:35,074 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:02:40,076 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:02:40,674 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:02:40,675 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:02:40,675 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:02:40,677 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:02:41,264 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:02:45,683 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:02:47,887 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:02:47,891 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:02:47,892 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:02:51,097 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:02:56,102 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:02:57,289 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:03:01,292 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:03:02,886 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:03:02,891 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:03:02,892 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:03:03,018 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:03:03,034 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:03:03,037 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:03:03,050 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:03:03,571 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:03:07,056 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:03:12,061 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:03:17,063 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:03:17,887 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:03:17,895 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:03:17,897 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:03:22,106 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:03:25,604 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:03:25,605 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:03:25,605 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:03:25,608 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:03:25,909 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:03:27,288 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:03:27,292 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:03:32,294 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:03:32,887 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:03:32,895 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:03:32,898 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:03:37,998 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:03:43,003 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:03:47,887 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:03:47,897 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:03:47,898 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:03:48,038 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:03:48,305 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:03:48,307 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:03:48,308 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:03:48,311 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:03:49,182 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:03:53,323 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:03:57,288 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:03:59,291 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:04:02,887 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:04:02,897 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:04:02,898 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:04:05,067 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:04:10,070 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:04:11,472 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:04:11,473 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:04:11,474 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:04:11,476 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:04:12,483 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:04:15,480 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:04:17,889 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:04:17,895 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:04:17,896 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:04:21,048 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:04:26,049 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:04:27,292 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:04:31,294 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:04:32,890 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:04:32,897 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:04:32,902 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:04:33,896 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:04:33,898 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:04:33,898 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:04:33,901 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:04:34,769 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:04:36,904 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:04:41,906 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:04:46,911 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:04:47,890 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:04:47,897 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:04:47,899 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:04:52,039 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:04:56,211 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:04:56,212 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:04:56,212 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:04:56,215 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:04:57,061 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:04:57,217 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:04:57,297 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:05:02,302 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:05:02,889 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:05:02,898 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:05:02,899 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:05:08,085 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:05:13,089 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:05:17,892 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:05:17,898 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:05:17,899 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:05:19,007 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:05:19,009 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:05:19,009 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:05:19,009 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:05:19,012 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:05:19,322 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:05:24,016 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:05:27,308 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:05:29,311 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:05:32,890 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:05:32,899 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:05:32,901 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:05:35,054 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:05:40,055 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:05:41,313 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:05:41,314 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:05:41,314 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:05:41,318 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:05:41,603 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:05:45,324 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:05:47,890 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:05:47,906 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:05:47,907 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:05:51,059 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:05:56,060 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:05:57,317 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:06:01,333 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:06:02,891 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:06:02,900 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:06:02,901 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:06:03,887 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:06:03,888 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:06:03,889 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:06:03,891 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:06:04,893 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:06:06,894 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:06:11,896 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:06:16,899 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:06:17,892 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:06:17,899 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:06:17,901 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:06:22,050 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:06:26,392 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:06:26,393 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:06:26,393 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:06:26,396 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:06:27,182 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:06:27,311 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:06:27,313 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:06:32,318 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:06:32,891 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:06:32,905 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:06:32,909 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:06:38,113 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:06:43,113 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:06:47,891 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:06:47,899 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:06:47,900 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:06:48,721 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:06:48,724 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:06:48,725 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:06:48,726 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:06:48,731 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:06:49,482 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:06:53,740 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:06:57,315 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:06:59,323 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:07:02,894 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:07:02,901 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:07:02,905 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:07:05,062 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:07:10,063 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:07:11,307 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:07:11,308 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:07:11,309 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:07:11,311 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:07:11,805 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:07:15,316 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:07:17,894 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:07:17,903 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:07:17,905 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:07:21,078 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:07:26,079 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:07:27,321 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:07:31,327 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:07:32,893 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:07:32,902 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:07:32,906 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:07:34,028 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:07:34,029 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:07:34,029 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:07:34,031 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:07:34,086 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:07:37,034 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:07:42,037 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:07:47,045 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:07:47,893 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:07:47,902 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:07:47,904 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:07:53,038 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:07:56,367 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:07:56,368 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:07:56,369 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:07:56,371 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:07:56,385 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:07:57,322 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:07:58,325 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:08:02,894 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:08:02,902 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:08:02,902 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:08:04,035 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:08:09,035 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:08:14,038 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:08:17,897 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:08:17,902 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:08:17,904 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:08:19,088 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:08:19,228 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:08:19,230 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:08:19,230 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:08:19,237 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:08:19,706 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:08:24,244 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:08:27,323 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:08:29,326 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:08:32,894 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:08:32,903 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:08:32,906 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:08:35,082 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:08:40,086 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:08:41,649 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:08:41,650 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:08:41,650 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:08:41,652 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:08:41,974 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:08:45,657 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:08:47,897 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:08:47,903 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:08:47,904 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:08:51,055 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:08:56,057 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:08:57,325 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:09:01,328 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:09:02,894 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:09:02,904 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:09:02,907 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:09:04,226 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:09:04,227 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:09:04,228 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:09:04,231 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:09:04,268 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:09:07,234 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:09:12,236 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:09:17,238 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:09:17,895 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:09:17,907 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:09:17,912 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:09:23,059 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:09:27,130 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:09:27,131 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:09:27,131 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:09:27,133 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:09:27,326 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:09:27,598 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:09:28,330 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:09:32,895 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:09:32,904 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:09:32,905 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:09:34,075 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:09:39,077 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:09:44,078 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:09:47,896 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:09:47,905 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:09:47,909 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:09:49,113 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:09:49,800 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:09:49,802 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:09:49,802 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:09:49,805 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:09:49,903 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:09:54,809 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:09:57,327 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:10:00,331 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:10:02,895 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:10:02,906 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:10:02,909 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:10:06,045 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:10:11,054 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:10:12,547 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:10:12,548 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:10:12,548 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:10:12,550 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:10:13,181 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:10:16,562 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:10:17,897 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:10:17,906 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:10:17,908 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:10:22,031 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:10:27,033 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:10:27,331 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:10:32,340 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:10:32,895 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:10:32,907 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:10:32,910 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:10:35,365 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:10:35,366 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:10:35,366 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:10:35,369 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:10:35,459 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:10:37,371 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:10:42,373 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:10:47,375 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:10:47,896 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:10:47,908 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:10:47,910 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:10:53,050 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:10:57,332 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:10:57,690 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:10:57,693 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:10:57,694 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:10:57,699 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:10:57,765 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:10:58,701 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:11:02,896 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:11:02,909 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:11:02,912 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:11:04,115 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:11:09,117 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:11:14,121 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:11:17,896 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:11:17,910 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:11:17,911 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:11:20,032 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:11:20,709 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:11:20,710 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:11:20,710 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:11:20,714 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:11:21,024 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:11:25,719 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:11:27,332 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:11:31,335 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:11:32,897 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:11:32,912 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:11:32,914 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:11:37,114 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:11:42,117 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:11:43,308 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:11:43,309 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:11:43,310 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:11:43,316 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:11:43,360 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:11:47,329 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:11:47,897 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:11:47,911 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:11:47,913 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:11:53,114 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:11:57,363 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:11:58,366 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:12:02,897 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:12:02,911 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:12:02,915 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:12:04,062 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:12:06,132 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:12:06,132 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:12:06,133 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:12:06,136 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:12:06,719 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:12:09,139 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:12:14,141 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:12:17,900 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:12:17,916 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:12:17,919 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:12:19,143 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:12:24,145 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:12:27,341 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:12:28,768 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:12:28,769 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:12:28,769 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:12:28,772 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:12:28,998 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:12:29,523 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:12:30,005 INFO    Thread-266:14456 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/output.log
+2023-11-24 04:12:32,015 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/output.log
+2023-11-24 04:12:32,897 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:12:32,911 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:12:32,912 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:12:35,099 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:12:40,100 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:12:45,101 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:12:47,898 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:12:47,912 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-24 04:12:47,912 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: stop_status
+2023-11-24 04:12:50,124 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:12:50,754 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: partial_history
+2023-11-24 04:12:50,756 DEBUG   SenderThread:14456 [sender.py:send():380] send: history
+2023-11-24 04:12:50,756 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: summary_record
+2023-11-24 04:12:50,758 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:12:50,759 DEBUG   SenderThread:14456 [sender.py:send():380] send: telemetry
+2023-11-24 04:12:50,760 DEBUG   SenderThread:14456 [sender.py:send():380] send: exit
+2023-11-24 04:12:50,760 INFO    SenderThread:14456 [sender.py:send_exit():585] handling exit code: 0
+2023-11-24 04:12:50,760 INFO    SenderThread:14456 [sender.py:send_exit():587] handling runtime: 893
+2023-11-24 04:12:50,765 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:12:50,767 INFO    SenderThread:14456 [sender.py:send_exit():593] send defer
+2023-11-24 04:12:50,767 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:50,767 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 0
+2023-11-24 04:12:50,768 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:50,768 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-11-24 04:12:50,768 INFO    SenderThread:14456 [sender.py:transition_state():613] send defer: 1
+2023-11-24 04:12:50,769 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:50,769 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 1
+2023-11-24 04:12:50,769 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:50,769 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-11-24 04:12:50,769 INFO    SenderThread:14456 [sender.py:transition_state():613] send defer: 2
+2023-11-24 04:12:50,770 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:50,770 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 2
+2023-11-24 04:12:50,770 INFO    HandlerThread:14456 [system_monitor.py:finish():190] Stopping system monitor
+2023-11-24 04:12:50,770 DEBUG   SystemMonitor:14456 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-11-24 04:12:50,771 INFO    HandlerThread:14456 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-24 04:12:50,771 DEBUG   SystemMonitor:14456 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-11-24 04:12:50,772 INFO    HandlerThread:14456 [interfaces.py:finish():202] Joined disk monitor
+2023-11-24 04:12:50,776 INFO    HandlerThread:14456 [interfaces.py:finish():202] Joined gpu monitor
+2023-11-24 04:12:50,777 INFO    HandlerThread:14456 [interfaces.py:finish():202] Joined memory monitor
+2023-11-24 04:12:50,777 INFO    HandlerThread:14456 [interfaces.py:finish():202] Joined network monitor
+2023-11-24 04:12:50,778 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:50,778 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-11-24 04:12:50,778 INFO    SenderThread:14456 [sender.py:transition_state():613] send defer: 3
+2023-11-24 04:12:50,779 DEBUG   SenderThread:14456 [sender.py:send():380] send: stats
+2023-11-24 04:12:50,779 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:50,779 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 3
+2023-11-24 04:12:50,780 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:50,780 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-11-24 04:12:50,780 INFO    SenderThread:14456 [sender.py:transition_state():613] send defer: 4
+2023-11-24 04:12:50,781 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:50,781 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 4
+2023-11-24 04:12:50,781 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:50,781 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-11-24 04:12:50,782 INFO    SenderThread:14456 [sender.py:transition_state():613] send defer: 5
+2023-11-24 04:12:50,782 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:50,782 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 5
+2023-11-24 04:12:50,783 DEBUG   SenderThread:14456 [sender.py:send():380] send: summary
+2023-11-24 04:12:50,784 INFO    SenderThread:14456 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-24 04:12:50,786 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:50,786 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-11-24 04:12:50,786 INFO    SenderThread:14456 [sender.py:transition_state():613] send defer: 6
+2023-11-24 04:12:50,786 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:50,787 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 6
+2023-11-24 04:12:50,787 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:50,787 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-11-24 04:12:50,790 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: status_report
+2023-11-24 04:12:50,911 INFO    SenderThread:14456 [sender.py:transition_state():613] send defer: 7
+2023-11-24 04:12:50,912 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:50,912 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 7
+2023-11-24 04:12:50,913 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:50,913 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-11-24 04:12:51,094 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/config.yaml
+2023-11-24 04:12:51,095 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:12:51,540 INFO    SenderThread:14456 [sender.py:transition_state():613] send defer: 8
+2023-11-24 04:12:51,540 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:51,540 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 8
+2023-11-24 04:12:51,541 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:51,541 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-11-24 04:12:51,541 INFO    SenderThread:14456 [job_builder.py:build():281] Attempting to build job artifact
+2023-11-24 04:12:51,545 INFO    SenderThread:14456 [job_builder.py:_get_source_type():393] is repo sourced job
+2023-11-24 04:12:51,546 INFO    SenderThread:14456 [job_builder.py:build():369] adding wandb-job metadata file
+2023-11-24 04:12:51,572 INFO    SenderThread:14456 [sender.py:transition_state():613] send defer: 9
+2023-11-24 04:12:51,573 DEBUG   SenderThread:14456 [sender.py:send():380] send: artifact
+2023-11-24 04:12:51,573 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:51,574 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 9
+2023-11-24 04:12:51,757 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: poll_exit
+2023-11-24 04:12:52,101 INFO    Thread-266:14456 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/output.log
+2023-11-24 04:12:52,161 INFO    SenderThread:14456 [sender.py:send_artifact():1456] sent artifact job-https___github.com_trev77_diet-recommendation.git_src_training_portion_model.py - {'id': 'QXJ0aWZhY3Q6NjQ3NjA3NTcz', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjExODM1MDg2OA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NjQ3NjA3NTcz', 'versionIndex': 0}}}
+2023-11-24 04:12:52,162 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:52,162 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-11-24 04:12:52,162 INFO    SenderThread:14456 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-11-24 04:12:53,115 INFO    SenderThread:14456 [dir_watcher.py:finish():388] scan: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files
+2023-11-24 04:12:53,117 INFO    SenderThread:14456 [dir_watcher.py:finish():402] scan save: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/conda-environment.yaml conda-environment.yaml
+2023-11-24 04:12:53,121 INFO    SenderThread:14456 [dir_watcher.py:finish():402] scan save: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/config.yaml config.yaml
+2023-11-24 04:12:53,125 INFO    SenderThread:14456 [dir_watcher.py:finish():402] scan save: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/output.log output.log
+2023-11-24 04:12:53,130 INFO    SenderThread:14456 [dir_watcher.py:finish():402] scan save: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/requirements.txt requirements.txt
+2023-11-24 04:12:53,135 INFO    SenderThread:14456 [dir_watcher.py:finish():402] scan save: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-metadata.json wandb-metadata.json
+2023-11-24 04:12:53,136 INFO    SenderThread:14456 [dir_watcher.py:finish():402] scan save: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json wandb-summary.json
+2023-11-24 04:12:53,143 INFO    SenderThread:14456 [sender.py:transition_state():613] send defer: 10
+2023-11-24 04:12:53,144 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: poll_exit
+2023-11-24 04:12:53,144 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:53,145 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 10
+2023-11-24 04:12:53,148 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:53,149 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-11-24 04:12:53,149 INFO    SenderThread:14456 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-24 04:12:53,724 INFO    wandb-upload_0:14456 [upload_job.py:push():131] Uploaded file /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/conda-environment.yaml
+2023-11-24 04:12:53,937 INFO    wandb-upload_4:14456 [upload_job.py:push():131] Uploaded file /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/wandb-summary.json
+2023-11-24 04:12:53,980 INFO    wandb-upload_3:14456 [upload_job.py:push():131] Uploaded file /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/requirements.txt
+2023-11-24 04:12:53,980 INFO    wandb-upload_2:14456 [upload_job.py:push():131] Uploaded file /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/output.log
+2023-11-24 04:12:54,630 INFO    wandb-upload_1:14456 [upload_job.py:push():131] Uploaded file /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/files/config.yaml
+2023-11-24 04:12:54,830 INFO    Thread-265 (_thread_body):14456 [sender.py:transition_state():613] send defer: 11
+2023-11-24 04:12:54,831 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:54,831 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 11
+2023-11-24 04:12:54,832 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:54,832 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-11-24 04:12:54,832 INFO    SenderThread:14456 [file_pusher.py:join():181] waiting for file pusher
+2023-11-24 04:12:54,833 INFO    SenderThread:14456 [sender.py:transition_state():613] send defer: 12
+2023-11-24 04:12:54,833 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:54,833 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 12
+2023-11-24 04:12:54,834 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:54,834 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-11-24 04:12:54,834 INFO    SenderThread:14456 [file_stream.py:finish():595] file stream finish called
+2023-11-24 04:12:55,212 INFO    SenderThread:14456 [file_stream.py:finish():599] file stream finish is done
+2023-11-24 04:12:55,213 INFO    SenderThread:14456 [sender.py:transition_state():613] send defer: 13
+2023-11-24 04:12:55,213 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:55,213 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 13
+2023-11-24 04:12:55,214 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:55,214 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-11-24 04:12:55,214 INFO    SenderThread:14456 [sender.py:transition_state():613] send defer: 14
+2023-11-24 04:12:55,215 DEBUG   SenderThread:14456 [sender.py:send():380] send: final
+2023-11-24 04:12:55,215 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: defer
+2023-11-24 04:12:55,215 DEBUG   SenderThread:14456 [sender.py:send():380] send: footer
+2023-11-24 04:12:55,215 INFO    HandlerThread:14456 [handler.py:handle_request_defer():170] handle defer: 14
+2023-11-24 04:12:55,216 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: defer
+2023-11-24 04:12:55,216 INFO    SenderThread:14456 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-11-24 04:12:55,217 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-24 04:12:55,218 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: poll_exit
+2023-11-24 04:12:55,218 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: server_info
+2023-11-24 04:12:55,218 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: get_summary
+2023-11-24 04:12:55,219 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: poll_exit
+2023-11-24 04:12:55,219 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: sampled_history
+2023-11-24 04:12:55,219 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: server_info
+2023-11-24 04:12:55,220 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: job_info
+2023-11-24 04:12:55,351 DEBUG   SenderThread:14456 [sender.py:send_request():407] send_request: job_info
+2023-11-24 04:12:55,352 DEBUG   HandlerThread:14456 [handler.py:handle_request():144] handle_request: shutdown
+2023-11-24 04:12:55,352 INFO    HandlerThread:14456 [handler.py:finish():844] shutting down handler
+2023-11-24 04:12:56,223 INFO    WriterThread:14456 [datastore.py:close():294] close: /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231124_035756-2n8bfx36/run-2n8bfx36.wandb
+2023-11-24 04:12:56,352 INFO    SenderThread:14456 [sender.py:finish():1534] shutting down sender
+2023-11-24 04:12:56,352 INFO    SenderThread:14456 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-24 04:12:56,352 INFO    SenderThread:14456 [file_pusher.py:join():181] waiting for file pusher

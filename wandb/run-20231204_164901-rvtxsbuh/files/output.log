@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/training/train_presence_model.py", line 50, in <module>
+    main()
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/training/train_presence_model.py", line 47, in main
+    train_presence_model(data, meal_type, wb_group_name, presence_model_log, config)
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/training/train_presence_model.py", line 17, in train_presence_model
+    fold_macro_metrics, fold_micro_metrics, best_model = cross_validation(
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/utils/model_utils.py", line 102, in cross_validation
+    model.train(X_fold_train, y_fold_train, X_fold_val, y_fold_val, log)
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/utils/models.py", line 186, in train
+    self.model.fit(
+  File "/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/keras/src/utils/traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/keras/src/engine/training.py", line 1850, in fit
+    callbacks.on_epoch_end(epoch, epoch_logs)
+  File "/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/keras/src/callbacks.py", line 453, in on_epoch_end
+    callback.on_epoch_end(epoch, logs)
+  File "/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/keras/src/callbacks.py", line 1221, in on_epoch_end
+    self.model.history = self
+  File "/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/keras/src/engine/training.py", line 378, in __setattr__
+    for v in tf.nest.flatten(value)
+  File "/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/tensorflow/python/util/nest.py", line 294, in flatten
+    return nest_util.flatten(
+  File "/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/tensorflow/python/util/nest_util.py", line 815, in flatten
+    return _tf_core_flatten(structure, expand_composites)
+  File "/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/tensorflow/python/util/nest_util.py", line 829, in _tf_core_flatten
+    return _pywrap_utils.Flatten(structure, expand_composites)
+KeyboardInterrupt

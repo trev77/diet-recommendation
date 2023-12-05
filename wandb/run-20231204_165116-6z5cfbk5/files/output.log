@@ -1,0 +1,32 @@
+
+137/137 [==============================] - 1s 3ms/step
+/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1760: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, "true nor predicted", "F-score is", len(true_sum))
+/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Traceback (most recent call last):
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/training/train_presence_model.py", line 50, in <module>
+    main()
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/training/train_presence_model.py", line 47, in main
+    train_presence_model(data, meal_type, wb_group_name, presence_model_log, config)
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/training/train_presence_model.py", line 17, in train_presence_model
+    fold_macro_metrics, fold_micro_metrics, best_model = cross_validation(
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/utils/model_utils.py", line 103, in cross_validation
+    micro_results, macro_results = model.evaluate(X_fold_val, y_fold_val)
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/utils/models.py", line 208, in evaluate
+    roc_auc_micro = roc_auc_score(X_test, y_pred, average='micro', multi_class='ovo')
+  File "/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/sklearn/metrics/_ranking.py", line 606, in roc_auc_score
+    y_score = check_array(y_score, ensure_2d=False)
+  File "/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/sklearn/utils/validation.py", line 957, in check_array
+    _assert_all_finite(
+  File "/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/sklearn/utils/validation.py", line 122, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/unixftwx/anaconda3/envs/diet_rec/lib/python3.9/site-packages/sklearn/utils/validation.py", line 171, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains NaN.

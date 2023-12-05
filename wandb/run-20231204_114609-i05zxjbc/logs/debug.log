@@ -1,0 +1,33 @@
+2023-12-04 11:46:09,095 INFO    MainThread:1641 [wandb_setup.py:_flush():76] Current SDK version is 0.16.0
+2023-12-04 11:46:09,095 INFO    MainThread:1641 [wandb_setup.py:_flush():76] Configure stats pid to 1641
+2023-12-04 11:46:09,095 INFO    MainThread:1641 [wandb_setup.py:_flush():76] Loading settings from /home/unixftwx/.config/wandb/settings
+2023-12-04 11:46:09,096 INFO    MainThread:1641 [wandb_setup.py:_flush():76] Loading settings from /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/settings
+2023-12-04 11:46:09,096 INFO    MainThread:1641 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-12-04 11:46:09,096 INFO    MainThread:1641 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-12-04 11:46:09,097 INFO    MainThread:1641 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'src/training/train_presence_model.py', 'program_abspath': '/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/training/train_presence_model.py', 'program': '/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/training/train_presence_model.py'}
+2023-12-04 11:46:09,097 INFO    MainThread:1641 [wandb_init.py:_log_setup():524] Logging user logs to /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231204_114609-i05zxjbc/logs/debug.log
+2023-12-04 11:46:09,097 INFO    MainThread:1641 [wandb_init.py:_log_setup():525] Logging internal logs to /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231204_114609-i05zxjbc/logs/debug-internal.log
+2023-12-04 11:46:09,097 INFO    MainThread:1641 [wandb_init.py:init():564] calling init triggers
+2023-12-04 11:46:09,097 INFO    MainThread:1641 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {'portion_model': {'layer_sizes': [512, 512], 'dropout_rate': 0.1, 'epochs': 200, 'batch_size': 64, 'eval_metric': 'r2'}, 'presence_model': {'encoder_sizes': [512, 256, 128, 64], 'decoder_sizes': [64, 128, 256, 512], 'latent_dim': 20, 'dropout_rate': 0.1, 'epochs': 200, 'batch_size': 64, 'learning_rate': 0.001, 'alpha': 1, 'eval_metric': 'f1'}, 'embedding_model': {'embedding_size': 32, 'walk_length': 10}}
+2023-12-04 11:46:09,098 INFO    MainThread:1641 [wandb_init.py:init():614] starting backend
+2023-12-04 11:46:09,098 INFO    MainThread:1641 [wandb_init.py:init():618] setting up manager
+2023-12-04 11:46:09,100 INFO    MainThread:1641 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-12-04 11:46:09,101 INFO    MainThread:1641 [wandb_init.py:init():624] backend started and connected
+2023-12-04 11:46:09,106 INFO    MainThread:1641 [wandb_init.py:init():716] updated telemetry
+2023-12-04 11:46:09,180 INFO    MainThread:1641 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2023-12-04 11:46:10,290 INFO    MainThread:1641 [wandb_run.py:_on_init():2254] communicating current version
+2023-12-04 11:46:10,446 INFO    MainThread:1641 [wandb_run.py:_on_init():2263] got version response 
+2023-12-04 11:46:10,446 INFO    MainThread:1641 [wandb_init.py:init():800] starting run threads in backend
+2023-12-04 11:46:14,917 INFO    MainThread:1641 [wandb_run.py:_console_start():2233] atexit reg
+2023-12-04 11:46:14,918 INFO    MainThread:1641 [wandb_run.py:_redirect():2088] redirect: wrap_raw
+2023-12-04 11:46:14,918 INFO    MainThread:1641 [wandb_run.py:_redirect():2153] Wrapping output streams.
+2023-12-04 11:46:14,918 INFO    MainThread:1641 [wandb_run.py:_redirect():2178] Redirects installed.
+2023-12-04 11:46:14,920 INFO    MainThread:1641 [wandb_init.py:init():841] run started, returning control to user process
+2023-12-04 11:51:25,240 INFO    MainThread:1641 [wandb_run.py:_finish():1962] finishing run tagkopoulos_lab/breakfast_presence_model/i05zxjbc
+2023-12-04 11:51:25,240 INFO    MainThread:1641 [wandb_run.py:_atexit_cleanup():2202] got exitcode: 0
+2023-12-04 11:51:25,241 INFO    MainThread:1641 [wandb_run.py:_restore():2185] restore
+2023-12-04 11:51:25,242 INFO    MainThread:1641 [wandb_run.py:_restore():2191] restore done
+2023-12-04 11:51:31,748 INFO    MainThread:1641 [wandb_run.py:_footer_history_summary_info():3760] rendering history
+2023-12-04 11:51:31,749 INFO    MainThread:1641 [wandb_run.py:_footer_history_summary_info():3792] rendering summary
+2023-12-04 11:51:31,759 INFO    MainThread:1641 [wandb_run.py:_footer_sync_info():3719] logging synced files

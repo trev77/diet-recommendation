@@ -1,0 +1,77 @@
+Epoch 1/200
+
+273/273 [==============================] - 5s 13ms/step - loss: 24.4193 - recon_loss: 24.4193 - kl_loss: 1.0269 - val_loss: 15.5147 - val_recon_loss: 15.5147 - val_kl_loss: 0.3082
+Epoch 2/200
+273/273 [==============================] - 3s 10ms/step - loss: 14.7510 - recon_loss: 14.7510 - kl_loss: 4.8794 - val_loss: 13.5415 - val_recon_loss: 13.5415 - val_kl_loss: 14.1685
+Epoch 3/200
+
+273/273 [==============================] - 3s 10ms/step - loss: 13.1117 - recon_loss: 13.1117 - kl_loss: 37.8475 - val_loss: 12.0955 - val_recon_loss: 12.0955 - val_kl_loss: 64.1602
+Epoch 4/200
+273/273 [==============================] - 3s 10ms/step - loss: 11.3815 - recon_loss: 11.3815 - kl_loss: 89.7775 - val_loss: 10.3523 - val_recon_loss: 10.3523 - val_kl_loss: 111.8803
+Epoch 5/200
+273/273 [==============================] - 3s 11ms/step - loss: 10.1248 - recon_loss: 10.1248 - kl_loss: 130.3713 - val_loss: 9.3096 - val_recon_loss: 9.3096 - val_kl_loss: 140.5528
+Epoch 6/200
+
+273/273 [==============================] - 2s 9ms/step - loss: 9.1523 - recon_loss: 9.1523 - kl_loss: 159.9083 - val_loss: 8.4421 - val_recon_loss: 8.4421 - val_kl_loss: 166.6002
+Epoch 7/200
+273/273 [==============================] - 3s 10ms/step - loss: 8.3381 - recon_loss: 8.3381 - kl_loss: 199.9745 - val_loss: 7.7363 - val_recon_loss: 7.7363 - val_kl_loss: 202.7519
+Epoch 8/200
+273/273 [==============================] - 3s 10ms/step - loss: 7.7350 - recon_loss: 7.7350 - kl_loss: 238.8636 - val_loss: 7.2845 - val_recon_loss: 7.2845 - val_kl_loss: 237.0976
+Epoch 9/200
+
+273/273 [==============================] - 4s 14ms/step - loss: 7.2731 - recon_loss: 7.2731 - kl_loss: 274.4342 - val_loss: 7.0507 - val_recon_loss: 7.0507 - val_kl_loss: 285.2132
+Epoch 10/200
+
+273/273 [==============================] - 4s 13ms/step - loss: 6.9799 - recon_loss: 6.9799 - kl_loss: 308.2782 - val_loss: 6.8238 - val_recon_loss: 6.8238 - val_kl_loss: 304.8794
+Epoch 11/200
+
+273/273 [==============================] - 3s 11ms/step - loss: 6.7199 - recon_loss: 6.7199 - kl_loss: 342.8792 - val_loss: 6.6692 - val_recon_loss: 6.6692 - val_kl_loss: 356.8857
+Epoch 12/200
+273/273 [==============================] - 3s 12ms/step - loss: 6.4913 - recon_loss: 6.4913 - kl_loss: 376.8199 - val_loss: 6.5721 - val_recon_loss: 6.5721 - val_kl_loss: 352.5612
+Epoch 13/200
+273/273 [==============================] - 3s 9ms/step - loss: 6.3038 - recon_loss: 6.3038 - kl_loss: 390.8706 - val_loss: 6.3835 - val_recon_loss: 6.3835 - val_kl_loss: 378.4177
+Epoch 14/200
+
+273/273 [==============================] - 3s 11ms/step - loss: 6.1066 - recon_loss: 6.1066 - kl_loss: 407.9867 - val_loss: 6.2509 - val_recon_loss: 6.2509 - val_kl_loss: 403.9775
+Epoch 15/200
+273/273 [==============================] - 3s 11ms/step - loss: 5.9516 - recon_loss: 5.9516 - kl_loss: 433.4222 - val_loss: 6.1832 - val_recon_loss: 6.1832 - val_kl_loss: 414.8688
+Epoch 16/200
+
+273/273 [==============================] - 3s 12ms/step - loss: 5.7717 - recon_loss: 5.7717 - kl_loss: 457.6665 - val_loss: 6.1366 - val_recon_loss: 6.1366 - val_kl_loss: 438.5825
+Epoch 17/200
+
+273/273 [==============================] - 3s 10ms/step - loss: 6.6629 - recon_loss: 6.0321 - kl_loss: 63.0729 - val_loss: 6.6338 - val_recon_loss: 6.2203 - val_kl_loss: 41.3470
+Epoch 18/200
+143/273 [==============>...............] - ETA: 1s - loss: 6.6483 - recon_loss: 5.9651 - kl_loss: 34.1598
+Traceback (most recent call last):
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/training/train_presence_model.py", line 45, in <module>
+    main()
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/training/train_presence_model.py", line 42, in main
+    train_presence_model(data, meal_type, wb_group_name)
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/training/train_presence_model.py", line 18, in train_presence_model
+    fold_macro_metrics, fold_micro_metrics, best_model = cross_validation(
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/utils/model_utils.py", line 94, in cross_validation
+    model.train(X_fold_train, y_fold_train, X_fold_val, y_fold_val)
+  File "/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/utils/models.py", line 195, in train
+    self.model.fit(
+  File "/home/unixftwx/anaconda3/envs/drp/lib/python3.10/site-packages/keras/src/utils/traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "/home/unixftwx/anaconda3/envs/drp/lib/python3.10/site-packages/keras/src/engine/training.py", line 1742, in fit
+    tmp_logs = self.train_function(iterator)
+  File "/home/unixftwx/anaconda3/envs/drp/lib/python3.10/site-packages/tensorflow/python/util/traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "/home/unixftwx/anaconda3/envs/drp/lib/python3.10/site-packages/tensorflow/python/eager/polymorphic_function/polymorphic_function.py", line 825, in __call__
+    result = self._call(*args, **kwds)
+  File "/home/unixftwx/anaconda3/envs/drp/lib/python3.10/site-packages/tensorflow/python/eager/polymorphic_function/polymorphic_function.py", line 857, in _call
+    return self._no_variable_creation_fn(*args, **kwds)  # pylint: disable=not-callable
+  File "/home/unixftwx/anaconda3/envs/drp/lib/python3.10/site-packages/tensorflow/python/eager/polymorphic_function/tracing_compiler.py", line 148, in __call__
+    return concrete_function._call_flat(
+  File "/home/unixftwx/anaconda3/envs/drp/lib/python3.10/site-packages/tensorflow/python/eager/polymorphic_function/monomorphic_function.py", line 1349, in _call_flat
+    return self._build_call_outputs(self._inference_function(*args))
+  File "/home/unixftwx/anaconda3/envs/drp/lib/python3.10/site-packages/tensorflow/python/eager/polymorphic_function/atomic_function.py", line 196, in __call__
+    outputs = self._bound_context.call_function(
+  File "/home/unixftwx/anaconda3/envs/drp/lib/python3.10/site-packages/tensorflow/python/eager/context.py", line 1457, in call_function
+    outputs = execute.execute(
+  File "/home/unixftwx/anaconda3/envs/drp/lib/python3.10/site-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+KeyboardInterrupt

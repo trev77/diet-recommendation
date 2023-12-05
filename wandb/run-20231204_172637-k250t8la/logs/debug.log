@@ -1,0 +1,27 @@
+2023-12-04 17:26:37,455 INFO    MainThread:18137 [wandb_setup.py:_flush():76] Current SDK version is 0.16.0
+2023-12-04 17:26:37,456 INFO    MainThread:18137 [wandb_setup.py:_flush():76] Configure stats pid to 18137
+2023-12-04 17:26:37,457 INFO    MainThread:18137 [wandb_setup.py:_flush():76] Loading settings from /home/unixftwx/.config/wandb/settings
+2023-12-04 17:26:37,457 INFO    MainThread:18137 [wandb_setup.py:_flush():76] Loading settings from /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/settings
+2023-12-04 17:26:37,457 INFO    MainThread:18137 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-12-04 17:26:37,458 INFO    MainThread:18137 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-12-04 17:26:37,458 INFO    MainThread:18137 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'src/preprocessing/data_preprocessing.py', 'program_abspath': '/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/preprocessing/data_preprocessing.py', 'program': '/mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/src/preprocessing/data_preprocessing.py'}
+2023-12-04 17:26:37,459 INFO    MainThread:18137 [wandb_init.py:_log_setup():524] Logging user logs to /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231204_172637-k250t8la/logs/debug.log
+2023-12-04 17:26:37,459 INFO    MainThread:18137 [wandb_init.py:_log_setup():525] Logging internal logs to /mnt/e/Personal/UC Davis/Research/Ilias/AIFS Projects/diet_recommendation/meal_recommender/wandb/run-20231204_172637-k250t8la/logs/debug-internal.log
+2023-12-04 17:26:37,459 INFO    MainThread:18137 [wandb_init.py:init():564] calling init triggers
+2023-12-04 17:26:37,459 INFO    MainThread:18137 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {'portion_model': {'layer_sizes': [512, 512], 'dropout_rate': 0.1, 'epochs': 3, 'batch_size': 512, 'eval_metric': 'r2'}, 'presence_model': {'encoder_sizes': [512, 256, 128, 64], 'decoder_sizes': [64, 128, 256, 512], 'latent_dim': 20, 'dropout_rate': 0.1, 'epochs': 5, 'batch_size': 64, 'learning_rate': 0.001, 'alpha': 1, 'eval_metric': 'f1'}, 'embedding_model': {'embedding_size': 32, 'walk_length': 10}}
+2023-12-04 17:26:37,460 INFO    MainThread:18137 [wandb_init.py:init():614] starting backend
+2023-12-04 17:26:37,460 INFO    MainThread:18137 [wandb_init.py:init():618] setting up manager
+2023-12-04 17:26:37,463 INFO    MainThread:18137 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-12-04 17:26:37,464 INFO    MainThread:18137 [wandb_init.py:init():624] backend started and connected
+2023-12-04 17:26:37,471 INFO    MainThread:18137 [wandb_init.py:init():716] updated telemetry
+2023-12-04 17:26:37,539 INFO    MainThread:18137 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2023-12-04 17:26:38,003 INFO    MainThread:18137 [wandb_run.py:_on_init():2254] communicating current version
+2023-12-04 17:26:38,134 INFO    MainThread:18137 [wandb_run.py:_on_init():2263] got version response 
+2023-12-04 17:26:38,135 INFO    MainThread:18137 [wandb_init.py:init():800] starting run threads in backend
+2023-12-04 17:26:43,110 INFO    MainThread:18137 [wandb_run.py:_console_start():2233] atexit reg
+2023-12-04 17:26:43,110 INFO    MainThread:18137 [wandb_run.py:_redirect():2088] redirect: wrap_raw
+2023-12-04 17:26:43,111 INFO    MainThread:18137 [wandb_run.py:_redirect():2153] Wrapping output streams.
+2023-12-04 17:26:43,111 INFO    MainThread:18137 [wandb_run.py:_redirect():2178] Redirects installed.
+2023-12-04 17:26:43,113 INFO    MainThread:18137 [wandb_init.py:init():841] run started, returning control to user process
+2023-12-04 17:28:11,344 WARNING MsgRouterThr:18137 [router.py:message_loop():77] message_loop has been closed

@@ -1,6 +1,6 @@
-# Meal Recommender Project
+# Diet Recommendation Project v1
 
-This repository contains the codebase for the Meal Recommender project.
+This repository contains the codebase for the Diet Recommendation project (v1).
 
 ## Project Structure
 
@@ -20,6 +20,7 @@ This repository contains the codebase for the Meal Recommender project.
 1. Clone the repository and navigate to the project directory.
 2. Run `pip install -r requirements.txt` to install dependencies.
 3. Execute `bash setup_repo.sh` to create the directory structure and initial setup files.
+4. Ensure your active Python version is 3.9
 
 ## Data Version Control (DVC)
 
