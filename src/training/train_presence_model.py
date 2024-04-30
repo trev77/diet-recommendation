@@ -13,11 +13,13 @@ def train_presence_model(data, meal_type, wb_group_name, presence_model_log, con
     bin_data = data.applymap(lambda x: 1 if x > 0 else x)
     X_train, X_test = train_test_split(bin_data, test_size=0.15, random_state=42)
     
+    model = PresenceModel(data.shape[1], meal_type, 'config.json')
+    
     wb_project_name = f'{meal_type}_presence_model'
     fold_macro_metrics, fold_micro_metrics, best_model = cross_validation(
         X=X_train, 
         y=X_train, 
-        logpath='', 
+        model_configs=model, 
         meal_type=meal_type, 
         model_type='presence', 
         config=config, 
@@ -36,10 +38,9 @@ def main():
     configure_gpu(-1)
     config = load_config('config.json')
 
-    logdir = f'{config["presence_model"]["learning_rate"]}_{config["presence_model"]["latent_dim"]}'
-    logdir += f'_{config["presence_model"]["epochs"]}_{config["presence_model"]["batch_size"]}'
-    presence_model_log = setup_logger('presence_model_log', f'logs/{meal_type}/presence_model/{logdir}/presence_model_training.log')
-    data = pd.read_pickle(f'data/processed/meals/dataframes/{meal_type}_sparsity_filtered.pkl')
+    logpath = construct_save_path(meal_type, 'presence_model', 'logging', config)
+    presence_model_log = setup_logger('presence_model_log', f'{logpath}/training.log')
+    data = pd.read_pickle(f'data/processed/real_meals/dataframes/{meal_type}_bci_filtered.pkl')
     
     presence_model_log.info(f"Training presence model...")
     wb_group_name = 'first_attempt_param_sweep'

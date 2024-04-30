@@ -5,7 +5,7 @@ import pandas as pd
 
 import tensorflow as tf
 import tensorflow.keras.backend as K
-from tensorflow.keras.models import Sequential, Model
+from tensorflow.keras.models import Sequential, Model, load_model
 from tensorflow.keras.layers import Input, Dense, Lambda, Dropout
 from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.optimizers import Adam
@@ -19,29 +19,30 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.helpers import *
 
 class PresenceTrainingLogger(tf.keras.callbacks.Callback):
-    def __init__(self, model, X_val, log):
+    def __init__(self, model, X_val, log=None):  
         super(PresenceTrainingLogger, self).__init__()
         self.model = model
         self.X_val = X_val
         self.log = log
-    def on_epoch_end(self, epoch, logs=None):
-        if logs is not None:
-            self.log.info(f"Epoch {epoch + 1:<3}: Training Loss: {logs.get('loss'):14.10f}, "
-                         f"Validation Loss: {logs.get('val_loss'):14.10f}, "
-                         f"Training KL Loss: {logs.get('kl_loss'):14.10f}, "
-                         f"Validation KL Loss: {logs.get('val_kl_loss'):14.10f}")
-            wandb.log({"epoch": epoch, **logs})
 
-class PortionTrainingLogger(tf.keras.callbacks.Callback):      
-    def __init__(self, log):
-        super(PortionTrainingLogger, self).__init__()
-        self.log = log 
     def on_epoch_end(self, epoch, logs=None):
-        if logs is not None:
+        if self.log is not None and logs is not None:
+            self.log.info(f"Epoch {epoch + 1:<3}: Training Loss: {logs.get('loss'):14.10f}, "
+                          f"Validation Loss: {logs.get('val_loss'):14.10f}, "
+                          f"Training KL Loss: {logs.get('kl_loss'):14.10f}, "
+                          f"Validation KL Loss: {logs.get('val_kl_loss'):14.10f}")
+            wandb.log({"epoch": epoch, **logs})
+class PortionTrainingLogger(tf.keras.callbacks.Callback):
+    def __init__(self, log=None): 
+        super(PortionTrainingLogger, self).__init__()
+        self.log = log
+
+    def on_epoch_end(self, epoch, logs=None):
+        if self.log is not None and logs is not None:
             self.log.info(f"Epoch {epoch + 1:<3}: Training Loss: {logs.get('loss'):>8.10f}, "
-                         f"Validation Loss: {logs.get('val_loss'):>8.10f}, "
-                         f"Training R-squared: {logs.get('r_squared'):>8.10f}, "
-                         f"Validation R-squared: {logs.get('val_r_squared'):>8.10f}")
+                          f"Validation Loss: {logs.get('val_loss'):>8.10f}, "
+                          f"Training R-squared: {logs.get('r_squared'):>8.10f}, "
+                          f"Validation R-squared: {logs.get('val_r_squared'):>8.10f}")
             wandb.log({"epoch": epoch, **logs})
             
 class KLAnnealingCallback(tf.keras.callbacks.Callback):
@@ -55,7 +56,7 @@ class KLAnnealingCallback(tf.keras.callbacks.Callback):
         else:
             new_value = K.get_value(PresenceModel.kl_weight) + self.increment
             K.set_value(PresenceModel.kl_weight, new_value)
-            
+        
 class VAELossLayer(tf.keras.layers.Layer):
     def __init__(self, config, **kwargs):
         super(VAELossLayer, self).__init__(**kwargs)
@@ -72,6 +73,42 @@ class VAELossLayer(tf.keras.layers.Layer):
         total_loss = recon_loss + (PresenceModel.kl_weight * kl_loss) #+ (self.alpha * similarity_loss)
         self.add_loss(total_loss)
         return x
+        
+"""
+class VAELossLayer(tf.keras.layers.Layer):
+    def __init__(self, config, **kwargs):
+        super(VAELossLayer, self).__init__(**kwargs)
+        self.config = config
+
+    def call(self, inputs):
+        x, z_mean, z_log_var, y_true = inputs
+        # Reconstruction loss
+        reconstruction_loss = K.sum(K.binary_crossentropy(y_true, x), axis=-1)
+        
+        # KL divergence loss
+        kl_loss = -0.5 * K.sum(1 + z_log_var - K.square(z_mean) - K.exp(z_log_var), axis=-1)
+        
+        # Custom Metrics
+        jaccard_loss = jaccard_index_loss(y_true, x)
+        gini_loss = gini_coefficient(y_true, x)
+        coverage_loss = food_coverage_loss(x)
+
+        # Configurable weights for each loss component
+        total_loss = reconstruction_loss + (PresenceModel.kl_weight * kl_loss)
+        
+        total_loss += self.config['presence_model']['alpha'] * jaccard_loss
+        total_loss += self.config['presence_model']['beta'] * gini_loss
+        total_loss += self.config['presence_model']['gamma'] * coverage_loss
+        self.add_loss(total_loss, inputs=inputs)
+
+        self.add_metric(reconstruction_loss, name='recon_loss', aggregation='mean')
+        self.add_metric(kl_loss, name='kl_loss', aggregation='mean')
+        self.add_metric(jaccard_loss, name='jaccard_loss', aggregation='mean')
+        self.add_metric(gini_loss, name='gini_loss', aggregation='mean')
+        self.add_metric(coverage_loss, name='coverage_loss', aggregation='mean')
+
+        return x
+""" 
 
 class PortionModel:
     def __init__(self, input_size, meal_type, config_path):
@@ -81,14 +118,6 @@ class PortionModel:
         self.results_save_path = construct_save_path(meal_type, 'portion_model', 'results', self.config) 
     
     def build_model(self, input_shape):
-        def rmse_loss(y_true, y_pred):
-            return K.sqrt(K.mean(K.square(y_pred - y_true)))
-
-        def r_squared(y_true, y_pred):
-            ss_res = K.sum(K.square(y_true - y_pred))
-            ss_tot = K.sum(K.square(y_true - K.mean(y_true)))
-            return (1 - ss_res/(ss_tot + K.epsilon()))
-
         model = Sequential()
         model.add(Dense(self.config["portion_model"]["layer_sizes"][0], activation='sigmoid', input_shape=(input_shape,)))
         for size in self.config["portion_model"]["layer_sizes"][1:]:
@@ -139,9 +168,15 @@ class PortionModel:
 
         return micro_results, macro_results
 
-    def save_model(self, log):
+    def save_model(self, log=None):
         self.model.save(self.model_save_path + 'model.keras')
-        log.info(f"Model saved to {self.model_save_path}model.keras")
+        if log is not None:
+            log.info(f"Model saved to {self.model_save_path}model.keras")
+
+    @staticmethod
+    def load_model(filepath):
+        custom_objects = {'rmse_loss': rmse_loss, 'r_squared': r_squared}
+        return load_model(filepath, custom_objects=custom_objects)
 
 class PresenceModel:
     def __init__(self, input_size, meal_type, config_path):
@@ -151,13 +186,6 @@ class PresenceModel:
         self.model = self.build_model()
         self.model_save_path = construct_save_path(meal_type, 'presence_model', 'model', self.config) 
         self.results_save_path = construct_save_path(meal_type, 'presence_model', 'results', self.config) 
-        
-    def sampling(self, args):
-        z_mean, z_log_var = args
-        batch = K.shape(z_mean)[0]
-        dim = K.int_shape(z_mean)[1]
-        epsilon = K.random_normal(shape=(batch, dim), mean=0., stddev=0.5)
-        return z_mean + K.exp(0.5 * z_log_var) * epsilon
 
     def build_model(self):
         encoder_inputs = Input(shape=(self.input_size,))
@@ -168,17 +196,41 @@ class PresenceModel:
             
         z_mean = Dense(self.config["presence_model"]["latent_dim"], name='z_mean')(encoder)
         z_log_var = Dense(self.config["presence_model"]["latent_dim"], name='z_log_var')(encoder)
-        z = Lambda(self.sampling, output_shape=(self.config["presence_model"]["latent_dim"],), name='z')([z_mean, z_log_var])
+        z = Lambda(sampling, output_shape=(self.config["presence_model"]["latent_dim"],), name='z')([z_mean, z_log_var])
+
         decoder = z
-        for size in self.config["presence_model"]["decoder_sizes"]:
-            decoder = Dense(size, activation='relu')(decoder)
+        for i, size in enumerate(self.config["presence_model"]["decoder_sizes"]):
+            decoder = Dense(size, activation='relu', name=f'decoder_dense_{i}')(decoder)
         ingredient_selection = Dense(self.input_size, activation='sigmoid', name='food_selection_output')(decoder)
 
         vae_output = VAELossLayer(self.config)([ingredient_selection, z_mean, z_log_var, encoder_inputs])
         vae = Model(inputs=encoder_inputs, outputs=vae_output)
         vae.compile(optimizer=Adam(self.config["presence_model"]["learning_rate"]))
         return vae
-    
+
+    """
+    def build_model(self):
+        encoder_inputs = Input(shape=(self.input_size,))
+        encoder = encoder_inputs
+        for size in self.config["presence_model"]["encoder_sizes"]:
+            encoder = Dense(size, activation='relu')(encoder)
+            encoder = Dropout(self.config["presence_model"]["dropout_rate"])(encoder)
+            
+        z_mean = Dense(self.config["presence_model"]["latent_dim"], name='z_mean')(encoder)
+        z_log_var = Dense(self.config["presence_model"]["latent_dim"], name='z_log_var')(encoder)
+        z = Lambda(sampling, output_shape=(self.config["presence_model"]["latent_dim"],), name='z')([z_mean, z_log_var])
+
+        decoder = z
+        for i, size in enumerate(self.config["presence_model"]["decoder_sizes"]):
+            decoder = Dense(size, activation='relu', name=f'decoder_dense_{i}')(decoder)
+        ingredient_selection = Dense(self.input_size, activation='sigmoid', name='food_selection_output')(decoder)
+
+        # Use VAELossLayer with the updated loss including custom metrics
+        vae_output = VAELossLayer(self.config)([ingredient_selection, z_mean, z_log_var, encoder_inputs])
+        vae = Model(inputs=encoder_inputs, outputs=vae_output)
+        vae.compile(optimizer=Adam(self.config["presence_model"]["learning_rate"]))
+        return vae   
+    """
     def train(self, X_train, X_train_temp, X_val, X_val_temp, log):
         kl_annealing = KLAnnealingCallback()
         early_stopping = EarlyStopping(monitor='val_loss', patience=100, restore_best_weights=False)
@@ -189,7 +241,7 @@ class PresenceModel:
             epochs=self.config["presence_model"]["epochs"],
             validation_data=(X_val, X_val),
             callbacks=[kl_annealing, early_stopping, training_logger],
-            verbose=0
+            verbose=1
         )
     
     def evaluate(self, X_test, X_test_temp):
@@ -219,10 +271,29 @@ class PresenceModel:
         } # can't get macro aucs here due to sparse data
         
         return micro_results, macro_results
+
+    def extract_decoder(self):
+        latent_inputs = Input(shape=(self.config["presence_model"]["latent_dim"],), name='z_sampling')
+        x = latent_inputs
+        for i, _ in enumerate(self.config["presence_model"]["decoder_sizes"]):
+            layer = self.model.get_layer(f'decoder_dense_{i}')
+            x = layer(x)
+        output_layer = self.model.get_layer('food_selection_output')
+        decoder_output = output_layer(x)
+        
+        return Model(latent_inputs, decoder_output)
+        
+    def save_models(self, log):
+        self.model.save(self.model_save_path + 'vae_model.keras')
+        decoder = self.extract_decoder()
+        decoder.save(self.model_save_path + 'decoder_model.keras')
+        if log is not None:
+            log.info(f"Models saved to {self.model_save_path}vae_model.keras and {self.model_save_path}decoder_model.keras")
     
-    def save_model(self, log):
-        self.model.save(self.model_save_path + 'model.keras')
-        log.info(f"Model saved to {self.model_save_path}model.keras")
+    @staticmethod
+    def load_model(filepath):
+        custom_objects = {'VAELossLayer': VAELossLayer}
+        return load_model(filepath, custom_objects=custom_objects, safe_mode=False)
         
 def construct_save_path(meal_type, model_type, save_type, config):
     if model_type == 'portion_model':
@@ -240,3 +311,50 @@ def construct_save_path(meal_type, model_type, save_type, config):
     os.makedirs(path, exist_ok=True)
     
     return path
+
+def rmse_loss(y_true, y_pred):
+    return K.sqrt(K.mean(K.square(y_pred - y_true)))
+
+def r_squared(y_true, y_pred):
+    ss_res = K.sum(K.square(y_true - y_pred))
+    ss_tot = K.sum(K.square(y_true - K.mean(y_true)))
+    return (1 - ss_res/(ss_tot + K.epsilon()))
+
+def sampling(args):
+    z_mean, z_log_var = args
+    batch = K.shape(z_mean)[0]
+    dim = K.int_shape(z_mean)[1]
+    epsilon = K.random_normal(shape=(batch, dim), mean=0., stddev=0.5)
+    return z_mean + K.exp(0.5 * z_log_var) * epsilon
+
+def food_coverage_loss(y_pred):
+    """Encourage the model to activate a broader set of outputs."""
+    epsilon = K.epsilon()
+    mean_activation = K.mean(y_pred, axis=0)  # Average activation per output across the batch
+    coverage = -K.mean(K.log(mean_activation + epsilon))  # Maximize mean activation, minimize the negative log
+    return coverage
+
+def gini_coefficient(y_true, y_pred):
+    # Note: y_pred is the predicted distribution of ingredients.
+    # Sorting the predictions
+    values = tf.sort(y_pred, axis=1)
+    n = tf.cast(tf.shape(values)[1], tf.float32)
+    index = tf.range(1, n+1, dtype=tf.float32)
+    
+    # Calculating the Gini coefficient using the formula
+    numerator = tf.reduce_sum((2 * index - n - 1) * values, axis=1)
+    denominator = tf.reduce_sum(values, axis=1)
+    gini = numerator / (n * denominator)
+    # Since we want to minimize the loss, and a lower Gini coefficient indicates more equality
+    # (which is our goal if we want to maximize diversity), we return 1 minus the Gini coefficient.
+    return 1 - gini  # Minimizing inequality (maximizing equality)
+
+def jaccard_index_loss(y_true, y_pred):
+    """Approximate Jaccard Index for differentiable loss calculation."""
+    epsilon = K.epsilon()
+    y_true_ = K.clip(y_true, epsilon, 1)
+    y_pred_ = K.clip(y_pred, epsilon, 1)
+    intersection = K.sum(y_true_ * y_pred_, axis=-1)
+    sum_ = K.sum(y_true_ + y_pred_, axis=-1)
+    union = sum_ - intersection
+    return 1 - (intersection / (union + epsilon))

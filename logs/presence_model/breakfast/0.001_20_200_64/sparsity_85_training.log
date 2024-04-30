@@ -1,0 +1,611 @@
+2024-04-29 12:21:27,601 - INFO - Dataset reduced to 30403 meals and 581 foods
+2024-04-29 12:21:27,602 - INFO - Model parameters - 4 encoder layers of size [512, 256, 128, 64]
+2024-04-29 12:21:27,602 - INFO - Model parameters - 4 decoder layers of size [64, 128, 256, 512]
+2024-04-29 12:21:27,602 - INFO - Model parameters - Dropout rate: 0.1
+2024-04-29 12:21:27,602 - INFO - Model parameters - Epochs: 200
+2024-04-29 12:21:27,603 - INFO - Model parameters - Batch size: 64
+2024-04-29 12:21:28,386 - INFO - Model parameters - 4 encoder layers of size [512, 256, 128, 64]
+2024-04-29 12:21:28,386 - INFO - Model parameters - 4 decoder layers of size [64, 128, 256, 512]
+2024-04-29 12:21:28,386 - INFO - Model parameters - Dropout rate: 0.1
+2024-04-29 12:21:28,386 - INFO - Model parameters - Epochs: 200
+2024-04-29 12:21:28,386 - INFO - Model parameters - Batch size: 64
+2024-04-29 12:21:31,540 - INFO - ================================================================== Fold 1 ===================================================================
+2024-04-29 12:21:38,769 - INFO - Epoch 1  : Training Loss:  28.3231029510, Validation Loss:  16.4533176422, Training KL Loss:   3.9561357498, Validation KL Loss:   2.4305460453
+2024-04-29 12:21:42,828 - INFO - Epoch 2  : Training Loss:  15.4709081650, Validation Loss:  14.8472671509, Training KL Loss:   9.7638216019, Validation KL Loss:  18.3606185913
+2024-04-29 12:21:46,632 - INFO - Epoch 3  : Training Loss:  13.6085681915, Validation Loss:  12.2681512833, Training KL Loss:  43.9520454407, Validation KL Loss:  69.0910186768
+2024-04-29 12:21:50,325 - INFO - Epoch 4  : Training Loss:  11.8135786057, Validation Loss:  11.2056970596, Training KL Loss:  89.2870864868, Validation KL Loss:  94.7373733521
+2024-04-29 12:21:54,245 - INFO - Epoch 5  : Training Loss:  10.7832584381, Validation Loss:  10.1804695129, Training KL Loss: 117.2481002808, Validation KL Loss: 118.1759643555
+2024-04-29 12:21:58,055 - INFO - Epoch 6  : Training Loss:   9.8922729492, Validation Loss:   9.3766908646, Training KL Loss: 147.0136108398, Validation KL Loss: 148.2574005127
+2024-04-29 12:22:02,011 - INFO - Epoch 7  : Training Loss:   9.1352968216, Validation Loss:   8.7472991943, Training KL Loss: 176.4727325439, Validation KL Loss: 181.2400817871
+2024-04-29 12:22:05,926 - INFO - Epoch 8  : Training Loss:   8.5797233582, Validation Loss:   8.3590059280, Training KL Loss: 212.4889984131, Validation KL Loss: 206.3066406250
+2024-04-29 12:22:09,701 - INFO - Epoch 9  : Training Loss:   8.1667022705, Validation Loss:   8.0474596024, Training KL Loss: 234.2857360840, Validation KL Loss: 224.2396545410
+2024-04-29 12:22:13,621 - INFO - Epoch 10 : Training Loss:   7.8284854889, Validation Loss:   7.8250236511, Training KL Loss: 264.2923278809, Validation KL Loss: 257.3113403320
+2024-04-29 12:22:18,498 - INFO - Epoch 11 : Training Loss:   7.5573368073, Validation Loss:   7.6596822739, Training KL Loss: 288.8076171875, Validation KL Loss: 266.0549316406
+2024-04-29 12:22:23,027 - INFO - Epoch 12 : Training Loss:   7.2461867332, Validation Loss:   7.3894371986, Training KL Loss: 312.9786071777, Validation KL Loss: 305.9351501465
+2024-04-29 12:22:27,386 - INFO - Epoch 13 : Training Loss:   7.0134716034, Validation Loss:   7.4117765427, Training KL Loss: 344.8894348145, Validation KL Loss: 329.9302368164
+2024-04-29 12:22:31,120 - INFO - Epoch 14 : Training Loss:   6.7927942276, Validation Loss:   7.2623443604, Training KL Loss: 374.4218750000, Validation KL Loss: 353.1837463379
+2024-04-29 12:22:35,214 - INFO - Epoch 15 : Training Loss:   6.6262049675, Validation Loss:   7.0724577904, Training KL Loss: 392.6162719727, Validation KL Loss: 373.3794555664
+2024-04-29 12:22:39,567 - INFO - Epoch 16 : Training Loss:   6.4154024124, Validation Loss:   7.0631332397, Training KL Loss: 431.2587890625, Validation KL Loss: 376.2337036133
+2024-04-29 12:22:43,625 - INFO - Epoch 17 : Training Loss:   7.2769327164, Validation Loss:   7.5745081902, Training KL Loss:  65.3160858154, Validation KL Loss:  43.4301338196
+2024-04-29 12:22:47,687 - INFO - Epoch 18 : Training Loss:   7.2769136429, Validation Loss:   7.7178716660, Training KL Loss:  34.0662384033, Validation KL Loss:  29.4671478271
+2024-04-29 12:22:51,483 - INFO - Epoch 19 : Training Loss:   7.3561120033, Validation Loss:   7.9853038788, Training KL Loss:  26.4466094971, Validation KL Loss:  23.2654800415
+2024-04-29 12:22:55,321 - INFO - Epoch 20 : Training Loss:   7.4466114044, Validation Loss:   8.0900983810, Training KL Loss:  22.6933040619, Validation KL Loss:  20.6047992706
+2024-04-29 12:22:59,126 - INFO - Epoch 21 : Training Loss:   7.5205264091, Validation Loss:   8.1479988098, Training KL Loss:  20.0209560394, Validation KL Loss:  17.8054771423
+2024-04-29 12:23:03,011 - INFO - Epoch 22 : Training Loss:   7.5779814720, Validation Loss:   8.2434730530, Training KL Loss:  18.0795612335, Validation KL Loss:  15.7909822464
+2024-04-29 12:23:06,674 - INFO - Epoch 23 : Training Loss:   7.6076798439, Validation Loss:   8.3930635452, Training KL Loss:  16.5921726227, Validation KL Loss:  15.0364322662
+2024-04-29 12:23:10,264 - INFO - Epoch 24 : Training Loss:   7.6741437912, Validation Loss:   8.4216823578, Training KL Loss:  15.3998241425, Validation KL Loss:  14.2570009232
+2024-04-29 12:23:14,003 - INFO - Epoch 25 : Training Loss:   7.6630887985, Validation Loss:   8.5097246170, Training KL Loss:  14.1826896667, Validation KL Loss:  12.8613805771
+2024-04-29 12:23:17,876 - INFO - Epoch 26 : Training Loss:   7.6618485451, Validation Loss:   8.5271196365, Training KL Loss:  13.2390165329, Validation KL Loss:  11.8351106644
+2024-04-29 12:23:22,047 - INFO - Epoch 27 : Training Loss:   7.6602001190, Validation Loss:   8.5988960266, Training KL Loss:  12.5361146927, Validation KL Loss:  11.2347936630
+2024-04-29 12:23:25,779 - INFO - Epoch 28 : Training Loss:   7.6798558235, Validation Loss:   8.6542701721, Training KL Loss:  11.9364471436, Validation KL Loss:  10.9219980240
+2024-04-29 12:23:29,391 - INFO - Epoch 29 : Training Loss:   7.6970763206, Validation Loss:   8.7126016617, Training KL Loss:  11.4495782852, Validation KL Loss:  10.4773769379
+2024-04-29 12:23:33,495 - INFO - Epoch 30 : Training Loss:   7.6874990463, Validation Loss:   8.8182744980, Training KL Loss:  10.9799938202, Validation KL Loss:  10.1544313431
+2024-04-29 12:23:38,253 - INFO - Epoch 31 : Training Loss:   7.7206635475, Validation Loss:   8.8274030685, Training KL Loss:  10.5958929062, Validation KL Loss:   9.6475801468
+2024-04-29 12:23:42,964 - INFO - Epoch 32 : Training Loss:   7.7160568237, Validation Loss:   8.9358310699, Training KL Loss:  10.2770967484, Validation KL Loss:   9.4652576447
+2024-04-29 12:23:47,601 - INFO - Epoch 33 : Training Loss:   7.7680010796, Validation Loss:   9.0173082352, Training KL Loss:  10.0376415253, Validation KL Loss:   9.5145549774
+2024-04-29 12:23:52,511 - INFO - Epoch 34 : Training Loss:   7.7998123169, Validation Loss:   9.1236238480, Training KL Loss:   9.8899650574, Validation KL Loss:   8.9454975128
+2024-04-29 12:23:56,709 - INFO - Epoch 35 : Training Loss:   7.8187799454, Validation Loss:   9.1899795532, Training KL Loss:   9.5499992371, Validation KL Loss:   8.8059930801
+2024-04-29 12:24:00,639 - INFO - Epoch 36 : Training Loss:   7.8540806770, Validation Loss:   9.2695722580, Training KL Loss:   9.3850107193, Validation KL Loss:   8.7009954453
+2024-04-29 12:24:04,461 - INFO - Epoch 37 : Training Loss:   7.8978605270, Validation Loss:   9.2167329788, Training KL Loss:   9.2009773254, Validation KL Loss:   8.3187694550
+2024-04-29 12:24:08,456 - INFO - Epoch 38 : Training Loss:   7.9337654114, Validation Loss:   9.4516077042, Training KL Loss:   9.0315046310, Validation KL Loss:   8.4204998016
+2024-04-29 12:24:12,763 - INFO - Epoch 39 : Training Loss:   7.9596757889, Validation Loss:   9.5151081085, Training KL Loss:   8.8840723038, Validation KL Loss:   8.3014316559
+2024-04-29 12:24:17,165 - INFO - Epoch 40 : Training Loss:   7.9769792557, Validation Loss:   9.5863714218, Training KL Loss:   8.7679328918, Validation KL Loss:   8.1293220520
+2024-04-29 12:24:21,089 - INFO - Epoch 41 : Training Loss:   8.0479116440, Validation Loss:   9.6352825165, Training KL Loss:   8.6069211960, Validation KL Loss:   8.1765909195
+2024-04-29 12:24:24,796 - INFO - Epoch 42 : Training Loss:   8.0673236847, Validation Loss:   9.6974830627, Training KL Loss:   8.4449262619, Validation KL Loss:   7.8182206154
+2024-04-29 12:24:28,860 - INFO - Epoch 43 : Training Loss:   8.1459541321, Validation Loss:   9.8152065277, Training KL Loss:   8.3754549026, Validation KL Loss:   7.9217867851
+2024-04-29 12:24:32,721 - INFO - Epoch 44 : Training Loss:   8.1433258057, Validation Loss:   9.8624200821, Training KL Loss:   8.2083520889, Validation KL Loss:   7.7862505913
+2024-04-29 12:24:36,466 - INFO - Epoch 45 : Training Loss:   8.2331504822, Validation Loss:  10.0098171234, Training KL Loss:   8.1234788895, Validation KL Loss:   7.5450119972
+2024-04-29 12:24:40,182 - INFO - Epoch 46 : Training Loss:   8.2569379807, Validation Loss:  10.0971994400, Training KL Loss:   8.0001506805, Validation KL Loss:   7.5205388069
+2024-04-29 12:24:44,116 - INFO - Epoch 47 : Training Loss:   8.3041486740, Validation Loss:  10.1330213547, Training KL Loss:   7.8670578003, Validation KL Loss:   7.4999494553
+2024-04-29 12:24:48,002 - INFO - Epoch 48 : Training Loss:   8.3658046722, Validation Loss:  10.2525424957, Training KL Loss:   7.8133292198, Validation KL Loss:   7.4647092819
+2024-04-29 12:24:51,854 - INFO - Epoch 49 : Training Loss:   8.4420118332, Validation Loss:  10.3419818878, Training KL Loss:   7.7417058945, Validation KL Loss:   7.1573028564
+2024-04-29 12:24:55,685 - INFO - Epoch 50 : Training Loss:   8.4658746719, Validation Loss:  10.3577384949, Training KL Loss:   7.5816817284, Validation KL Loss:   7.2439160347
+2024-04-29 12:24:59,532 - INFO - Epoch 51 : Training Loss:   8.5363693237, Validation Loss:  10.3951683044, Training KL Loss:   7.5316348076, Validation KL Loss:   7.0308065414
+2024-04-29 12:25:03,367 - INFO - Epoch 52 : Training Loss:   8.5683412552, Validation Loss:  10.4185934067, Training KL Loss:   7.4310703278, Validation KL Loss:   6.7518053055
+2024-04-29 12:25:07,137 - INFO - Epoch 53 : Training Loss:   8.6234502792, Validation Loss:  10.5003805161, Training KL Loss:   7.3229150772, Validation KL Loss:   6.8131213188
+2024-04-29 12:25:10,879 - INFO - Epoch 54 : Training Loss:   8.6764945984, Validation Loss:  10.5773811340, Training KL Loss:   7.2705612183, Validation KL Loss:   6.7335519791
+2024-04-29 12:25:14,825 - INFO - Epoch 55 : Training Loss:   8.6772356033, Validation Loss:  10.6673307419, Training KL Loss:   7.1534519196, Validation KL Loss:   6.8066620827
+2024-04-29 12:25:19,165 - INFO - Epoch 56 : Training Loss:   8.7308139801, Validation Loss:  10.8140840530, Training KL Loss:   7.0925760269, Validation KL Loss:   6.7056922913
+2024-04-29 12:25:23,221 - INFO - Epoch 57 : Training Loss:   8.8290100098, Validation Loss:  10.8988370895, Training KL Loss:   7.0371861458, Validation KL Loss:   6.5238499641
+2024-04-29 12:25:27,101 - INFO - Epoch 58 : Training Loss:   8.8512983322, Validation Loss:  10.8641328812, Training KL Loss:   6.9135518074, Validation KL Loss:   6.4425406456
+2024-04-29 12:25:31,014 - INFO - Epoch 59 : Training Loss:   8.9074268341, Validation Loss:  10.9630002975, Training KL Loss:   6.8875913620, Validation KL Loss:   6.4725351334
+2024-04-29 12:25:34,846 - INFO - Epoch 60 : Training Loss:   8.9558773041, Validation Loss:  11.0462341309, Training KL Loss:   6.8094964027, Validation KL Loss:   6.4261651039
+2024-04-29 12:25:38,816 - INFO - Epoch 61 : Training Loss:   9.0146751404, Validation Loss:  11.1537609100, Training KL Loss:   6.7240953445, Validation KL Loss:   6.3302311897
+2024-04-29 12:25:42,759 - INFO - Epoch 62 : Training Loss:   9.0388393402, Validation Loss:  11.2119340897, Training KL Loss:   6.6680760384, Validation KL Loss:   6.1725382805
+2024-04-29 12:25:46,667 - INFO - Epoch 63 : Training Loss:   9.1185703278, Validation Loss:  11.1723833084, Training KL Loss:   6.5879497528, Validation KL Loss:   6.0126285553
+2024-04-29 12:25:50,493 - INFO - Epoch 64 : Training Loss:   9.1544361115, Validation Loss:  11.3264617920, Training KL Loss:   6.5112662315, Validation KL Loss:   5.9773387909
+2024-04-29 12:25:54,586 - INFO - Epoch 65 : Training Loss:   9.2208948135, Validation Loss:  11.3853845596, Training KL Loss:   6.4842901230, Validation KL Loss:   6.0557198524
+2024-04-29 12:25:58,577 - INFO - Epoch 66 : Training Loss:   9.2910270691, Validation Loss:  11.3931827545, Training KL Loss:   6.4160709381, Validation KL Loss:   6.0051493645
+2024-04-29 12:26:02,460 - INFO - Epoch 67 : Training Loss:   9.3092584610, Validation Loss:  11.4548377991, Training KL Loss:   6.3280692101, Validation KL Loss:   5.8590316772
+2024-04-29 12:26:06,344 - INFO - Epoch 68 : Training Loss:   9.3473033905, Validation Loss:  11.4895715714, Training KL Loss:   6.3121514320, Validation KL Loss:   5.7224669456
+2024-04-29 12:26:10,088 - INFO - Epoch 69 : Training Loss:   9.3828783035, Validation Loss:  11.5626287460, Training KL Loss:   6.1704196930, Validation KL Loss:   5.7080888748
+2024-04-29 12:26:13,998 - INFO - Epoch 70 : Training Loss:   9.4433298111, Validation Loss:  11.5340738297, Training KL Loss:   6.1433110237, Validation KL Loss:   5.6656346321
+2024-04-29 12:26:17,936 - INFO - Epoch 71 : Training Loss:   9.4918832779, Validation Loss:  11.6965856552, Training KL Loss:   6.0832409859, Validation KL Loss:   5.7189745903
+2024-04-29 12:26:21,874 - INFO - Epoch 72 : Training Loss:   9.5630016327, Validation Loss:  11.6963033676, Training KL Loss:   6.0516767502, Validation KL Loss:   5.5417194366
+2024-04-29 12:26:26,483 - INFO - Epoch 73 : Training Loss:   9.5720272064, Validation Loss:  11.7546987534, Training KL Loss:   5.9606389999, Validation KL Loss:   5.4770064354
+2024-04-29 12:26:30,581 - INFO - Epoch 74 : Training Loss:   9.6367950439, Validation Loss:  11.8088722229, Training KL Loss:   5.9124903679, Validation KL Loss:   5.4782853127
+2024-04-29 12:26:35,358 - INFO - Epoch 75 : Training Loss:   9.6898069382, Validation Loss:  11.9334163666, Training KL Loss:   5.8863048553, Validation KL Loss:   5.3390355110
+2024-04-29 12:26:40,080 - INFO - Epoch 76 : Training Loss:   9.7063255310, Validation Loss:  11.9922866821, Training KL Loss:   5.8116664886, Validation KL Loss:   5.3445000648
+2024-04-29 12:26:44,410 - INFO - Epoch 77 : Training Loss:   9.8162250519, Validation Loss:  12.0015239716, Training KL Loss:   5.7590594292, Validation KL Loss:   5.4658684731
+2024-04-29 12:26:48,958 - INFO - Epoch 78 : Training Loss:   9.8570623398, Validation Loss:  12.0079040527, Training KL Loss:   5.7256526947, Validation KL Loss:   5.2801475525
+2024-04-29 12:26:53,528 - INFO - Epoch 79 : Training Loss:   9.9021501541, Validation Loss:  12.0624961853, Training KL Loss:   5.6496114731, Validation KL Loss:   5.3338522911
+2024-04-29 12:26:57,392 - INFO - Epoch 80 : Training Loss:   9.9404792786, Validation Loss:  12.1864109039, Training KL Loss:   5.6099367142, Validation KL Loss:   5.2473597527
+2024-04-29 12:27:01,156 - INFO - Epoch 81 : Training Loss:   9.9730825424, Validation Loss:  12.1391563416, Training KL Loss:   5.5606336594, Validation KL Loss:   5.1841387749
+2024-04-29 12:27:04,776 - INFO - Epoch 82 : Training Loss:  10.0411787033, Validation Loss:  12.1506404877, Training KL Loss:   5.5120410919, Validation KL Loss:   5.0320835114
+2024-04-29 12:27:08,498 - INFO - Epoch 83 : Training Loss:  10.0695695877, Validation Loss:  12.2249288559, Training KL Loss:   5.4438185692, Validation KL Loss:   5.1645603180
+2024-04-29 12:27:12,255 - INFO - Epoch 84 : Training Loss:  10.1179199219, Validation Loss:  12.3037719727, Training KL Loss:   5.3914523125, Validation KL Loss:   5.1203508377
+2024-04-29 12:27:16,247 - INFO - Epoch 85 : Training Loss:  10.1907262802, Validation Loss:  12.3837757111, Training KL Loss:   5.3622655869, Validation KL Loss:   5.0069236755
+2024-04-29 12:27:20,128 - INFO - Epoch 86 : Training Loss:  10.1798849106, Validation Loss:  12.3258333206, Training KL Loss:   5.3071436882, Validation KL Loss:   4.8952436447
+2024-04-29 12:27:24,641 - INFO - Epoch 87 : Training Loss:  10.2657222748, Validation Loss:  12.4191541672, Training KL Loss:   5.2788467407, Validation KL Loss:   4.8777351379
+2024-04-29 12:27:28,661 - INFO - Epoch 88 : Training Loss:  10.2781839371, Validation Loss:  12.4032258987, Training KL Loss:   5.2118387222, Validation KL Loss:   4.8445472717
+2024-04-29 12:27:32,563 - INFO - Epoch 89 : Training Loss:  10.3505392075, Validation Loss:  12.4986114502, Training KL Loss:   5.1828341484, Validation KL Loss:   4.7640156746
+2024-04-29 12:27:36,507 - INFO - Epoch 90 : Training Loss:  10.4182519913, Validation Loss:  12.5654249191, Training KL Loss:   5.1269354820, Validation KL Loss:   4.8321037292
+2024-04-29 12:27:40,272 - INFO - Epoch 91 : Training Loss:  10.4555892944, Validation Loss:  12.5750503540, Training KL Loss:   5.1092095375, Validation KL Loss:   4.8071384430
+2024-04-29 12:27:44,221 - INFO - Epoch 92 : Training Loss:  10.4714803696, Validation Loss:  12.6028776169, Training KL Loss:   5.0548882484, Validation KL Loss:   4.6607327461
+2024-04-29 12:27:48,111 - INFO - Epoch 93 : Training Loss:  10.5305585861, Validation Loss:  12.5611944199, Training KL Loss:   5.0228581429, Validation KL Loss:   4.6159005165
+2024-04-29 12:27:51,934 - INFO - Epoch 94 : Training Loss:  10.5532951355, Validation Loss:  12.7889156342, Training KL Loss:   4.9662446976, Validation KL Loss:   4.6264686584
+2024-04-29 12:27:55,807 - INFO - Epoch 95 : Training Loss:  10.6274938583, Validation Loss:  12.7714300156, Training KL Loss:   4.9201092720, Validation KL Loss:   4.6229228973
+2024-04-29 12:27:59,751 - INFO - Epoch 96 : Training Loss:  10.6822233200, Validation Loss:  12.7784891129, Training KL Loss:   4.8805766106, Validation KL Loss:   4.4064373970
+2024-04-29 12:28:03,652 - INFO - Epoch 97 : Training Loss:  10.6793346405, Validation Loss:  12.7613019943, Training KL Loss:   4.8522038460, Validation KL Loss:   4.4021162987
+2024-04-29 12:28:07,595 - INFO - Epoch 98 : Training Loss:  10.7185850143, Validation Loss:  12.7677087784, Training KL Loss:   4.7968711853, Validation KL Loss:   4.4446406364
+2024-04-29 12:28:11,551 - INFO - Epoch 99 : Training Loss:  10.7903928757, Validation Loss:  12.8329219818, Training KL Loss:   4.7916975021, Validation KL Loss:   4.3476681709
+2024-04-29 12:28:15,272 - INFO - Epoch 100: Training Loss:  10.8488588333, Validation Loss:  12.9337320328, Training KL Loss:   4.7539658546, Validation KL Loss:   4.4448709488
+2024-04-29 12:28:19,209 - INFO - Epoch 101: Training Loss:  10.8654022217, Validation Loss:  12.9486284256, Training KL Loss:   4.6879267693, Validation KL Loss:   4.3620343208
+2024-04-29 12:28:23,089 - INFO - Epoch 102: Training Loss:  10.8920516968, Validation Loss:  12.9288139343, Training KL Loss:   4.6421284676, Validation KL Loss:   4.2777981758
+2024-04-29 12:28:26,977 - INFO - Epoch 103: Training Loss:  10.9166240692, Validation Loss:  13.0416545868, Training KL Loss:   4.6304636002, Validation KL Loss:   4.3059029579
+2024-04-29 12:28:30,736 - INFO - Epoch 104: Training Loss:  10.9748792648, Validation Loss:  13.0838317871, Training KL Loss:   4.5782022476, Validation KL Loss:   4.3104138374
+2024-04-29 12:28:34,652 - INFO - Epoch 105: Training Loss:  11.0212211609, Validation Loss:  13.0549077988, Training KL Loss:   4.5283999443, Validation KL Loss:   4.1925110817
+2024-04-29 12:28:38,818 - INFO - Epoch 106: Training Loss:  11.0668811798, Validation Loss:  13.0486068726, Training KL Loss:   4.5071587563, Validation KL Loss:   4.1393871307
+2024-04-29 12:28:42,676 - INFO - Epoch 107: Training Loss:  11.0670118332, Validation Loss:  13.1670112610, Training KL Loss:   4.4568529129, Validation KL Loss:   4.0760073662
+2024-04-29 12:28:46,330 - INFO - Epoch 108: Training Loss:  11.1351661682, Validation Loss:  13.1902933121, Training KL Loss:   4.4166235924, Validation KL Loss:   4.0620641708
+2024-04-29 12:28:49,920 - INFO - Epoch 109: Training Loss:  11.2258377075, Validation Loss:  13.1366300583, Training KL Loss:   4.4130110741, Validation KL Loss:   4.0027127266
+2024-04-29 12:28:53,675 - INFO - Epoch 110: Training Loss:  11.2112703323, Validation Loss:  13.1906185150, Training KL Loss:   4.3505578041, Validation KL Loss:   3.9920957088
+2024-04-29 12:28:57,569 - INFO - Epoch 111: Training Loss:  11.2754049301, Validation Loss:  13.2427120209, Training KL Loss:   4.3359565735, Validation KL Loss:   3.9846987724
+2024-04-29 12:29:01,589 - INFO - Epoch 112: Training Loss:  11.3140459061, Validation Loss:  13.3433933258, Training KL Loss:   4.2859539986, Validation KL Loss:   3.9229333401
+2024-04-29 12:29:05,657 - INFO - Epoch 113: Training Loss:  11.3578033447, Validation Loss:  13.2779531479, Training KL Loss:   4.2275314331, Validation KL Loss:   3.8747627735
+2024-04-29 12:29:09,793 - INFO - Epoch 114: Training Loss:  11.3914728165, Validation Loss:  13.3639059067, Training KL Loss:   4.2178530693, Validation KL Loss:   3.8827581406
+2024-04-29 12:29:13,718 - INFO - Epoch 115: Training Loss:  11.4172639847, Validation Loss:  13.3430213928, Training KL Loss:   4.1718921661, Validation KL Loss:   3.8320834637
+2024-04-29 12:29:17,548 - INFO - Epoch 116: Training Loss:  11.4782905579, Validation Loss:  13.4535961151, Training KL Loss:   4.1566419601, Validation KL Loss:   3.7614047527
+2024-04-29 12:29:21,989 - INFO - Fold 0 Metrics (Macro) - Precision: 0.3036964004, Recall: 0.1131782736, F1: 0.1473894097, Roc_auc: 0.0000000000, Auprc: 0.0000000000
+2024-04-29 12:29:21,990 - INFO - Fold 0 Metrics (Micro) - Precision: 0.8325614535, Recall: 0.4108649789, F1: 0.5502060035, Roc_auc: 0.9650107751, Auprc: 0.5779411617
+2024-04-29 12:29:22,002 - INFO - ================================================================== Fold 2 ===================================================================
+2024-04-29 12:29:28,976 - INFO - Epoch 1  : Training Loss:  27.5571613312, Validation Loss:  16.4617176056, Training KL Loss:   1.8506824970, Validation KL Loss:   2.1902503967
+2024-04-29 12:29:32,838 - INFO - Epoch 2  : Training Loss:  15.3158197403, Validation Loss:  14.1637840271, Training KL Loss:  10.2347154617, Validation KL Loss:  23.3235321045
+2024-04-29 12:29:36,672 - INFO - Epoch 3  : Training Loss:  13.4729461670, Validation Loss:  12.8038711548, Training KL Loss:  40.8620491028, Validation KL Loss:  55.5476837158
+2024-04-29 12:29:40,377 - INFO - Epoch 4  : Training Loss:  12.2172346115, Validation Loss:  11.6588697433, Training KL Loss:  69.2029800415, Validation KL Loss:  75.3071899414
+2024-04-29 12:29:44,304 - INFO - Epoch 5  : Training Loss:  11.0908737183, Validation Loss:  10.4813919067, Training KL Loss:  95.5876541138, Validation KL Loss: 107.7238082886
+2024-04-29 12:29:48,176 - INFO - Epoch 6  : Training Loss:  10.2013225555, Validation Loss:   9.6326284409, Training KL Loss: 124.3914413452, Validation KL Loss: 131.4327392578
+2024-04-29 12:29:52,037 - INFO - Epoch 7  : Training Loss:   9.3841934204, Validation Loss:   8.9020709991, Training KL Loss: 148.7070159912, Validation KL Loss: 137.8478851318
+2024-04-29 12:29:55,824 - INFO - Epoch 8  : Training Loss:   8.7824134827, Validation Loss:   8.5215368271, Training KL Loss: 172.3613739014, Validation KL Loss: 176.7782287598
+2024-04-29 12:29:59,784 - INFO - Epoch 9  : Training Loss:   8.3315706253, Validation Loss:   8.2582864761, Training KL Loss: 201.7790069580, Validation KL Loss: 199.7416992188
+2024-04-29 12:30:03,705 - INFO - Epoch 10 : Training Loss:   8.0148057938, Validation Loss:   8.0329771042, Training KL Loss: 223.6563415527, Validation KL Loss: 212.5422515869
+2024-04-29 12:30:07,614 - INFO - Epoch 11 : Training Loss:   7.7159419060, Validation Loss:   7.7776732445, Training KL Loss: 243.4994506836, Validation KL Loss: 222.9738311768
+2024-04-29 12:30:11,420 - INFO - Epoch 12 : Training Loss:   7.4464664459, Validation Loss:   7.5957112312, Training KL Loss: 267.5414733887, Validation KL Loss: 258.4776916504
+2024-04-29 12:30:15,192 - INFO - Epoch 13 : Training Loss:   7.2040367126, Validation Loss:   7.4213533401, Training KL Loss: 294.5284423828, Validation KL Loss: 280.5825500488
+2024-04-29 12:30:19,071 - INFO - Epoch 14 : Training Loss:   6.9696197510, Validation Loss:   7.3469762802, Training KL Loss: 313.3695983887, Validation KL Loss: 287.3911132812
+2024-04-29 12:30:22,916 - INFO - Epoch 15 : Training Loss:   6.7652745247, Validation Loss:   7.2041397095, Training KL Loss: 333.9552917480, Validation KL Loss: 306.2142944336
+2024-04-29 12:30:27,489 - INFO - Epoch 16 : Training Loss:   6.5730338097, Validation Loss:   7.0642342567, Training KL Loss: 371.3285522461, Validation KL Loss: 333.1239013672
+2024-04-29 12:30:31,390 - INFO - Epoch 17 : Training Loss:   7.3414335251, Validation Loss:   7.5513525009, Training KL Loss:  61.8231887817, Validation KL Loss:  39.3475303650
+2024-04-29 12:30:35,579 - INFO - Epoch 18 : Training Loss:   7.3601994514, Validation Loss:   7.7898416519, Training KL Loss:  32.9284782410, Validation KL Loss:  28.0986976624
+2024-04-29 12:30:39,562 - INFO - Epoch 19 : Training Loss:   7.4069614410, Validation Loss:   7.8686428070, Training KL Loss:  25.9660034180, Validation KL Loss:  22.3967170715
+2024-04-29 12:30:43,746 - INFO - Epoch 20 : Training Loss:   7.4805693626, Validation Loss:   7.9781088829, Training KL Loss:  22.1635551453, Validation KL Loss:  20.4716072083
+2024-04-29 12:30:48,032 - INFO - Epoch 21 : Training Loss:   7.5424880981, Validation Loss:   8.0830192566, Training KL Loss:  19.7802925110, Validation KL Loss:  18.2769393921
+2024-04-29 12:30:52,368 - INFO - Epoch 22 : Training Loss:   7.6106085777, Validation Loss:   8.1903629303, Training KL Loss:  17.9621257782, Validation KL Loss:  16.1697311401
+2024-04-29 12:30:57,164 - INFO - Epoch 23 : Training Loss:   7.5902256966, Validation Loss:   8.2897052765, Training KL Loss:  16.4149742126, Validation KL Loss:  15.3208351135
+2024-04-29 12:31:01,028 - INFO - Epoch 24 : Training Loss:   7.6050992012, Validation Loss:   8.2791337967, Training KL Loss:  15.1999797821, Validation KL Loss:  13.7883081436
+2024-04-29 12:31:05,223 - INFO - Epoch 25 : Training Loss:   7.6471681595, Validation Loss:   8.4702892303, Training KL Loss:  14.1928768158, Validation KL Loss:  12.7447519302
+2024-04-29 12:31:10,044 - INFO - Epoch 26 : Training Loss:   7.6442289352, Validation Loss:   8.4163036346, Training KL Loss:  13.3363456726, Validation KL Loss:  12.3310012817
+2024-04-29 12:31:14,886 - INFO - Epoch 27 : Training Loss:   7.6305460930, Validation Loss:   8.4866724014, Training KL Loss:  12.7046937943, Validation KL Loss:  11.8132095337
+2024-04-29 12:31:19,488 - INFO - Epoch 28 : Training Loss:   7.6246681213, Validation Loss:   8.6380891800, Training KL Loss:  12.1111621857, Validation KL Loss:  11.8395700455
+2024-04-29 12:31:23,355 - INFO - Epoch 29 : Training Loss:   7.6501560211, Validation Loss:   8.6075019836, Training KL Loss:  11.6648836136, Validation KL Loss:  10.1705617905
+2024-04-29 12:31:27,142 - INFO - Epoch 30 : Training Loss:   7.6371436119, Validation Loss:   8.7153825760, Training KL Loss:  11.2271528244, Validation KL Loss:  10.4091968536
+2024-04-29 12:31:30,949 - INFO - Epoch 31 : Training Loss:   7.6524119377, Validation Loss:   8.8584136963, Training KL Loss:  10.7913646698, Validation KL Loss:   9.8343305588
+2024-04-29 12:31:34,754 - INFO - Epoch 32 : Training Loss:   7.7032256126, Validation Loss:   8.8389329910, Training KL Loss:  10.5273313522, Validation KL Loss:   9.9081525803
+2024-04-29 12:31:38,615 - INFO - Epoch 33 : Training Loss:   7.6919970512, Validation Loss:   8.9976940155, Training KL Loss:  10.2373352051, Validation KL Loss:   9.6765441895
+2024-04-29 12:31:42,369 - INFO - Epoch 34 : Training Loss:   7.7001190186, Validation Loss:   9.0368576050, Training KL Loss:   9.9859056473, Validation KL Loss:   9.4402265549
+2024-04-29 12:31:46,033 - INFO - Epoch 35 : Training Loss:   7.7431063652, Validation Loss:   9.1639480591, Training KL Loss:   9.7441368103, Validation KL Loss:   9.1696424484
+2024-04-29 12:31:49,932 - INFO - Epoch 36 : Training Loss:   7.7972145081, Validation Loss:   9.1795616150, Training KL Loss:   9.5580902100, Validation KL Loss:   9.2289047241
+2024-04-29 12:31:53,758 - INFO - Epoch 37 : Training Loss:   7.8213877678, Validation Loss:   9.3580589294, Training KL Loss:   9.3521184921, Validation KL Loss:   8.7891950607
+2024-04-29 12:31:57,685 - INFO - Epoch 38 : Training Loss:   7.8721671104, Validation Loss:   9.3500719070, Training KL Loss:   9.2065038681, Validation KL Loss:   8.4658756256
+2024-04-29 12:32:01,532 - INFO - Epoch 39 : Training Loss:   7.9181866646, Validation Loss:   9.4791736603, Training KL Loss:   9.0512590408, Validation KL Loss:   8.4438829422
+2024-04-29 12:32:05,318 - INFO - Epoch 40 : Training Loss:   7.9839897156, Validation Loss:   9.4743480682, Training KL Loss:   8.8718910217, Validation KL Loss:   8.1978902817
+2024-04-29 12:32:09,326 - INFO - Epoch 41 : Training Loss:   8.0023775101, Validation Loss:   9.6031351089, Training KL Loss:   8.7065544128, Validation KL Loss:   8.1950178146
+2024-04-29 12:32:13,408 - INFO - Epoch 42 : Training Loss:   8.0414772034, Validation Loss:   9.6993217468, Training KL Loss:   8.5868482590, Validation KL Loss:   8.0588207245
+2024-04-29 12:32:17,417 - INFO - Epoch 43 : Training Loss:   8.0856533051, Validation Loss:   9.7485256195, Training KL Loss:   8.4521465302, Validation KL Loss:   7.9635190964
+2024-04-29 12:32:21,756 - INFO - Epoch 44 : Training Loss:   8.1298532486, Validation Loss:   9.9230222702, Training KL Loss:   8.3368215561, Validation KL Loss:   7.7702522278
+2024-04-29 12:32:25,808 - INFO - Epoch 45 : Training Loss:   8.1724967957, Validation Loss:   9.9962530136, Training KL Loss:   8.2091159821, Validation KL Loss:   7.8790273666
+2024-04-29 12:32:29,665 - INFO - Epoch 46 : Training Loss:   8.2166929245, Validation Loss:  10.0968618393, Training KL Loss:   8.0796194077, Validation KL Loss:   7.6793227196
+2024-04-29 12:32:33,658 - INFO - Epoch 47 : Training Loss:   8.2439403534, Validation Loss:  10.0815668106, Training KL Loss:   7.9431428909, Validation KL Loss:   7.2715091705
+2024-04-29 12:32:37,433 - INFO - Epoch 48 : Training Loss:   8.3162927628, Validation Loss:  10.1353883743, Training KL Loss:   7.8477144241, Validation KL Loss:   7.4256677628
+2024-04-29 12:32:41,164 - INFO - Epoch 49 : Training Loss:   8.3580942154, Validation Loss:  10.2754631042, Training KL Loss:   7.7600750923, Validation KL Loss:   7.2925381660
+2024-04-29 12:32:45,088 - INFO - Epoch 50 : Training Loss:   8.3945970535, Validation Loss:  10.3280868530, Training KL Loss:   7.6341323853, Validation KL Loss:   7.1606669426
+2024-04-29 12:32:49,094 - INFO - Epoch 51 : Training Loss:   8.4349164963, Validation Loss:  10.3670835495, Training KL Loss:   7.5526900291, Validation KL Loss:   6.9780249596
+2024-04-29 12:32:53,300 - INFO - Epoch 52 : Training Loss:   8.5025300980, Validation Loss:  10.4144783020, Training KL Loss:   7.4742727280, Validation KL Loss:   6.8828420639
+2024-04-29 12:32:57,649 - INFO - Epoch 53 : Training Loss:   8.5405416489, Validation Loss:  10.4925575256, Training KL Loss:   7.3449039459, Validation KL Loss:   6.7192049026
+2024-04-29 12:33:01,880 - INFO - Epoch 54 : Training Loss:   8.5874624252, Validation Loss:  10.5450353622, Training KL Loss:   7.2397146225, Validation KL Loss:   6.7259035110
+2024-04-29 12:33:05,613 - INFO - Epoch 55 : Training Loss:   8.6378984451, Validation Loss:  10.6369934082, Training KL Loss:   7.1644387245, Validation KL Loss:   6.6231660843
+2024-04-29 12:33:09,496 - INFO - Epoch 56 : Training Loss:   8.6725521088, Validation Loss:  10.8105859756, Training KL Loss:   7.0603890419, Validation KL Loss:   6.6132040024
+2024-04-29 12:33:13,397 - INFO - Epoch 57 : Training Loss:   8.7479944229, Validation Loss:  10.8497676849, Training KL Loss:   7.0238943100, Validation KL Loss:   6.5009312630
+2024-04-29 12:33:17,310 - INFO - Epoch 58 : Training Loss:   8.7955074310, Validation Loss:  10.8544607162, Training KL Loss:   6.9262714386, Validation KL Loss:   6.4338417053
+2024-04-29 12:33:21,079 - INFO - Epoch 59 : Training Loss:   8.8543319702, Validation Loss:  10.9565954208, Training KL Loss:   6.8717713356, Validation KL Loss:   6.4870176315
+2024-04-29 12:33:24,936 - INFO - Epoch 60 : Training Loss:   8.9075431824, Validation Loss:  10.9254503250, Training KL Loss:   6.7773637772, Validation KL Loss:   6.1471438408
+2024-04-29 12:33:28,891 - INFO - Epoch 61 : Training Loss:   8.9420480728, Validation Loss:  11.0946693420, Training KL Loss:   6.7167463303, Validation KL Loss:   6.3419990540
+2024-04-29 12:33:32,908 - INFO - Epoch 62 : Training Loss:   8.9547920227, Validation Loss:  11.0833244324, Training KL Loss:   6.6365170479, Validation KL Loss:   6.1586751938
+2024-04-29 12:33:37,307 - INFO - Epoch 63 : Training Loss:   9.0230655670, Validation Loss:  11.1315650940, Training KL Loss:   6.5653352737, Validation KL Loss:   6.1660475731
+2024-04-29 12:33:41,379 - INFO - Epoch 64 : Training Loss:   9.0847721100, Validation Loss:  11.2359237671, Training KL Loss:   6.5097327232, Validation KL Loss:   6.1091012955
+2024-04-29 12:33:45,261 - INFO - Epoch 65 : Training Loss:   9.1192216873, Validation Loss:  11.3527460098, Training KL Loss:   6.4196414948, Validation KL Loss:   5.8166508675
+2024-04-29 12:33:49,209 - INFO - Epoch 66 : Training Loss:   9.1635427475, Validation Loss:  11.3020572662, Training KL Loss:   6.3575716019, Validation KL Loss:   5.8418354988
+2024-04-29 12:33:53,070 - INFO - Epoch 67 : Training Loss:   9.1998949051, Validation Loss:  11.4603691101, Training KL Loss:   6.3002214432, Validation KL Loss:   5.7293310165
+2024-04-29 12:33:56,927 - INFO - Epoch 68 : Training Loss:   9.2455091476, Validation Loss:  11.4554386139, Training KL Loss:   6.1983399391, Validation KL Loss:   5.7254090309
+2024-04-29 12:34:00,753 - INFO - Epoch 69 : Training Loss:   9.3042135239, Validation Loss:  11.4925518036, Training KL Loss:   6.1595411301, Validation KL Loss:   5.7348184586
+2024-04-29 12:34:04,796 - INFO - Epoch 70 : Training Loss:   9.3484420776, Validation Loss:  11.5284156799, Training KL Loss:   6.0888857841, Validation KL Loss:   5.6360669136
+2024-04-29 12:34:08,679 - INFO - Epoch 71 : Training Loss:   9.3916368484, Validation Loss:  11.5826778412, Training KL Loss:   6.0372433662, Validation KL Loss:   5.5471711159
+2024-04-29 12:34:12,556 - INFO - Epoch 72 : Training Loss:   9.4446544647, Validation Loss:  11.6503067017, Training KL Loss:   5.9912433624, Validation KL Loss:   5.4769344330
+2024-04-29 12:34:16,256 - INFO - Epoch 73 : Training Loss:   9.4859867096, Validation Loss:  11.7078180313, Training KL Loss:   5.9146256447, Validation KL Loss:   5.4084620476
+2024-04-29 12:34:20,150 - INFO - Epoch 74 : Training Loss:   9.5444679260, Validation Loss:  11.7739191055, Training KL Loss:   5.8912639618, Validation KL Loss:   5.4183850288
+2024-04-29 12:34:24,074 - INFO - Epoch 75 : Training Loss:   9.5790262222, Validation Loss:  11.8050060272, Training KL Loss:   5.8282666206, Validation KL Loss:   5.3968348503
+2024-04-29 12:34:27,882 - INFO - Epoch 76 : Training Loss:   9.6000967026, Validation Loss:  11.8531579971, Training KL Loss:   5.7499556541, Validation KL Loss:   5.4346151352
+2024-04-29 12:34:31,666 - INFO - Epoch 77 : Training Loss:   9.6504583359, Validation Loss:  11.9126224518, Training KL Loss:   5.7189512253, Validation KL Loss:   5.2766313553
+2024-04-29 12:34:35,476 - INFO - Epoch 78 : Training Loss:   9.7148189545, Validation Loss:  11.9024982452, Training KL Loss:   5.6277809143, Validation KL Loss:   5.1727385521
+2024-04-29 12:34:39,361 - INFO - Epoch 79 : Training Loss:   9.7568092346, Validation Loss:  11.9921016693, Training KL Loss:   5.6120514870, Validation KL Loss:   5.0674424171
+2024-04-29 12:34:43,348 - INFO - Epoch 80 : Training Loss:   9.7960062027, Validation Loss:  11.9999570847, Training KL Loss:   5.5813522339, Validation KL Loss:   4.9835886955
+2024-04-29 12:34:47,154 - INFO - Epoch 81 : Training Loss:   9.8640861511, Validation Loss:  12.0347394943, Training KL Loss:   5.5192799568, Validation KL Loss:   5.0570049286
+2024-04-29 12:34:50,896 - INFO - Epoch 82 : Training Loss:   9.9051189423, Validation Loss:  12.1257696152, Training KL Loss:   5.4690303802, Validation KL Loss:   4.9790334702
+2024-04-29 12:34:54,823 - INFO - Epoch 83 : Training Loss:   9.9243974686, Validation Loss:  12.1982488632, Training KL Loss:   5.4008255005, Validation KL Loss:   4.9948501587
+2024-04-29 12:34:59,032 - INFO - Epoch 84 : Training Loss:   9.9945354462, Validation Loss:  12.3778781891, Training KL Loss:   5.3613600731, Validation KL Loss:   5.0407295227
+2024-04-29 12:35:03,493 - INFO - Epoch 85 : Training Loss:  10.0238018036, Validation Loss:  12.2752857208, Training KL Loss:   5.3193244934, Validation KL Loss:   4.8788318634
+2024-04-29 12:35:09,147 - INFO - Epoch 86 : Training Loss:  10.0895786285, Validation Loss:  12.2842388153, Training KL Loss:   5.2706861496, Validation KL Loss:   4.8453798294
+2024-04-29 12:35:16,132 - INFO - Epoch 87 : Training Loss:  10.0793523788, Validation Loss:  12.4024219513, Training KL Loss:   5.2218875885, Validation KL Loss:   4.7566666603
+2024-04-29 12:35:21,146 - INFO - Epoch 88 : Training Loss:  10.1604604721, Validation Loss:  12.3556241989, Training KL Loss:   5.1961512566, Validation KL Loss:   4.8125262260
+2024-04-29 12:35:25,152 - INFO - Epoch 89 : Training Loss:  10.2188186646, Validation Loss:  12.3830404282, Training KL Loss:   5.1472473145, Validation KL Loss:   4.7831969261
+2024-04-29 12:35:29,210 - INFO - Epoch 90 : Training Loss:  10.2625627518, Validation Loss:  12.4119443893, Training KL Loss:   5.0933647156, Validation KL Loss:   4.5501046181
+2024-04-29 12:35:32,936 - INFO - Epoch 91 : Training Loss:  10.2763319016, Validation Loss:  12.4390783310, Training KL Loss:   5.0223546028, Validation KL Loss:   4.6028218269
+2024-04-29 12:35:36,654 - INFO - Epoch 92 : Training Loss:  10.3616790771, Validation Loss:  12.4164409637, Training KL Loss:   5.0122780800, Validation KL Loss:   4.5334849358
+2024-04-29 12:35:40,524 - INFO - Epoch 93 : Training Loss:  10.3953733444, Validation Loss:  12.5130395889, Training KL Loss:   4.9976582527, Validation KL Loss:   4.4579439163
+2024-04-29 12:35:44,323 - INFO - Epoch 94 : Training Loss:  10.3925828934, Validation Loss:  12.5351657867, Training KL Loss:   4.9469566345, Validation KL Loss:   4.4649324417
+2024-04-29 12:35:48,101 - INFO - Epoch 95 : Training Loss:  10.4320077896, Validation Loss:  12.7045335770, Training KL Loss:   4.8754706383, Validation KL Loss:   4.4049911499
+2024-04-29 12:35:52,187 - INFO - Epoch 96 : Training Loss:  10.4769325256, Validation Loss:  12.7878351212, Training KL Loss:   4.8647360802, Validation KL Loss:   4.5055828094
+2024-04-29 12:35:55,863 - INFO - Epoch 97 : Training Loss:  10.5535926819, Validation Loss:  12.7343101501, Training KL Loss:   4.8312702179, Validation KL Loss:   4.4042897224
+2024-04-29 12:35:59,747 - INFO - Epoch 98 : Training Loss:  10.6034917831, Validation Loss:  12.6989774704, Training KL Loss:   4.7880434990, Validation KL Loss:   4.3819451332
+2024-04-29 12:36:03,608 - INFO - Epoch 99 : Training Loss:  10.5919694901, Validation Loss:  12.7012958527, Training KL Loss:   4.6989755630, Validation KL Loss:   4.2310209274
+2024-04-29 12:36:07,358 - INFO - Epoch 100: Training Loss:  10.6405353546, Validation Loss:  12.8657865524, Training KL Loss:   4.6946668625, Validation KL Loss:   4.2458500862
+2024-04-29 12:36:11,035 - INFO - Epoch 101: Training Loss:  10.6858968735, Validation Loss:  12.8714570999, Training KL Loss:   4.6629848480, Validation KL Loss:   4.3350214958
+2024-04-29 12:36:14,856 - INFO - Epoch 102: Training Loss:  10.7479000092, Validation Loss:  12.9353208542, Training KL Loss:   4.6200008392, Validation KL Loss:   4.2894916534
+2024-04-29 12:36:18,651 - INFO - Epoch 103: Training Loss:  10.8061590195, Validation Loss:  12.8884439468, Training KL Loss:   4.5921916962, Validation KL Loss:   4.1434707642
+2024-04-29 12:36:22,338 - INFO - Epoch 104: Training Loss:  10.7965650558, Validation Loss:  12.9204826355, Training KL Loss:   4.5134110451, Validation KL Loss:   4.0596318245
+2024-04-29 12:36:26,000 - INFO - Epoch 105: Training Loss:  10.8551940918, Validation Loss:  13.0049600601, Training KL Loss:   4.5125436783, Validation KL Loss:   4.1961836815
+2024-04-29 12:36:29,814 - INFO - Epoch 106: Training Loss:  10.9046297073, Validation Loss:  13.0186023712, Training KL Loss:   4.4912886620, Validation KL Loss:   3.9969568253
+2024-04-29 12:36:33,602 - INFO - Epoch 107: Training Loss:  10.9258117676, Validation Loss:  13.0496664047, Training KL Loss:   4.4105091095, Validation KL Loss:   4.0932803154
+2024-04-29 12:36:37,347 - INFO - Epoch 108: Training Loss:  10.9503650665, Validation Loss:  13.1017360687, Training KL Loss:   4.4032597542, Validation KL Loss:   4.0126795769
+2024-04-29 12:36:41,004 - INFO - Epoch 109: Training Loss:  11.0034151077, Validation Loss:  13.1316289902, Training KL Loss:   4.3606271744, Validation KL Loss:   3.9080479145
+2024-04-29 12:36:44,791 - INFO - Epoch 110: Training Loss:  11.0565013885, Validation Loss:  13.1613435745, Training KL Loss:   4.3364191055, Validation KL Loss:   3.9186282158
+2024-04-29 12:36:48,588 - INFO - Epoch 111: Training Loss:  11.1349363327, Validation Loss:  13.2003545761, Training KL Loss:   4.3064718246, Validation KL Loss:   3.9243755341
+2024-04-29 12:36:52,305 - INFO - Epoch 112: Training Loss:  11.1509027481, Validation Loss:  13.1525096893, Training KL Loss:   4.2996215820, Validation KL Loss:   3.7577803135
+2024-04-29 12:36:55,939 - INFO - Epoch 113: Training Loss:  11.1670808792, Validation Loss:  13.2060966492, Training KL Loss:   4.2075362206, Validation KL Loss:   3.8108744621
+2024-04-29 12:36:59,823 - INFO - Epoch 114: Training Loss:  11.2068500519, Validation Loss:  13.1769552231, Training KL Loss:   4.1906490326, Validation KL Loss:   3.7497882843
+2024-04-29 12:37:03,659 - INFO - Epoch 115: Training Loss:  11.1777944565, Validation Loss:  13.2992677689, Training KL Loss:   4.1317963600, Validation KL Loss:   3.7351477146
+2024-04-29 12:37:07,336 - INFO - Epoch 116: Training Loss:  11.2746219635, Validation Loss:  13.1862640381, Training KL Loss:   4.1199841499, Validation KL Loss:   3.6712100506
+2024-04-29 12:37:11,782 - INFO - Fold 1 Metrics (Macro) - Precision: 0.3635266534, Recall: 0.1325769399, F1: 0.1765070257, Roc_auc: 0.0000000000, Auprc: 0.0000000000
+2024-04-29 12:37:11,782 - INFO - Fold 1 Metrics (Micro) - Precision: 0.8263445232, Recall: 0.4166325037, F1: 0.5539635571, Roc_auc: 0.9647102684, Auprc: 0.5887129390
+2024-04-29 12:37:11,796 - INFO - ================================================================== Fold 3 ===================================================================
+2024-04-29 12:37:18,399 - INFO - Epoch 1  : Training Loss:  27.5897026062, Validation Loss:  16.3727302551, Training KL Loss:   1.7354055643, Validation KL Loss:   0.9378574491
+2024-04-29 12:37:22,064 - INFO - Epoch 2  : Training Loss:  15.4656267166, Validation Loss:  14.6206703186, Training KL Loss:  10.5221138000, Validation KL Loss:  24.0085659027
+2024-04-29 12:37:25,728 - INFO - Epoch 3  : Training Loss:  14.0664815903, Validation Loss:  12.9795598984, Training KL Loss:  46.6509284973, Validation KL Loss:  60.5544471741
+2024-04-29 12:37:29,516 - INFO - Epoch 4  : Training Loss:  12.5379276276, Validation Loss:  11.5927162170, Training KL Loss:  86.0903015137, Validation KL Loss:  97.4690093994
+2024-04-29 12:37:33,294 - INFO - Epoch 5  : Training Loss:  11.3944721222, Validation Loss:  10.7395219803, Training KL Loss: 114.8496398926, Validation KL Loss: 121.7259674072
+2024-04-29 12:37:36,894 - INFO - Epoch 6  : Training Loss:  10.3407430649, Validation Loss:   9.7501087189, Training KL Loss: 137.0847473145, Validation KL Loss: 134.8426818848
+2024-04-29 12:37:40,681 - INFO - Epoch 7  : Training Loss:   9.5936717987, Validation Loss:   9.0931730270, Training KL Loss: 158.0140686035, Validation KL Loss: 164.4202423096
+2024-04-29 12:37:44,554 - INFO - Epoch 8  : Training Loss:   8.9963235855, Validation Loss:   8.5483322144, Training KL Loss: 189.2346954346, Validation KL Loss: 183.4089660645
+2024-04-29 12:37:48,179 - INFO - Epoch 9  : Training Loss:   8.5219621658, Validation Loss:   8.2907390594, Training KL Loss: 222.8105316162, Validation KL Loss: 204.7134552002
+2024-04-29 12:37:51,982 - INFO - Epoch 10 : Training Loss:   8.1388921738, Validation Loss:   8.0180673599, Training KL Loss: 248.8325958252, Validation KL Loss: 233.5387420654
+2024-04-29 12:37:56,062 - INFO - Epoch 11 : Training Loss:   7.8419218063, Validation Loss:   7.7713160515, Training KL Loss: 276.0899963379, Validation KL Loss: 263.9509887695
+2024-04-29 12:38:00,197 - INFO - Epoch 12 : Training Loss:   7.5578866005, Validation Loss:   7.5472712517, Training KL Loss: 305.6336059570, Validation KL Loss: 292.5223693848
+2024-04-29 12:38:04,166 - INFO - Epoch 13 : Training Loss:   7.2820291519, Validation Loss:   7.3575649261, Training KL Loss: 343.6116943359, Validation KL Loss: 330.7583312988
+2024-04-29 12:38:07,866 - INFO - Epoch 14 : Training Loss:   7.0550870895, Validation Loss:   7.3257956505, Training KL Loss: 370.6347351074, Validation KL Loss: 331.7255859375
+2024-04-29 12:38:11,507 - INFO - Epoch 15 : Training Loss:   6.8588309288, Validation Loss:   7.2020993233, Training KL Loss: 398.4323120117, Validation KL Loss: 379.8141784668
+2024-04-29 12:38:15,287 - INFO - Epoch 16 : Training Loss:   6.6579518318, Validation Loss:   7.0804758072, Training KL Loss: 430.0089111328, Validation KL Loss: 382.6683959961
+2024-04-29 12:38:19,092 - INFO - Epoch 17 : Training Loss:   7.5401606560, Validation Loss:   7.5902490616, Training KL Loss:  66.7061767578, Validation KL Loss:  44.9976081848
+2024-04-29 12:38:22,822 - INFO - Epoch 18 : Training Loss:   7.5212192535, Validation Loss:   7.7512054443, Training KL Loss:  33.8547554016, Validation KL Loss:  29.1021251678
+2024-04-29 12:38:26,495 - INFO - Epoch 19 : Training Loss:   7.5687065125, Validation Loss:   7.8155913353, Training KL Loss:  26.3042793274, Validation KL Loss:  23.7793292999
+2024-04-29 12:38:30,290 - INFO - Epoch 20 : Training Loss:   7.6381058693, Validation Loss:   8.0312519073, Training KL Loss:  22.2838535309, Validation KL Loss:  20.2411060333
+2024-04-29 12:38:34,058 - INFO - Epoch 21 : Training Loss:   7.7020640373, Validation Loss:   8.1201267242, Training KL Loss:  19.7805175781, Validation KL Loss:  17.3285942078
+2024-04-29 12:38:37,769 - INFO - Epoch 22 : Training Loss:   7.7484264374, Validation Loss:   8.1936779022, Training KL Loss:  17.7254467010, Validation KL Loss:  15.9006290436
+2024-04-29 12:38:41,388 - INFO - Epoch 23 : Training Loss:   7.7910289764, Validation Loss:   8.2972726822, Training KL Loss:  16.2170219421, Validation KL Loss:  14.5136852264
+2024-04-29 12:38:45,183 - INFO - Epoch 24 : Training Loss:   7.7914433479, Validation Loss:   8.3202877045, Training KL Loss:  14.8940649033, Validation KL Loss:  13.6585855484
+2024-04-29 12:38:49,059 - INFO - Epoch 25 : Training Loss:   7.8103938103, Validation Loss:   8.4503221512, Training KL Loss:  13.8518848419, Validation KL Loss:  12.0661859512
+2024-04-29 12:38:52,732 - INFO - Epoch 26 : Training Loss:   7.8333745003, Validation Loss:   8.5258598328, Training KL Loss:  13.0395708084, Validation KL Loss:  11.7821931839
+2024-04-29 12:38:56,415 - INFO - Epoch 27 : Training Loss:   7.8280963898, Validation Loss:   8.6041288376, Training KL Loss:  12.4054355621, Validation KL Loss:  11.0355901718
+2024-04-29 12:39:00,404 - INFO - Epoch 28 : Training Loss:   7.8381586075, Validation Loss:   8.6365709305, Training KL Loss:  11.8063488007, Validation KL Loss:  10.5627660751
+2024-04-29 12:39:04,225 - INFO - Epoch 29 : Training Loss:   7.8738021851, Validation Loss:   8.6850461960, Training KL Loss:  11.2925281525, Validation KL Loss:  10.0834770203
+2024-04-29 12:39:07,889 - INFO - Epoch 30 : Training Loss:   7.8686270714, Validation Loss:   8.8102931976, Training KL Loss:  10.8667678833, Validation KL Loss:   9.9019699097
+2024-04-29 12:39:11,495 - INFO - Epoch 31 : Training Loss:   7.8982601166, Validation Loss:   8.8254270554, Training KL Loss:  10.5013856888, Validation KL Loss:   9.5875282288
+2024-04-29 12:39:15,259 - INFO - Epoch 32 : Training Loss:   7.8735747337, Validation Loss:   8.9676113129, Training KL Loss:  10.1681365967, Validation KL Loss:   9.3852643967
+2024-04-29 12:39:19,012 - INFO - Epoch 33 : Training Loss:   7.9131026268, Validation Loss:   8.9991321564, Training KL Loss:   9.9013347626, Validation KL Loss:   8.9653072357
+2024-04-29 12:39:22,677 - INFO - Epoch 34 : Training Loss:   7.9328761101, Validation Loss:   9.0881948471, Training KL Loss:   9.6506805420, Validation KL Loss:   8.8209085464
+2024-04-29 12:39:26,300 - INFO - Epoch 35 : Training Loss:   7.9456486702, Validation Loss:   9.1608266830, Training KL Loss:   9.4145927429, Validation KL Loss:   8.8183689117
+2024-04-29 12:39:30,055 - INFO - Epoch 36 : Training Loss:   7.9965953827, Validation Loss:   9.2465696335, Training KL Loss:   9.1941566467, Validation KL Loss:   8.2562665939
+2024-04-29 12:39:33,757 - INFO - Epoch 37 : Training Loss:   8.0001602173, Validation Loss:   9.2885894775, Training KL Loss:   9.0177049637, Validation KL Loss:   8.1760854721
+2024-04-29 12:39:37,412 - INFO - Epoch 38 : Training Loss:   8.0604486465, Validation Loss:   9.3368501663, Training KL Loss:   8.8527069092, Validation KL Loss:   7.9969582558
+2024-04-29 12:39:41,033 - INFO - Epoch 39 : Training Loss:   8.0817813873, Validation Loss:   9.4717216492, Training KL Loss:   8.6883258820, Validation KL Loss:   8.0559043884
+2024-04-29 12:39:44,775 - INFO - Epoch 40 : Training Loss:   8.1291275024, Validation Loss:   9.5933256149, Training KL Loss:   8.5886316299, Validation KL Loss:   7.7629728317
+2024-04-29 12:39:48,455 - INFO - Epoch 41 : Training Loss:   8.1795806885, Validation Loss:   9.6636123657, Training KL Loss:   8.4097023010, Validation KL Loss:   7.7737808228
+2024-04-29 12:39:52,140 - INFO - Epoch 42 : Training Loss:   8.2147016525, Validation Loss:   9.7134304047, Training KL Loss:   8.3421087265, Validation KL Loss:   7.4796991348
+2024-04-29 12:39:55,816 - INFO - Epoch 43 : Training Loss:   8.2692546844, Validation Loss:   9.6986703873, Training KL Loss:   8.1936521530, Validation KL Loss:   7.4050865173
+2024-04-29 12:39:59,632 - INFO - Epoch 44 : Training Loss:   8.3039245605, Validation Loss:   9.8693847656, Training KL Loss:   8.0658550262, Validation KL Loss:   7.4072160721
+2024-04-29 12:40:03,416 - INFO - Epoch 45 : Training Loss:   8.3541078568, Validation Loss:   9.9383726120, Training KL Loss:   7.9269590378, Validation KL Loss:   7.2797803879
+2024-04-29 12:40:07,082 - INFO - Epoch 46 : Training Loss:   8.3819627762, Validation Loss:  10.0179615021, Training KL Loss:   7.8418741226, Validation KL Loss:   7.2264890671
+2024-04-29 12:40:10,789 - INFO - Epoch 47 : Training Loss:   8.4277591705, Validation Loss:  10.1040458679, Training KL Loss:   7.7170829773, Validation KL Loss:   7.1105327606
+2024-04-29 12:40:14,552 - INFO - Epoch 48 : Training Loss:   8.4842414856, Validation Loss:  10.1891145706, Training KL Loss:   7.6207027435, Validation KL Loss:   6.8824429512
+2024-04-29 12:40:18,230 - INFO - Epoch 49 : Training Loss:   8.4929962158, Validation Loss:  10.2541818619, Training KL Loss:   7.5598616600, Validation KL Loss:   6.8032174110
+2024-04-29 12:40:21,851 - INFO - Epoch 50 : Training Loss:   8.5575475693, Validation Loss:  10.2683725357, Training KL Loss:   7.4539709091, Validation KL Loss:   6.8552451134
+2024-04-29 12:40:25,625 - INFO - Epoch 51 : Training Loss:   8.6190395355, Validation Loss:  10.4266510010, Training KL Loss:   7.3378667831, Validation KL Loss:   6.7694382668
+2024-04-29 12:40:29,417 - INFO - Epoch 52 : Training Loss:   8.6349048615, Validation Loss:  10.4996509552, Training KL Loss:   7.2547531128, Validation KL Loss:   6.8354120255
+2024-04-29 12:40:33,097 - INFO - Epoch 53 : Training Loss:   8.7052574158, Validation Loss:  10.6016397476, Training KL Loss:   7.1584939957, Validation KL Loss:   6.5511426926
+2024-04-29 12:40:36,736 - INFO - Epoch 54 : Training Loss:   8.7824563980, Validation Loss:  10.6370115280, Training KL Loss:   7.1005368233, Validation KL Loss:   6.4140791893
+2024-04-29 12:40:40,640 - INFO - Epoch 55 : Training Loss:   8.8024206161, Validation Loss:  10.7137680054, Training KL Loss:   7.0216650963, Validation KL Loss:   6.4269733429
+2024-04-29 12:40:44,380 - INFO - Epoch 56 : Training Loss:   8.8477373123, Validation Loss:  10.8304738998, Training KL Loss:   6.9302625656, Validation KL Loss:   6.3213667870
+2024-04-29 12:40:48,097 - INFO - Epoch 57 : Training Loss:   8.9091472626, Validation Loss:  10.8413782120, Training KL Loss:   6.8651113510, Validation KL Loss:   6.2119183540
+2024-04-29 12:40:51,808 - INFO - Epoch 58 : Training Loss:   8.9470739365, Validation Loss:  10.8734598160, Training KL Loss:   6.8002300262, Validation KL Loss:   6.3618154526
+2024-04-29 12:40:55,579 - INFO - Epoch 59 : Training Loss:   8.9853420258, Validation Loss:  10.8602924347, Training KL Loss:   6.7158017159, Validation KL Loss:   6.1019644737
+2024-04-29 12:40:59,427 - INFO - Epoch 60 : Training Loss:   9.0580730438, Validation Loss:  10.9724864960, Training KL Loss:   6.6496043205, Validation KL Loss:   6.2113838196
+2024-04-29 12:41:03,123 - INFO - Epoch 61 : Training Loss:   9.1030797958, Validation Loss:  11.0431127548, Training KL Loss:   6.5953960419, Validation KL Loss:   6.0563082695
+2024-04-29 12:41:06,737 - INFO - Epoch 62 : Training Loss:   9.1340055466, Validation Loss:  11.1366291046, Training KL Loss:   6.5277214050, Validation KL Loss:   5.9028315544
+2024-04-29 12:41:10,474 - INFO - Epoch 63 : Training Loss:   9.1897668839, Validation Loss:  11.1729373932, Training KL Loss:   6.4283914566, Validation KL Loss:   6.0248122215
+2024-04-29 12:41:14,179 - INFO - Epoch 64 : Training Loss:   9.2351408005, Validation Loss:  11.2853565216, Training KL Loss:   6.3667802811, Validation KL Loss:   5.7385773659
+2024-04-29 12:41:17,888 - INFO - Epoch 65 : Training Loss:   9.2592515945, Validation Loss:  11.3346662521, Training KL Loss:   6.2988681793, Validation KL Loss:   5.6602559090
+2024-04-29 12:41:21,524 - INFO - Epoch 66 : Training Loss:   9.3677558899, Validation Loss:  11.2664432526, Training KL Loss:   6.2515773773, Validation KL Loss:   5.7543358803
+2024-04-29 12:41:25,245 - INFO - Epoch 67 : Training Loss:   9.3823804855, Validation Loss:  11.3961696625, Training KL Loss:   6.2026095390, Validation KL Loss:   5.6855130196
+2024-04-29 12:41:28,973 - INFO - Epoch 68 : Training Loss:   9.4178552628, Validation Loss:  11.3658123016, Training KL Loss:   6.1202788353, Validation KL Loss:   5.5062885284
+2024-04-29 12:41:32,653 - INFO - Epoch 69 : Training Loss:   9.4974575043, Validation Loss:  11.5072765350, Training KL Loss:   6.1151027679, Validation KL Loss:   5.6441617012
+2024-04-29 12:41:36,268 - INFO - Epoch 70 : Training Loss:   9.5260887146, Validation Loss:  11.5946016312, Training KL Loss:   6.0316033363, Validation KL Loss:   5.4737467766
+2024-04-29 12:41:40,024 - INFO - Epoch 71 : Training Loss:   9.5518827438, Validation Loss:  11.5656290054, Training KL Loss:   5.9454026222, Validation KL Loss:   5.3075628281
+2024-04-29 12:41:43,750 - INFO - Epoch 72 : Training Loss:   9.6053104401, Validation Loss:  11.6533794403, Training KL Loss:   5.8970112801, Validation KL Loss:   5.3367500305
+2024-04-29 12:41:47,375 - INFO - Epoch 73 : Training Loss:   9.6549167633, Validation Loss:  11.6874837875, Training KL Loss:   5.8628859520, Validation KL Loss:   5.3137879372
+2024-04-29 12:41:51,153 - INFO - Epoch 74 : Training Loss:   9.7093687057, Validation Loss:  11.7428512573, Training KL Loss:   5.7767782211, Validation KL Loss:   5.2782335281
+2024-04-29 12:41:54,914 - INFO - Epoch 75 : Training Loss:   9.7492513657, Validation Loss:  11.7800750732, Training KL Loss:   5.7428627014, Validation KL Loss:   5.2603878975
+2024-04-29 12:41:58,636 - INFO - Epoch 76 : Training Loss:   9.8194084167, Validation Loss:  11.8120613098, Training KL Loss:   5.7111597061, Validation KL Loss:   5.2250146866
+2024-04-29 12:42:02,307 - INFO - Epoch 77 : Training Loss:   9.8380079269, Validation Loss:  11.8433618546, Training KL Loss:   5.6441259384, Validation KL Loss:   5.0587344170
+2024-04-29 12:42:06,260 - INFO - Epoch 78 : Training Loss:   9.8557682037, Validation Loss:  11.8390474319, Training KL Loss:   5.5782079697, Validation KL Loss:   5.0424685478
+2024-04-29 12:42:09,985 - INFO - Epoch 79 : Training Loss:   9.9233894348, Validation Loss:  11.9597406387, Training KL Loss:   5.5453529358, Validation KL Loss:   5.0871481895
+2024-04-29 12:42:13,651 - INFO - Epoch 80 : Training Loss:  10.0069246292, Validation Loss:  12.0305061340, Training KL Loss:   5.4946818352, Validation KL Loss:   4.9595956802
+2024-04-29 12:42:17,301 - INFO - Epoch 81 : Training Loss:  10.0090456009, Validation Loss:  12.0760154724, Training KL Loss:   5.4218568802, Validation KL Loss:   4.8845038414
+2024-04-29 12:42:21,000 - INFO - Epoch 82 : Training Loss:  10.0537357330, Validation Loss:  12.0511388779, Training KL Loss:   5.3686618805, Validation KL Loss:   4.9200439453
+2024-04-29 12:42:24,763 - INFO - Epoch 83 : Training Loss:  10.1314373016, Validation Loss:  12.1691684723, Training KL Loss:   5.3514337540, Validation KL Loss:   4.8785586357
+2024-04-29 12:42:28,479 - INFO - Epoch 84 : Training Loss:  10.1578731537, Validation Loss:  12.1839895248, Training KL Loss:   5.2970747948, Validation KL Loss:   4.7871417999
+2024-04-29 12:42:32,041 - INFO - Epoch 85 : Training Loss:  10.2148475647, Validation Loss:  12.2681989670, Training KL Loss:   5.2475280762, Validation KL Loss:   4.8425717354
+2024-04-29 12:42:35,785 - INFO - Epoch 86 : Training Loss:  10.2360343933, Validation Loss:  12.2339391708, Training KL Loss:   5.1831154823, Validation KL Loss:   4.7018308640
+2024-04-29 12:42:39,586 - INFO - Epoch 87 : Training Loss:  10.3434276581, Validation Loss:  12.3535919189, Training KL Loss:   5.1834454536, Validation KL Loss:   4.6840739250
+2024-04-29 12:42:43,384 - INFO - Epoch 88 : Training Loss:  10.3571424484, Validation Loss:  12.3522176743, Training KL Loss:   5.1321229935, Validation KL Loss:   4.7274942398
+2024-04-29 12:42:46,979 - INFO - Epoch 89 : Training Loss:  10.3918981552, Validation Loss:  12.3439264297, Training KL Loss:   5.0878529549, Validation KL Loss:   4.6409144402
+2024-04-29 12:42:50,740 - INFO - Epoch 90 : Training Loss:  10.3981351852, Validation Loss:  12.4726600647, Training KL Loss:   5.0109272003, Validation KL Loss:   4.5176324844
+2024-04-29 12:42:54,493 - INFO - Epoch 91 : Training Loss:  10.4654006958, Validation Loss:  12.4208602905, Training KL Loss:   4.9804277420, Validation KL Loss:   4.5016002655
+2024-04-29 12:42:58,253 - INFO - Epoch 92 : Training Loss:  10.4634723663, Validation Loss:  12.5798940659, Training KL Loss:   4.9515080452, Validation KL Loss:   4.4894018173
+2024-04-29 12:43:01,854 - INFO - Epoch 93 : Training Loss:  10.5471935272, Validation Loss:  12.5501890182, Training KL Loss:   4.8980813026, Validation KL Loss:   4.3932762146
+2024-04-29 12:43:05,649 - INFO - Epoch 94 : Training Loss:  10.6256389618, Validation Loss:  12.6240215302, Training KL Loss:   4.8544745445, Validation KL Loss:   4.4906616211
+2024-04-29 12:43:09,379 - INFO - Epoch 95 : Training Loss:  10.6547002792, Validation Loss:  12.6548728943, Training KL Loss:   4.8123936653, Validation KL Loss:   4.3504295349
+2024-04-29 12:43:13,032 - INFO - Epoch 96 : Training Loss:  10.6592626572, Validation Loss:  12.6438512802, Training KL Loss:   4.7734165192, Validation KL Loss:   4.3424720764
+2024-04-29 12:43:16,647 - INFO - Epoch 97 : Training Loss:  10.6930198669, Validation Loss:  12.7450809479, Training KL Loss:   4.7328953743, Validation KL Loss:   4.3504428864
+2024-04-29 12:43:20,936 - INFO - Epoch 98 : Training Loss:  10.8022947311, Validation Loss:  12.7850475311, Training KL Loss:   4.7372927666, Validation KL Loss:   4.2019186020
+2024-04-29 12:43:24,743 - INFO - Epoch 99 : Training Loss:  10.8175373077, Validation Loss:  12.7382860184, Training KL Loss:   4.6688728333, Validation KL Loss:   4.1540441513
+2024-04-29 12:43:28,695 - INFO - Epoch 100: Training Loss:  10.8447275162, Validation Loss:  12.7326059341, Training KL Loss:   4.6345100403, Validation KL Loss:   4.1740002632
+2024-04-29 12:43:32,507 - INFO - Epoch 101: Training Loss:  10.8552103043, Validation Loss:  12.8650970459, Training KL Loss:   4.5918226242, Validation KL Loss:   4.1223268509
+2024-04-29 12:43:36,926 - INFO - Epoch 102: Training Loss:  10.9146804810, Validation Loss:  12.9185266495, Training KL Loss:   4.5854296684, Validation KL Loss:   4.0505018234
+2024-04-29 12:43:40,943 - INFO - Epoch 103: Training Loss:  10.9566965103, Validation Loss:  12.9224557877, Training KL Loss:   4.5044083595, Validation KL Loss:   4.0560288429
+2024-04-29 12:43:44,588 - INFO - Epoch 104: Training Loss:  10.9906148911, Validation Loss:  12.9164991379, Training KL Loss:   4.4637680054, Validation KL Loss:   4.0385799408
+2024-04-29 12:43:48,235 - INFO - Epoch 105: Training Loss:  11.0267276764, Validation Loss:  12.9930629730, Training KL Loss:   4.4374938011, Validation KL Loss:   4.0135011673
+2024-04-29 12:43:51,773 - INFO - Epoch 106: Training Loss:  11.0696477890, Validation Loss:  12.9799900055, Training KL Loss:   4.4006195068, Validation KL Loss:   3.9871981144
+2024-04-29 12:43:55,364 - INFO - Epoch 107: Training Loss:  11.1257877350, Validation Loss:  13.1022453308, Training KL Loss:   4.3777852058, Validation KL Loss:   3.9400320053
+2024-04-29 12:43:59,044 - INFO - Epoch 108: Training Loss:  11.1536941528, Validation Loss:  13.0842704773, Training KL Loss:   4.3090901375, Validation KL Loss:   3.8692011833
+2024-04-29 12:44:02,516 - INFO - Epoch 109: Training Loss:  11.1612215042, Validation Loss:  13.1413335800, Training KL Loss:   4.3034844398, Validation KL Loss:   3.8896601200
+2024-04-29 12:44:06,113 - INFO - Epoch 110: Training Loss:  11.2328357697, Validation Loss:  13.1141614914, Training KL Loss:   4.2827916145, Validation KL Loss:   3.8313710690
+2024-04-29 12:44:09,667 - INFO - Epoch 111: Training Loss:  11.2575483322, Validation Loss:  13.2002878189, Training KL Loss:   4.2194466591, Validation KL Loss:   3.7742874622
+2024-04-29 12:44:13,182 - INFO - Epoch 112: Training Loss:  11.2989482880, Validation Loss:  13.2357835770, Training KL Loss:   4.1820068359, Validation KL Loss:   3.7468378544
+2024-04-29 12:44:16,615 - INFO - Epoch 113: Training Loss:  11.3487148285, Validation Loss:  13.3143806458, Training KL Loss:   4.1649155617, Validation KL Loss:   3.6612451077
+2024-04-29 12:44:20,176 - INFO - Epoch 114: Training Loss:  11.3826141357, Validation Loss:  13.3364715576, Training KL Loss:   4.1050605774, Validation KL Loss:   3.6437501907
+2024-04-29 12:44:23,676 - INFO - Epoch 115: Training Loss:  11.4188747406, Validation Loss:  13.2847070694, Training KL Loss:   4.0874538422, Validation KL Loss:   3.6345970631
+2024-04-29 12:44:27,192 - INFO - Epoch 116: Training Loss:  11.4675388336, Validation Loss:  13.3134813309, Training KL Loss:   4.0724620819, Validation KL Loss:   3.6062476635
+2024-04-29 12:44:31,363 - INFO - Fold 2 Metrics (Macro) - Precision: 0.3239018986, Recall: 0.1205596984, F1: 0.1581264797, Roc_auc: 0.0000000000, Auprc: 0.0000000000
+2024-04-29 12:44:31,364 - INFO - Fold 2 Metrics (Micro) - Precision: 0.8379693152, Recall: 0.3980801138, F1: 0.5397501306, Roc_auc: 0.9624159047, Auprc: 0.5783676922
+2024-04-29 12:44:31,376 - INFO - ================================================================== Fold 4 ===================================================================
+2024-04-29 12:44:37,674 - INFO - Epoch 1  : Training Loss:  28.0911598206, Validation Loss:  16.2025413513, Training KL Loss:   2.4722323418, Validation KL Loss:   1.1167672873
+2024-04-29 12:44:41,172 - INFO - Epoch 2  : Training Loss:  15.2827434540, Validation Loss:  14.3477859497, Training KL Loss:  12.1121463776, Validation KL Loss:  27.0897674561
+2024-04-29 12:44:44,714 - INFO - Epoch 3  : Training Loss:  13.7945747375, Validation Loss:  12.7857408524, Training KL Loss:  48.6376686096, Validation KL Loss:  65.1385726929
+2024-04-29 12:44:48,294 - INFO - Epoch 4  : Training Loss:  12.2657051086, Validation Loss:  11.3098640442, Training KL Loss:  85.0423660278, Validation KL Loss: 103.0060501099
+2024-04-29 12:44:51,734 - INFO - Epoch 5  : Training Loss:  11.0087690353, Validation Loss:  10.4771404266, Training KL Loss: 117.4997711182, Validation KL Loss: 124.6825408936
+2024-04-29 12:44:55,328 - INFO - Epoch 6  : Training Loss:  10.1702919006, Validation Loss:   9.6312112808, Training KL Loss: 144.9389343262, Validation KL Loss: 153.2307739258
+2024-04-29 12:44:58,902 - INFO - Epoch 7  : Training Loss:   9.5050506592, Validation Loss:   9.1331720352, Training KL Loss: 182.1117401123, Validation KL Loss: 181.4255371094
+2024-04-29 12:45:02,337 - INFO - Epoch 8  : Training Loss:   8.9725685120, Validation Loss:   8.6858491898, Training KL Loss: 209.6794281006, Validation KL Loss: 213.9372558594
+2024-04-29 12:45:05,998 - INFO - Epoch 9  : Training Loss:   8.5168037415, Validation Loss:   8.3826227188, Training KL Loss: 233.5443572998, Validation KL Loss: 215.6464233398
+2024-04-29 12:45:09,786 - INFO - Epoch 10 : Training Loss:   8.1201438904, Validation Loss:   8.0600099564, Training KL Loss: 256.0138244629, Validation KL Loss: 247.5689086914
+2024-04-29 12:45:13,587 - INFO - Epoch 11 : Training Loss:   7.7686882019, Validation Loss:   7.8028993607, Training KL Loss: 289.2230834961, Validation KL Loss: 280.6840820312
+2024-04-29 12:45:17,094 - INFO - Epoch 12 : Training Loss:   7.4372425079, Validation Loss:   7.5038275719, Training KL Loss: 318.0684814453, Validation KL Loss: 300.6549072266
+2024-04-29 12:45:20,655 - INFO - Epoch 13 : Training Loss:   7.1407556534, Validation Loss:   7.3682866096, Training KL Loss: 342.3388671875, Validation KL Loss: 326.0908813477
+2024-04-29 12:45:24,290 - INFO - Epoch 14 : Training Loss:   6.8920111656, Validation Loss:   7.2785129547, Training KL Loss: 372.7483825684, Validation KL Loss: 362.6874389648
+2024-04-29 12:45:27,798 - INFO - Epoch 15 : Training Loss:   6.6978044510, Validation Loss:   7.2849235535, Training KL Loss: 400.2131042480, Validation KL Loss: 381.9790954590
+2024-04-29 12:45:31,329 - INFO - Epoch 16 : Training Loss:   6.5193705559, Validation Loss:   7.0644011497, Training KL Loss: 424.1382751465, Validation KL Loss: 417.4658508301
+2024-04-29 12:45:34,997 - INFO - Epoch 17 : Training Loss:   7.3884806633, Validation Loss:   7.7389631271, Training KL Loss:  67.2486648560, Validation KL Loss:  44.2042961121
+2024-04-29 12:45:38,524 - INFO - Epoch 18 : Training Loss:   7.3540368080, Validation Loss:   7.8791193962, Training KL Loss:  34.7824668884, Validation KL Loss:  28.6667079926
+2024-04-29 12:45:41,966 - INFO - Epoch 19 : Training Loss:   7.4178352356, Validation Loss:   7.9209332466, Training KL Loss:  26.7934665680, Validation KL Loss:  23.3971195221
+2024-04-29 12:45:45,589 - INFO - Epoch 20 : Training Loss:   7.4922223091, Validation Loss:   8.0055484772, Training KL Loss:  22.7876415253, Validation KL Loss:  19.7246742249
+2024-04-29 12:45:49,119 - INFO - Epoch 21 : Training Loss:   7.5287470818, Validation Loss:   8.2062091827, Training KL Loss:  20.3172550201, Validation KL Loss:  18.6312217712
+2024-04-29 12:45:52,672 - INFO - Epoch 22 : Training Loss:   7.5684547424, Validation Loss:   8.3041992188, Training KL Loss:  18.4768314362, Validation KL Loss:  16.5036849976
+2024-04-29 12:45:56,200 - INFO - Epoch 23 : Training Loss:   7.6102766991, Validation Loss:   8.3412904739, Training KL Loss:  17.0257205963, Validation KL Loss:  15.5566749573
+2024-04-29 12:46:00,042 - INFO - Epoch 24 : Training Loss:   7.6180672646, Validation Loss:   8.4213895798, Training KL Loss:  15.8235082626, Validation KL Loss:  14.3647251129
+2024-04-29 12:46:03,556 - INFO - Epoch 25 : Training Loss:   7.6314520836, Validation Loss:   8.5249700546, Training KL Loss:  14.7658414841, Validation KL Loss:  12.9532213211
+2024-04-29 12:46:07,081 - INFO - Epoch 26 : Training Loss:   7.6654744148, Validation Loss:   8.6660690308, Training KL Loss:  13.9264183044, Validation KL Loss:  12.8761062622
+2024-04-29 12:46:10,683 - INFO - Epoch 27 : Training Loss:   7.6913123131, Validation Loss:   8.7316722870, Training KL Loss:  13.2921276093, Validation KL Loss:  11.8393354416
+2024-04-29 12:46:14,215 - INFO - Epoch 28 : Training Loss:   7.6534409523, Validation Loss:   8.7208070755, Training KL Loss:  12.6182231903, Validation KL Loss:  11.5931615829
+2024-04-29 12:46:17,704 - INFO - Epoch 29 : Training Loss:   7.6811318398, Validation Loss:   8.7750921249, Training KL Loss:  12.1757507324, Validation KL Loss:  10.9248342514
+2024-04-29 12:46:21,180 - INFO - Epoch 30 : Training Loss:   7.6864466667, Validation Loss:   8.7566967010, Training KL Loss:  11.6699209213, Validation KL Loss:  10.6576976776
+2024-04-29 12:46:24,744 - INFO - Epoch 31 : Training Loss:   7.7295002937, Validation Loss:   8.9722461700, Training KL Loss:  11.2654304504, Validation KL Loss:  10.0041484833
+2024-04-29 12:46:28,260 - INFO - Epoch 32 : Training Loss:   7.7292819023, Validation Loss:   8.9070320129, Training KL Loss:  10.8770294189, Validation KL Loss:   9.9604730606
+2024-04-29 12:46:31,763 - INFO - Epoch 33 : Training Loss:   7.7526860237, Validation Loss:   9.0163831711, Training KL Loss:  10.5414247513, Validation KL Loss:   9.4847841263
+2024-04-29 12:46:35,353 - INFO - Epoch 34 : Training Loss:   7.8203864098, Validation Loss:   9.2031669617, Training KL Loss:  10.3052778244, Validation KL Loss:   9.3657531738
+2024-04-29 12:46:38,886 - INFO - Epoch 35 : Training Loss:   7.8375549316, Validation Loss:   9.1684083939, Training KL Loss:  10.1052274704, Validation KL Loss:   9.1572713852
+2024-04-29 12:46:42,349 - INFO - Epoch 36 : Training Loss:   7.8570609093, Validation Loss:   9.2712926865, Training KL Loss:   9.8762245178, Validation KL Loss:   8.8472232819
+2024-04-29 12:46:45,968 - INFO - Epoch 37 : Training Loss:   7.9147768021, Validation Loss:   9.3521251678, Training KL Loss:   9.6920051575, Validation KL Loss:   8.8374977112
+2024-04-29 12:46:49,529 - INFO - Epoch 38 : Training Loss:   7.9470710754, Validation Loss:   9.4718837738, Training KL Loss:   9.4377450943, Validation KL Loss:   8.5230569839
+2024-04-29 12:46:52,994 - INFO - Epoch 39 : Training Loss:   8.0047302246, Validation Loss:   9.5009641647, Training KL Loss:   9.2815427780, Validation KL Loss:   8.3557157516
+2024-04-29 12:46:56,443 - INFO - Epoch 40 : Training Loss:   8.0115919113, Validation Loss:   9.6709003448, Training KL Loss:   9.1260490417, Validation KL Loss:   8.2911195755
+2024-04-29 12:47:00,108 - INFO - Epoch 41 : Training Loss:   8.0711288452, Validation Loss:   9.7646141052, Training KL Loss:   8.9531555176, Validation KL Loss:   8.2469415665
+2024-04-29 12:47:03,617 - INFO - Epoch 42 : Training Loss:   8.0803403854, Validation Loss:   9.7853755951, Training KL Loss:   8.7746372223, Validation KL Loss:   7.9826431274
+2024-04-29 12:47:07,102 - INFO - Epoch 43 : Training Loss:   8.1658821106, Validation Loss:   9.8528795242, Training KL Loss:   8.6649017334, Validation KL Loss:   7.8946928978
+2024-04-29 12:47:10,694 - INFO - Epoch 44 : Training Loss:   8.1875581741, Validation Loss:   9.8921794891, Training KL Loss:   8.5031003952, Validation KL Loss:   7.6655845642
+2024-04-29 12:47:14,182 - INFO - Epoch 45 : Training Loss:   8.2271432877, Validation Loss:  10.1018991470, Training KL Loss:   8.2944660187, Validation KL Loss:   7.5658946037
+2024-04-29 12:47:17,627 - INFO - Epoch 46 : Training Loss:   8.2942409515, Validation Loss:  10.0604066849, Training KL Loss:   8.2184991837, Validation KL Loss:   7.3647818565
+2024-04-29 12:47:21,181 - INFO - Epoch 47 : Training Loss:   8.3140974045, Validation Loss:  10.1881227493, Training KL Loss:   8.1055688858, Validation KL Loss:   7.3925571442
+2024-04-29 12:47:24,721 - INFO - Epoch 48 : Training Loss:   8.3473577499, Validation Loss:  10.2804613113, Training KL Loss:   7.9657607079, Validation KL Loss:   7.2146568298
+2024-04-29 12:47:28,252 - INFO - Epoch 49 : Training Loss:   8.4053316116, Validation Loss:  10.3420104980, Training KL Loss:   7.8668813705, Validation KL Loss:   7.1366176605
+2024-04-29 12:47:31,728 - INFO - Epoch 50 : Training Loss:   8.4556140900, Validation Loss:  10.4413270950, Training KL Loss:   7.7248606682, Validation KL Loss:   7.1070985794
+2024-04-29 12:47:35,348 - INFO - Epoch 51 : Training Loss:   8.4924821854, Validation Loss:  10.4985780716, Training KL Loss:   7.6236577034, Validation KL Loss:   6.9290246964
+2024-04-29 12:47:38,832 - INFO - Epoch 52 : Training Loss:   8.5524311066, Validation Loss:  10.5886325836, Training KL Loss:   7.5347666740, Validation KL Loss:   6.9012289047
+2024-04-29 12:47:42,288 - INFO - Epoch 53 : Training Loss:   8.5720682144, Validation Loss:  10.6168756485, Training KL Loss:   7.4314894676, Validation KL Loss:   6.7199335098
+2024-04-29 12:47:45,879 - INFO - Epoch 54 : Training Loss:   8.6711711884, Validation Loss:  10.7649908066, Training KL Loss:   7.3216156960, Validation KL Loss:   6.8185439110
+2024-04-29 12:47:49,387 - INFO - Epoch 55 : Training Loss:   8.6689825058, Validation Loss:  10.6704120636, Training KL Loss:   7.2428965569, Validation KL Loss:   6.6155977249
+2024-04-29 12:47:52,872 - INFO - Epoch 56 : Training Loss:   8.7297029495, Validation Loss:  10.7385435104, Training KL Loss:   7.1404585838, Validation KL Loss:   6.4971790314
+2024-04-29 12:47:56,421 - INFO - Epoch 57 : Training Loss:   8.8083610535, Validation Loss:  10.8554878235, Training KL Loss:   7.0536346436, Validation KL Loss:   6.4486255646
+2024-04-29 12:48:00,036 - INFO - Epoch 58 : Training Loss:   8.8014431000, Validation Loss:  10.9192476273, Training KL Loss:   6.9437327385, Validation KL Loss:   6.4147367477
+2024-04-29 12:48:03,548 - INFO - Epoch 59 : Training Loss:   8.8523101807, Validation Loss:  11.0269336700, Training KL Loss:   6.8487238884, Validation KL Loss:   6.1518535614
+2024-04-29 12:48:06,995 - INFO - Epoch 60 : Training Loss:   8.9105434418, Validation Loss:  11.1460456848, Training KL Loss:   6.8241171837, Validation KL Loss:   6.1520390511
+2024-04-29 12:48:10,606 - INFO - Epoch 61 : Training Loss:   8.9926166534, Validation Loss:  11.0811672211, Training KL Loss:   6.7361116409, Validation KL Loss:   6.2084951401
+2024-04-29 12:48:14,117 - INFO - Epoch 62 : Training Loss:   9.0112218857, Validation Loss:  11.2036151886, Training KL Loss:   6.6445784569, Validation KL Loss:   6.0341658592
+2024-04-29 12:48:17,587 - INFO - Epoch 63 : Training Loss:   9.0657472610, Validation Loss:  11.3253297806, Training KL Loss:   6.5774259567, Validation KL Loss:   6.1169428825
+2024-04-29 12:48:21,236 - INFO - Epoch 64 : Training Loss:   9.0985622406, Validation Loss:  11.2742786407, Training KL Loss:   6.4843235016, Validation KL Loss:   5.8746299744
+2024-04-29 12:48:24,759 - INFO - Epoch 65 : Training Loss:   9.1469440460, Validation Loss:  11.2297239304, Training KL Loss:   6.4350094795, Validation KL Loss:   5.8355846405
+2024-04-29 12:48:28,262 - INFO - Epoch 66 : Training Loss:   9.2121286392, Validation Loss:  11.4618968964, Training KL Loss:   6.3786497116, Validation KL Loss:   5.9179406166
+2024-04-29 12:48:31,671 - INFO - Epoch 67 : Training Loss:   9.2607650757, Validation Loss:  11.4381704330, Training KL Loss:   6.2946381569, Validation KL Loss:   5.7491044998
+2024-04-29 12:48:35,261 - INFO - Epoch 68 : Training Loss:   9.2652692795, Validation Loss:  11.6059331894, Training KL Loss:   6.2193946838, Validation KL Loss:   5.7420969009
+2024-04-29 12:48:38,771 - INFO - Epoch 69 : Training Loss:   9.3520231247, Validation Loss:  11.5603923798, Training KL Loss:   6.1788253784, Validation KL Loss:   5.6888308525
+2024-04-29 12:48:42,232 - INFO - Epoch 70 : Training Loss:   9.3841276169, Validation Loss:  11.5600481033, Training KL Loss:   6.1117739677, Validation KL Loss:   5.6250972748
+2024-04-29 12:48:45,796 - INFO - Epoch 71 : Training Loss:   9.4035520554, Validation Loss:  11.6835803986, Training KL Loss:   6.0230951309, Validation KL Loss:   5.5421361923
+2024-04-29 12:48:49,465 - INFO - Epoch 72 : Training Loss:   9.4734191895, Validation Loss:  11.6773042679, Training KL Loss:   5.9845781326, Validation KL Loss:   5.4931159019
+2024-04-29 12:48:52,948 - INFO - Epoch 73 : Training Loss:   9.5347766876, Validation Loss:  11.8446741104, Training KL Loss:   5.9428839684, Validation KL Loss:   5.4789581299
+2024-04-29 12:48:56,466 - INFO - Epoch 74 : Training Loss:   9.5668964386, Validation Loss:  11.7564620972, Training KL Loss:   5.8521113396, Validation KL Loss:   5.5164575577
+2024-04-29 12:49:00,242 - INFO - Epoch 75 : Training Loss:   9.6135358810, Validation Loss:  11.8552179337, Training KL Loss:   5.8185520172, Validation KL Loss:   5.3684129715
+2024-04-29 12:49:03,785 - INFO - Epoch 76 : Training Loss:   9.6754407883, Validation Loss:  11.9509010315, Training KL Loss:   5.7850914001, Validation KL Loss:   5.2525463104
+2024-04-29 12:49:07,209 - INFO - Epoch 77 : Training Loss:   9.6888380051, Validation Loss:  11.9372014999, Training KL Loss:   5.7041845322, Validation KL Loss:   5.0531969070
+2024-04-29 12:49:10,848 - INFO - Epoch 78 : Training Loss:   9.7277231216, Validation Loss:  12.1149435043, Training KL Loss:   5.6584005356, Validation KL Loss:   5.1262173653
+2024-04-29 12:49:14,346 - INFO - Epoch 79 : Training Loss:   9.7717962265, Validation Loss:  12.0338687897, Training KL Loss:   5.5897302628, Validation KL Loss:   5.0722904205
+2024-04-29 12:49:17,775 - INFO - Epoch 80 : Training Loss:   9.8812446594, Validation Loss:  12.0332183838, Training KL Loss:   5.5764231682, Validation KL Loss:   5.0120658875
+2024-04-29 12:49:21,346 - INFO - Epoch 81 : Training Loss:   9.8418636322, Validation Loss:  12.1239719391, Training KL Loss:   5.4801464081, Validation KL Loss:   4.9539837837
+2024-04-29 12:49:25,000 - INFO - Epoch 82 : Training Loss:   9.9389791489, Validation Loss:  12.1894912720, Training KL Loss:   5.4536428452, Validation KL Loss:   4.9181990623
+2024-04-29 12:49:28,485 - INFO - Epoch 83 : Training Loss:   9.9913425446, Validation Loss:  12.1123695374, Training KL Loss:   5.4080867767, Validation KL Loss:   4.9595556259
+2024-04-29 12:49:31,909 - INFO - Epoch 84 : Training Loss:   9.9973173141, Validation Loss:  12.3187627792, Training KL Loss:   5.3210129738, Validation KL Loss:   4.8476915359
+2024-04-29 12:49:35,520 - INFO - Epoch 85 : Training Loss:  10.0747880936, Validation Loss:  12.3270692825, Training KL Loss:   5.3057403564, Validation KL Loss:   4.8073482513
+2024-04-29 12:49:39,021 - INFO - Epoch 86 : Training Loss:  10.1104946136, Validation Loss:  12.3150739670, Training KL Loss:   5.2555961609, Validation KL Loss:   4.7566480637
+2024-04-29 12:49:42,698 - INFO - Epoch 87 : Training Loss:  10.1223793030, Validation Loss:  12.3264293671, Training KL Loss:   5.2113790512, Validation KL Loss:   4.6981472969
+2024-04-29 12:49:46,271 - INFO - Epoch 88 : Training Loss:  10.1787519455, Validation Loss:  12.3688259125, Training KL Loss:   5.1444368362, Validation KL Loss:   4.6132788658
+2024-04-29 12:49:49,832 - INFO - Epoch 89 : Training Loss:  10.2593946457, Validation Loss:  12.3910970688, Training KL Loss:   5.1263499260, Validation KL Loss:   4.5617642403
+2024-04-29 12:49:53,321 - INFO - Epoch 90 : Training Loss:  10.3062410355, Validation Loss:  12.5552654266, Training KL Loss:   5.1044669151, Validation KL Loss:   4.6031789780
+2024-04-29 12:49:56,799 - INFO - Epoch 91 : Training Loss:  10.3118391037, Validation Loss:  12.4357767105, Training KL Loss:   5.0222077370, Validation KL Loss:   4.4749188423
+2024-04-29 12:50:00,880 - INFO - Epoch 92 : Training Loss:  10.3917522430, Validation Loss:  12.5752630234, Training KL Loss:   5.0022931099, Validation KL Loss:   4.4583835602
+2024-04-29 12:50:05,362 - INFO - Epoch 93 : Training Loss:  10.4051046371, Validation Loss:  12.6077041626, Training KL Loss:   4.9479656219, Validation KL Loss:   4.4539160728
+2024-04-29 12:50:09,205 - INFO - Epoch 94 : Training Loss:  10.4744119644, Validation Loss:  12.7630109787, Training KL Loss:   4.9173817635, Validation KL Loss:   4.4288239479
+2024-04-29 12:50:13,093 - INFO - Epoch 95 : Training Loss:  10.4971370697, Validation Loss:  12.6388473511, Training KL Loss:   4.8693618774, Validation KL Loss:   4.3151245117
+2024-04-29 12:50:16,898 - INFO - Epoch 96 : Training Loss:  10.5727310181, Validation Loss:  12.6904964447, Training KL Loss:   4.8332066536, Validation KL Loss:   4.3763527870
+2024-04-29 12:50:20,572 - INFO - Epoch 97 : Training Loss:  10.5704698563, Validation Loss:  12.7723417282, Training KL Loss:   4.7783923149, Validation KL Loss:   4.2940969467
+2024-04-29 12:50:24,161 - INFO - Epoch 98 : Training Loss:  10.6135578156, Validation Loss:  12.7479000092, Training KL Loss:   4.7404694557, Validation KL Loss:   4.2540054321
+2024-04-29 12:50:27,754 - INFO - Epoch 99 : Training Loss:  10.7072267532, Validation Loss:  12.8054285049, Training KL Loss:   4.6960206032, Validation KL Loss:   4.1966381073
+2024-04-29 12:50:31,494 - INFO - Epoch 100: Training Loss:  10.7030687332, Validation Loss:  12.8203821182, Training KL Loss:   4.6853961945, Validation KL Loss:   4.2223620415
+2024-04-29 12:50:35,173 - INFO - Epoch 101: Training Loss:  10.7304506302, Validation Loss:  12.9287214279, Training KL Loss:   4.6238913536, Validation KL Loss:   4.2222943306
+2024-04-29 12:50:38,841 - INFO - Epoch 102: Training Loss:  10.7836160660, Validation Loss:  12.8448448181, Training KL Loss:   4.5856933594, Validation KL Loss:   4.0999984741
+2024-04-29 12:50:42,406 - INFO - Epoch 103: Training Loss:  10.8013124466, Validation Loss:  12.9913921356, Training KL Loss:   4.5509471893, Validation KL Loss:   4.1828460693
+2024-04-29 12:50:46,087 - INFO - Epoch 104: Training Loss:  10.8565320969, Validation Loss:  12.9533681870, Training KL Loss:   4.5365257263, Validation KL Loss:   4.0830903053
+2024-04-29 12:50:49,716 - INFO - Epoch 105: Training Loss:  10.9174404144, Validation Loss:  12.9534845352, Training KL Loss:   4.4887561798, Validation KL Loss:   3.9713943005
+2024-04-29 12:50:53,430 - INFO - Epoch 106: Training Loss:  10.9328832626, Validation Loss:  13.0205755234, Training KL Loss:   4.4192538261, Validation KL Loss:   3.9386501312
+2024-04-29 12:50:56,974 - INFO - Epoch 107: Training Loss:  10.9952096939, Validation Loss:  13.1343994141, Training KL Loss:   4.4128780365, Validation KL Loss:   3.8981099129
+2024-04-29 12:51:00,856 - INFO - Epoch 108: Training Loss:  11.0132207870, Validation Loss:  13.0915908813, Training KL Loss:   4.3704981804, Validation KL Loss:   3.8980598450
+2024-04-29 12:51:04,434 - INFO - Epoch 109: Training Loss:  11.0421209335, Validation Loss:  13.1413812637, Training KL Loss:   4.3316783905, Validation KL Loss:   3.9245650768
+2024-04-29 12:51:07,963 - INFO - Epoch 110: Training Loss:  11.0942277908, Validation Loss:  13.2734975815, Training KL Loss:   4.3044199944, Validation KL Loss:   3.8337833881
+2024-04-29 12:51:11,721 - INFO - Epoch 111: Training Loss:  11.1412601471, Validation Loss:  13.1595306396, Training KL Loss:   4.2689032555, Validation KL Loss:   3.8285918236
+2024-04-29 12:51:15,348 - INFO - Epoch 112: Training Loss:  11.1655626297, Validation Loss:  13.1662273407, Training KL Loss:   4.2288346291, Validation KL Loss:   3.8131079674
+2024-04-29 12:51:18,966 - INFO - Epoch 113: Training Loss:  11.2260217667, Validation Loss:  13.2028951645, Training KL Loss:   4.1982965469, Validation KL Loss:   3.7907545567
+2024-04-29 12:51:22,495 - INFO - Epoch 114: Training Loss:  11.2605180740, Validation Loss:  13.3552513123, Training KL Loss:   4.1764760017, Validation KL Loss:   3.7435903549
+2024-04-29 12:51:26,164 - INFO - Epoch 115: Training Loss:  11.2626085281, Validation Loss:  13.3387088776, Training KL Loss:   4.1372408867, Validation KL Loss:   3.7544009686
+2024-04-29 12:51:29,769 - INFO - Epoch 116: Training Loss:  11.3053998947, Validation Loss:  13.2965669632, Training KL Loss:   4.1021819115, Validation KL Loss:   3.6600127220
+2024-04-29 12:51:34,028 - INFO - Fold 3 Metrics (Macro) - Precision: 0.3426232323, Recall: 0.1267439650, F1: 0.1653423169, Roc_auc: 0.0000000000, Auprc: 0.0000000000
+2024-04-29 12:51:34,029 - INFO - Fold 3 Metrics (Micro) - Precision: 0.8159209762, Recall: 0.4157882269, F1: 0.5508610882, Roc_auc: 0.9636511722, Auprc: 0.5812942902
+2024-04-29 12:51:34,041 - INFO - ================================================================== Fold 5 ===================================================================
+2024-04-29 12:51:40,322 - INFO - Epoch 1  : Training Loss:  28.8446693420, Validation Loss:  16.5963897705, Training KL Loss:   0.8179553151, Validation KL Loss:   0.3673512936
+2024-04-29 12:51:43,911 - INFO - Epoch 2  : Training Loss:  15.9458332062, Validation Loss:  14.9694318771, Training KL Loss:  10.1787242889, Validation KL Loss:  31.5703372955
+2024-04-29 12:51:47,439 - INFO - Epoch 3  : Training Loss:  13.9881057739, Validation Loss:  12.8800821304, Training KL Loss:  49.3215255737, Validation KL Loss:  63.9813385010
+2024-04-29 12:51:51,105 - INFO - Epoch 4  : Training Loss:  12.5502071381, Validation Loss:  11.8180618286, Training KL Loss:  83.8537979126, Validation KL Loss:  93.7243347168
+2024-04-29 12:51:54,697 - INFO - Epoch 5  : Training Loss:  11.4075326920, Validation Loss:  10.5746765137, Training KL Loss: 110.9572982788, Validation KL Loss: 125.5972671509
+2024-04-29 12:51:58,361 - INFO - Epoch 6  : Training Loss:  10.4267759323, Validation Loss:   9.9553117752, Training KL Loss: 136.0521697998, Validation KL Loss: 146.0292053223
+2024-04-29 12:52:01,916 - INFO - Epoch 7  : Training Loss:   9.8853464127, Validation Loss:   9.6317701340, Training KL Loss: 160.1318511963, Validation KL Loss: 166.4552001953
+2024-04-29 12:52:05,590 - INFO - Epoch 8  : Training Loss:   9.4521684647, Validation Loss:   9.1960010529, Training KL Loss: 180.0910491943, Validation KL Loss: 175.5371093750
+2024-04-29 12:52:09,191 - INFO - Epoch 9  : Training Loss:   9.0228834152, Validation Loss:   8.8351793289, Training KL Loss: 189.4552001953, Validation KL Loss: 180.5077667236
+2024-04-29 12:52:12,758 - INFO - Epoch 10 : Training Loss:   8.6260147095, Validation Loss:   8.5368928909, Training KL Loss: 205.7013397217, Validation KL Loss: 206.6712646484
+2024-04-29 12:52:16,469 - INFO - Epoch 11 : Training Loss:   8.2920608521, Validation Loss:   8.3071470261, Training KL Loss: 229.4990081787, Validation KL Loss: 213.7187805176
+2024-04-29 12:52:20,105 - INFO - Epoch 12 : Training Loss:   7.9790339470, Validation Loss:   8.1015901566, Training KL Loss: 244.9178466797, Validation KL Loss: 228.4990386963
+2024-04-29 12:52:23,728 - INFO - Epoch 13 : Training Loss:   7.6888408661, Validation Loss:   7.8586010933, Training KL Loss: 260.2359008789, Validation KL Loss: 250.0542755127
+2024-04-29 12:52:27,214 - INFO - Epoch 14 : Training Loss:   7.4692125320, Validation Loss:   7.7598977089, Training KL Loss: 283.4711608887, Validation KL Loss: 274.7678222656
+2024-04-29 12:52:30,860 - INFO - Epoch 15 : Training Loss:   7.2113428116, Validation Loss:   7.6892437935, Training KL Loss: 310.6539916992, Validation KL Loss: 316.5386352539
+2024-04-29 12:52:34,479 - INFO - Epoch 16 : Training Loss:   7.0101079941, Validation Loss:   7.5898499489, Training KL Loss: 327.2006530762, Validation KL Loss: 305.8226928711
+2024-04-29 12:52:37,988 - INFO - Epoch 17 : Training Loss:   7.7676520348, Validation Loss:   8.0601263046, Training KL Loss:  61.4903793335, Validation KL Loss:  41.0317955017
+2024-04-29 12:52:41,694 - INFO - Epoch 18 : Training Loss:   7.7806582451, Validation Loss:   8.1575679779, Training KL Loss:  32.8368797302, Validation KL Loss:  27.0769214630
+2024-04-29 12:52:45,441 - INFO - Epoch 19 : Training Loss:   7.8300747871, Validation Loss:   8.3295145035, Training KL Loss:  25.8454494476, Validation KL Loss:  22.3673763275
+2024-04-29 12:52:49,167 - INFO - Epoch 20 : Training Loss:   7.8873085976, Validation Loss:   8.4312477112, Training KL Loss:  22.2007923126, Validation KL Loss:  19.3340873718
+2024-04-29 12:52:52,693 - INFO - Epoch 21 : Training Loss:   7.9541573524, Validation Loss:   8.5031175613, Training KL Loss:  19.8441944122, Validation KL Loss:  17.0784568787
+2024-04-29 12:52:56,411 - INFO - Epoch 22 : Training Loss:   7.9979910851, Validation Loss:   8.6442337036, Training KL Loss:  17.8979492188, Validation KL Loss:  15.7132520676
+2024-04-29 12:53:00,124 - INFO - Epoch 23 : Training Loss:   8.0113945007, Validation Loss:   8.6593570709, Training KL Loss:  16.4639873505, Validation KL Loss:  15.0137062073
+2024-04-29 12:53:03,722 - INFO - Epoch 24 : Training Loss:   8.0363216400, Validation Loss:   8.6456956863, Training KL Loss:  15.2682170868, Validation KL Loss:  13.7524204254
+2024-04-29 12:53:07,270 - INFO - Epoch 25 : Training Loss:   8.0456495285, Validation Loss:   8.7921657562, Training KL Loss:  14.2892723083, Validation KL Loss:  12.3965301514
+2024-04-29 12:53:11,008 - INFO - Epoch 26 : Training Loss:   8.0564947128, Validation Loss:   8.9022369385, Training KL Loss:  13.4736690521, Validation KL Loss:  12.3164405823
+2024-04-29 12:53:14,602 - INFO - Epoch 27 : Training Loss:   8.0664224625, Validation Loss:   8.8540773392, Training KL Loss:  12.7378864288, Validation KL Loss:  11.1501770020
+2024-04-29 12:53:18,124 - INFO - Epoch 28 : Training Loss:   8.0463752747, Validation Loss:   8.9938077927, Training KL Loss:  12.1395950317, Validation KL Loss:  10.8218240738
+2024-04-29 12:53:21,794 - INFO - Epoch 29 : Training Loss:   8.0446891785, Validation Loss:   9.0193080902, Training KL Loss:  11.5620555878, Validation KL Loss:  10.4478836060
+2024-04-29 12:53:25,467 - INFO - Epoch 30 : Training Loss:   8.0486574173, Validation Loss:   8.9807109833, Training KL Loss:  11.0790472031, Validation KL Loss:  10.1131410599
+2024-04-29 12:53:29,118 - INFO - Epoch 31 : Training Loss:   8.0513401031, Validation Loss:   9.1758251190, Training KL Loss:  10.7006120682, Validation KL Loss:   9.8498554230
+2024-04-29 12:53:32,787 - INFO - Epoch 32 : Training Loss:   8.0662050247, Validation Loss:   9.1339683533, Training KL Loss:  10.4031229019, Validation KL Loss:   9.6461668015
+2024-04-29 12:53:36,827 - INFO - Epoch 33 : Training Loss:   8.0878658295, Validation Loss:   9.2781829834, Training KL Loss:  10.1290493011, Validation KL Loss:   9.3289556503
+2024-04-29 12:53:40,865 - INFO - Epoch 34 : Training Loss:   8.1161251068, Validation Loss:   9.3885889053, Training KL Loss:   9.8440933228, Validation KL Loss:   9.1291131973
+2024-04-29 12:53:44,470 - INFO - Epoch 35 : Training Loss:   8.1251211166, Validation Loss:   9.4764585495, Training KL Loss:   9.5740509033, Validation KL Loss:   9.0342006683
+2024-04-29 12:53:48,074 - INFO - Epoch 36 : Training Loss:   8.1520938873, Validation Loss:   9.4397134781, Training KL Loss:   9.4132518768, Validation KL Loss:   9.0858135223
+2024-04-29 12:53:51,769 - INFO - Epoch 37 : Training Loss:   8.1769237518, Validation Loss:   9.5224943161, Training KL Loss:   9.2271289825, Validation KL Loss:   8.4680585861
+2024-04-29 12:53:55,444 - INFO - Epoch 38 : Training Loss:   8.2132949829, Validation Loss:   9.6745176315, Training KL Loss:   9.0330677032, Validation KL Loss:   8.3033123016
+2024-04-29 12:53:59,086 - INFO - Epoch 39 : Training Loss:   8.2505197525, Validation Loss:   9.7738685608, Training KL Loss:   8.8167037964, Validation KL Loss:   8.0019903183
+2024-04-29 12:54:02,672 - INFO - Epoch 40 : Training Loss:   8.2610816956, Validation Loss:   9.8065233231, Training KL Loss:   8.6765785217, Validation KL Loss:   8.0723218918
+2024-04-29 12:54:06,316 - INFO - Epoch 41 : Training Loss:   8.3018703461, Validation Loss:   9.8652534485, Training KL Loss:   8.5629758835, Validation KL Loss:   7.8358926773
+2024-04-29 12:54:09,916 - INFO - Epoch 42 : Training Loss:   8.3095941544, Validation Loss:   9.9873552322, Training KL Loss:   8.3351335526, Validation KL Loss:   7.5022153854
+2024-04-29 12:54:13,543 - INFO - Epoch 43 : Training Loss:   8.3813600540, Validation Loss:   9.9925117493, Training KL Loss:   8.2920522690, Validation KL Loss:   7.6786260605
+2024-04-29 12:54:17,107 - INFO - Epoch 44 : Training Loss:   8.4207658768, Validation Loss:  10.1269435883, Training KL Loss:   8.1283311844, Validation KL Loss:   7.4430041313
+2024-04-29 12:54:20,891 - INFO - Epoch 45 : Training Loss:   8.4356307983, Validation Loss:  10.1522073746, Training KL Loss:   8.0176467896, Validation KL Loss:   7.5083398819
+2024-04-29 12:54:24,505 - INFO - Epoch 46 : Training Loss:   8.4916172028, Validation Loss:  10.2776794434, Training KL Loss:   7.9380259514, Validation KL Loss:   7.2451367378
+2024-04-29 12:54:28,066 - INFO - Epoch 47 : Training Loss:   8.5349321365, Validation Loss:  10.3569526672, Training KL Loss:   7.7790560722, Validation KL Loss:   7.2861871719
+2024-04-29 12:54:31,735 - INFO - Epoch 48 : Training Loss:   8.5749511719, Validation Loss:  10.3585023880, Training KL Loss:   7.7074322701, Validation KL Loss:   7.0348672867
+2024-04-29 12:54:35,369 - INFO - Epoch 49 : Training Loss:   8.6325693130, Validation Loss:  10.3812332153, Training KL Loss:   7.6183590889, Validation KL Loss:   6.8921971321
+2024-04-29 12:54:38,942 - INFO - Epoch 50 : Training Loss:   8.6802539825, Validation Loss:  10.5841941833, Training KL Loss:   7.5153732300, Validation KL Loss:   6.9872784615
+2024-04-29 12:54:42,460 - INFO - Epoch 51 : Training Loss:   8.7314891815, Validation Loss:  10.6674919128, Training KL Loss:   7.4257521629, Validation KL Loss:   6.8707399368
+2024-04-29 12:54:46,159 - INFO - Epoch 52 : Training Loss:   8.7639293671, Validation Loss:  10.7145671844, Training KL Loss:   7.3719110489, Validation KL Loss:   6.8120565414
+2024-04-29 12:54:49,812 - INFO - Epoch 53 : Training Loss:   8.8373327255, Validation Loss:  10.7289514542, Training KL Loss:   7.2840094566, Validation KL Loss:   6.6543035507
+2024-04-29 12:54:53,409 - INFO - Epoch 54 : Training Loss:   8.8404560089, Validation Loss:  10.8635149002, Training KL Loss:   7.1455192566, Validation KL Loss:   6.6922469139
+2024-04-29 12:54:57,068 - INFO - Epoch 55 : Training Loss:   8.9161472321, Validation Loss:  10.9258518219, Training KL Loss:   7.1099019051, Validation KL Loss:   6.5011639595
+2024-04-29 12:55:00,895 - INFO - Epoch 56 : Training Loss:   8.9699897766, Validation Loss:  10.9786148071, Training KL Loss:   7.0567703247, Validation KL Loss:   6.4708533287
+2024-04-29 12:55:04,849 - INFO - Epoch 57 : Training Loss:   9.0043783188, Validation Loss:  11.0163373947, Training KL Loss:   6.9637322426, Validation KL Loss:   6.3862910271
+2024-04-29 12:55:08,472 - INFO - Epoch 58 : Training Loss:   9.0636358261, Validation Loss:  11.1013240814, Training KL Loss:   6.8757638931, Validation KL Loss:   6.2651295662
+2024-04-29 12:55:12,164 - INFO - Epoch 59 : Training Loss:   9.0980567932, Validation Loss:  11.2205076218, Training KL Loss:   6.7826967239, Validation KL Loss:   6.3096714020
+2024-04-29 12:55:15,839 - INFO - Epoch 60 : Training Loss:   9.1563577652, Validation Loss:  11.3035326004, Training KL Loss:   6.7261552811, Validation KL Loss:   6.3016300201
+2024-04-29 12:55:19,450 - INFO - Epoch 61 : Training Loss:   9.1709375381, Validation Loss:  11.2978477478, Training KL Loss:   6.6093196869, Validation KL Loss:   6.1498060226
+2024-04-29 12:55:22,943 - INFO - Epoch 62 : Training Loss:   9.2586631775, Validation Loss:  11.2896060944, Training KL Loss:   6.5683612823, Validation KL Loss:   5.9843611717
+2024-04-29 12:55:26,819 - INFO - Epoch 63 : Training Loss:   9.2815170288, Validation Loss:  11.3871459961, Training KL Loss:   6.5054869652, Validation KL Loss:   5.9549660683
+2024-04-29 12:55:30,463 - INFO - Epoch 64 : Training Loss:   9.3543720245, Validation Loss:  11.5037755966, Training KL Loss:   6.4583945274, Validation KL Loss:   5.8080301285
+2024-04-29 12:55:34,117 - INFO - Epoch 65 : Training Loss:   9.3556070328, Validation Loss:  11.5391216278, Training KL Loss:   6.3568229675, Validation KL Loss:   5.7368083000
+2024-04-29 12:55:37,645 - INFO - Epoch 66 : Training Loss:   9.4075899124, Validation Loss:  11.5987224579, Training KL Loss:   6.3103609085, Validation KL Loss:   5.8466506004
+2024-04-29 12:55:41,314 - INFO - Epoch 67 : Training Loss:   9.4889163971, Validation Loss:  11.6380424500, Training KL Loss:   6.2589697838, Validation KL Loss:   5.7625560760
+2024-04-29 12:55:44,930 - INFO - Epoch 68 : Training Loss:   9.4745769501, Validation Loss:  11.6854066849, Training KL Loss:   6.1809005737, Validation KL Loss:   5.6894021034
+2024-04-29 12:55:48,538 - INFO - Epoch 69 : Training Loss:   9.5700464249, Validation Loss:  11.7883481979, Training KL Loss:   6.1353311539, Validation KL Loss:   5.6668252945
+2024-04-29 12:55:52,219 - INFO - Epoch 70 : Training Loss:   9.6165771484, Validation Loss:  11.8070554733, Training KL Loss:   6.0704336166, Validation KL Loss:   5.6219458580
+2024-04-29 12:55:55,972 - INFO - Epoch 71 : Training Loss:   9.6609258652, Validation Loss:  11.8174428940, Training KL Loss:   6.0096454620, Validation KL Loss:   5.6292605400
+2024-04-29 12:55:59,592 - INFO - Epoch 72 : Training Loss:   9.6954755783, Validation Loss:  11.8445062637, Training KL Loss:   5.9488463402, Validation KL Loss:   5.5274720192
+2024-04-29 12:56:03,129 - INFO - Epoch 73 : Training Loss:   9.7381496429, Validation Loss:  11.8638019562, Training KL Loss:   5.9167437553, Validation KL Loss:   5.4067335129
+2024-04-29 12:56:06,793 - INFO - Epoch 74 : Training Loss:   9.8132677078, Validation Loss:  11.9577608109, Training KL Loss:   5.8583927155, Validation KL Loss:   5.3146781921
+2024-04-29 12:56:10,469 - INFO - Epoch 75 : Training Loss:   9.8081331253, Validation Loss:  12.1453227997, Training KL Loss:   5.8120675087, Validation KL Loss:   5.2488718033
+2024-04-29 12:56:14,166 - INFO - Epoch 76 : Training Loss:   9.8885145187, Validation Loss:  12.0830345154, Training KL Loss:   5.7368168831, Validation KL Loss:   5.2622604370
+2024-04-29 12:56:17,694 - INFO - Epoch 77 : Training Loss:   9.9256725311, Validation Loss:  12.1689643860, Training KL Loss:   5.6875662804, Validation KL Loss:   5.1841340065
+2024-04-29 12:56:21,382 - INFO - Epoch 78 : Training Loss:   9.9934539795, Validation Loss:  12.1271095276, Training KL Loss:   5.6402549744, Validation KL Loss:   5.1773309708
+2024-04-29 12:56:24,979 - INFO - Epoch 79 : Training Loss:  10.0632600784, Validation Loss:  12.2510910034, Training KL Loss:   5.6092267036, Validation KL Loss:   5.2223763466
+2024-04-29 12:56:28,614 - INFO - Epoch 80 : Training Loss:  10.0582914352, Validation Loss:  12.2205924988, Training KL Loss:   5.5251212120, Validation KL Loss:   5.1340432167
+2024-04-29 12:56:32,343 - INFO - Epoch 81 : Training Loss:  10.1203317642, Validation Loss:  12.3753585815, Training KL Loss:   5.4816651344, Validation KL Loss:   5.0841321945
+2024-04-29 12:56:35,999 - INFO - Epoch 82 : Training Loss:  10.1743736267, Validation Loss:  12.4072151184, Training KL Loss:   5.4532365799, Validation KL Loss:   5.0759415627
+2024-04-29 12:56:39,651 - INFO - Epoch 83 : Training Loss:  10.2396125793, Validation Loss:  12.4290285110, Training KL Loss:   5.4063625336, Validation KL Loss:   5.0287437439
+2024-04-29 12:56:43,215 - INFO - Epoch 84 : Training Loss:  10.2627201080, Validation Loss:  12.4840526581, Training KL Loss:   5.3424234390, Validation KL Loss:   4.9797968864
+2024-04-29 12:56:46,903 - INFO - Epoch 85 : Training Loss:  10.2980976105, Validation Loss:  12.4444074631, Training KL Loss:   5.2968044281, Validation KL Loss:   4.8301553726
+2024-04-29 12:56:50,568 - INFO - Epoch 86 : Training Loss:  10.3201799393, Validation Loss:  12.5349311829, Training KL Loss:   5.2366523743, Validation KL Loss:   4.9583272934
+2024-04-29 12:56:54,208 - INFO - Epoch 87 : Training Loss:  10.3817291260, Validation Loss:  12.5826129913, Training KL Loss:   5.2287883759, Validation KL Loss:   4.7594251633
+2024-04-29 12:56:57,809 - INFO - Epoch 88 : Training Loss:  10.4196252823, Validation Loss:  12.5906190872, Training KL Loss:   5.1620311737, Validation KL Loss:   4.8764276505
+2024-04-29 12:57:01,498 - INFO - Epoch 89 : Training Loss:  10.4798936844, Validation Loss:  12.6884193420, Training KL Loss:   5.1414031982, Validation KL Loss:   4.7528815269
+2024-04-29 12:57:05,107 - INFO - Epoch 90 : Training Loss:  10.5062370300, Validation Loss:  12.7157602310, Training KL Loss:   5.0750136375, Validation KL Loss:   4.7641100883
+2024-04-29 12:57:08,698 - INFO - Epoch 91 : Training Loss:  10.5810499191, Validation Loss:  12.7734556198, Training KL Loss:   5.0400314331, Validation KL Loss:   4.7195425034
+2024-04-29 12:57:12,331 - INFO - Epoch 92 : Training Loss:  10.6170558929, Validation Loss:  12.8250789642, Training KL Loss:   5.0023064613, Validation KL Loss:   4.7352609634
+2024-04-29 12:57:16,028 - INFO - Epoch 93 : Training Loss:  10.6517295837, Validation Loss:  12.7752351761, Training KL Loss:   4.9558281898, Validation KL Loss:   4.5718402863
+2024-04-29 12:57:19,613 - INFO - Epoch 94 : Training Loss:  10.7198362350, Validation Loss:  12.7866239548, Training KL Loss:   4.9009776115, Validation KL Loss:   4.5624761581
+2024-04-29 12:57:23,148 - INFO - Epoch 95 : Training Loss:  10.6991662979, Validation Loss:  12.8571634293, Training KL Loss:   4.8483114243, Validation KL Loss:   4.5636882782
+2024-04-29 12:57:26,802 - INFO - Epoch 96 : Training Loss:  10.7734317780, Validation Loss:  12.9007930756, Training KL Loss:   4.8420453072, Validation KL Loss:   4.3878893852
+2024-04-29 12:57:30,405 - INFO - Epoch 97 : Training Loss:  10.8150463104, Validation Loss:  13.0932559967, Training KL Loss:   4.7701110840, Validation KL Loss:   4.3472890854
+2024-04-29 12:57:34,057 - INFO - Epoch 98 : Training Loss:  10.8527517319, Validation Loss:  12.9736223221, Training KL Loss:   4.7798066139, Validation KL Loss:   4.3259758949
+2024-04-29 12:57:37,633 - INFO - Epoch 99 : Training Loss:  10.9149150848, Validation Loss:  12.9987831116, Training KL Loss:   4.7255086899, Validation KL Loss:   4.2163777351
+2024-04-29 12:57:41,278 - INFO - Epoch 100: Training Loss:  10.9500036240, Validation Loss:  13.1265420914, Training KL Loss:   4.6935873032, Validation KL Loss:   4.2070908546
+2024-04-29 12:57:44,893 - INFO - Epoch 101: Training Loss:  10.9816169739, Validation Loss:  13.0603199005, Training KL Loss:   4.6406679153, Validation KL Loss:   4.3178925514
+2024-04-29 12:57:48,463 - INFO - Epoch 102: Training Loss:  10.9866294861, Validation Loss:  13.0700054169, Training KL Loss:   4.5759897232, Validation KL Loss:   4.2389292717
+2024-04-29 12:57:52,157 - INFO - Epoch 103: Training Loss:  11.0899763107, Validation Loss:  13.1183862686, Training KL Loss:   4.5644507408, Validation KL Loss:   4.2129240036
+2024-04-29 12:57:55,838 - INFO - Epoch 104: Training Loss:  11.1222410202, Validation Loss:  13.1748714447, Training KL Loss:   4.5256237984, Validation KL Loss:   4.1355085373
+2024-04-29 12:57:59,669 - INFO - Epoch 105: Training Loss:  11.1162595749, Validation Loss:  13.2300500870, Training KL Loss:   4.4803476334, Validation KL Loss:   4.1163849831
+2024-04-29 12:58:03,240 - INFO - Epoch 106: Training Loss:  11.1554517746, Validation Loss:  13.2909250259, Training KL Loss:   4.4672331810, Validation KL Loss:   4.1526713371
+2024-04-29 12:58:06,941 - INFO - Epoch 107: Training Loss:  11.2606220245, Validation Loss:  13.2613563538, Training KL Loss:   4.4385752678, Validation KL Loss:   4.0492115021
+2024-04-29 12:58:10,545 - INFO - Epoch 108: Training Loss:  11.2551116943, Validation Loss:  13.3607778549, Training KL Loss:   4.3724489212, Validation KL Loss:   3.9997308254
+2024-04-29 12:58:14,207 - INFO - Epoch 109: Training Loss:  11.3457403183, Validation Loss:  13.3363475800, Training KL Loss:   4.3657593727, Validation KL Loss:   3.9925220013
+2024-04-29 12:58:17,762 - INFO - Epoch 110: Training Loss:  11.3458442688, Validation Loss:  13.4076662064, Training KL Loss:   4.3106160164, Validation KL Loss:   3.9641034603
+2024-04-29 12:58:21,408 - INFO - Epoch 111: Training Loss:  11.3954896927, Validation Loss:  13.3497056961, Training KL Loss:   4.2727737427, Validation KL Loss:   3.9412391186
+2024-04-29 12:58:25,045 - INFO - Epoch 112: Training Loss:  11.4636573792, Validation Loss:  13.4622573853, Training KL Loss:   4.2641406059, Validation KL Loss:   3.8032407761
+2024-04-29 12:58:28,652 - INFO - Epoch 113: Training Loss:  11.4663362503, Validation Loss:  13.3603172302, Training KL Loss:   4.2110795975, Validation KL Loss:   3.7426629066
+2024-04-29 12:58:32,337 - INFO - Epoch 114: Training Loss:  11.4909219742, Validation Loss:  13.5729598999, Training KL Loss:   4.1921381950, Validation KL Loss:   3.8324916363
+2024-04-29 12:58:36,007 - INFO - Epoch 115: Training Loss:  11.5405530930, Validation Loss:  13.5189943314, Training KL Loss:   4.1357636452, Validation KL Loss:   3.7538430691
+2024-04-29 12:58:39,605 - INFO - Epoch 116: Training Loss:  11.5895290375, Validation Loss:  13.6029062271, Training KL Loss:   4.1162123680, Validation KL Loss:   3.7996819019
+2024-04-29 12:58:43,810 - INFO - Fold 4 Metrics (Macro) - Precision: 0.2886583739, Recall: 0.1105297036, F1: 0.1437113980, Roc_auc: 0.0000000000, Auprc: 0.0000000000
+2024-04-29 12:58:43,810 - INFO - Fold 4 Metrics (Micro) - Precision: 0.8310332413, Recall: 0.4070416740, F1: 0.5464373077, Roc_auc: 0.9628423731, Auprc: 0.5796662752
+2024-04-29 12:58:47,909 - INFO - ============================================================= Results Summary ===============================================================
+2024-04-29 12:58:47,910 - INFO - CrossVal Metrics (Macro) - Precision: 0.3244813117 ± 0.0298718058, Recall: 0.1207177161 ± 0.0091872279, F1: 0.1582153260 ± 0.0133505858, Roc_auc: 0.0000000000 ± 0.0000000000, Auprc: 0.0000000000 ± 0.0000000000
+2024-04-29 12:58:47,910 - INFO - Testing  Metrics (Macro) - Precision: 0.3283749226, Recall: 0.1248554911, F1: 0.1609941079, Roc_auc: 0.0000000000, Auprc: 0.0000000000
+2024-04-29 12:58:47,910 - INFO - CrossVal Metrics (Micro) - Precision: 0.8287659019 ± 0.0082931455, Recall: 0.4096814995 ± 0.0075592664, F1: 0.5482436174 ± 0.0054502728, Roc_auc: 0.9637260987 ± 0.0011316113, Auprc: 0.5811964717 ± 0.0044002099
+2024-04-29 12:58:47,911 - INFO - Testing  Metrics (Micro) - Precision: 0.8295604106, Recall: 0.4225663717, F1: 0.5599182731, Roc_auc: 0.9658770925, Auprc: 0.5913500176

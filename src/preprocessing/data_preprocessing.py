@@ -9,6 +9,7 @@ from prettytable import PrettyTable
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.helpers import *
 from training.train_portion_model import *
+from training.train_presence_model import *
         
 def create_meals(data_subset, day_prefix):
     grouped = data_subset.groupby('SEQN')
@@ -210,10 +211,10 @@ def load_and_process_meal_data(meal_survey_urls, discontinued_id_map, cache_dir,
     
     preprocess_log.info(f"Raw unique food codes: {len(set(original_unique_food_codes))}")
     combined_meal_data = pd.concat(all_updated_data, ignore_index=True)
-    to_pickle(combined_meal_data, 'data/processed/meals/dataframes/combined_food_codes_standardized.pkl')
-    to_pickle(breakfast_meals, 'data/processed/meals/breakfast_meals.pkl')
-    to_pickle(lunch_meals, 'data/processed/meals/lunch_meals.pkl')
-    to_pickle(dinner_meals, 'data/processed/meals/dinner_meals.pkl')
+    to_pickle(combined_meal_data, 'data/processed/real_meals/dataframes/combined_food_codes_standardized.pkl')
+    to_pickle(breakfast_meals, 'data/processed/real_meals/breakfast_meals.pkl')
+    to_pickle(lunch_meals, 'data/processed/real_meals/lunch_meals.pkl')
+    to_pickle(dinner_meals, 'data/processed/real_meals/dinner_meals.pkl')
     
     return combined_meal_data, breakfast_meals, lunch_meals, dinner_meals
 
@@ -233,7 +234,7 @@ def remove_outliers(df, meal_type, preprocess_log, contamination=0.003):
         preprocess_log.info(f"Number of outliers removed: {num_outliers}")
         inlier_indexes = (lof_scores <= cutoff_score)
         filtered_df = df[inlier_indexes]
-        to_pickle(filtered_df, f'data/processed/meals/dataframes/{meal_type}_outliers_removed.pkl')
+        to_pickle(filtered_df, f'data/processed/real_meals/dataframes/{meal_type}_outliers_removed.pkl')
     except Exception as e:
         preprocess_log.error("Error in removing outliers: " + str(e))
     return filtered_df
@@ -263,19 +264,74 @@ def bootstrap_confidence_interval_filter(df, meal_type, preprocess_log, n_iterat
         num_rows_removed = num_rows_before - num_rows_after
         preprocess_log.info(f"Removed {num_rows_removed} meals with all zero values post-filtration")
 
-        to_pickle(filtered_df, f'data/processed/meals/dataframes/{meal_type}_bci_filtered.pkl')
+        to_pickle(filtered_df, f'data/processed/real_meals/dataframes/{meal_type}_bci_filtered.pkl')
     except Exception as e:
         preprocess_log.error("Error in bootstrap confidence interval filtering: " + str(e))
+
+def train_models_by_sparsity(data, meal_type, preprocess_log):
+    outdir = f'data/processed/real_meals/dataframes/{meal_type}'
+
+    if not os.path.exists(f'{outdir}_sparsity_filtered.pkl'):
+        foods_per_sparse, meals_per_sparse = [], []
+        fold_macro_results, fold_micro_results = [], []
+        test_macro_results, test_micro_results = [], []
         
+        config = load_config('config.json')
+        for percentage in [i  for i in range(10, 100, 5)]:
+            wb_group_name = f"sparsity_{percentage}"
+
+            respath = construct_save_path(meal_type, 'presence_model', 'results', config)
+            respath += f'sparsity_{percentage}/'
+            os.makedirs(respath, exist_ok=True)
+            logpath = construct_save_path(meal_type, 'presence_model', 'logging', config)
+            logpath += f'sparsity_{percentage}'
+            sparsity_logfile = f'{logpath}_training.log'
+            sparsity_model_train_log = setup_logger(f'sparsity_{percentage}', sparsity_logfile)
+            reduced_data = remove_columns_and_rows(data, percentage)
+            meals_per_sparse.append(reduced_data.shape[0])
+            foods_per_sparse.append(reduced_data.shape[1])
+            sparsity_model_train_log.info(f'Dataset reduced to {reduced_data.shape[0]} meals and {reduced_data.shape[1]} foods')
+
+            log_model_params(config, 'presence_model', sparsity_model_train_log)
+            sparsity_filtration_path = f'data/processed/real_meals/dataframes/sparsity_filtration/{meal_type}/'
+            os.makedirs(sparsity_filtration_path, exist_ok=True)
+            to_pickle(reduced_data, sparsity_filtration_path + f'{meal_type}_sparse_{int(percentage)}.pkl')
+            preprocess_log.info(f"Training model at {int(percentage)}% sparse columns removed...")
+            if not os.path.exists(f'{respath}result.pkl'):
+                model = PresenceModel(reduced_data.shape[1], meal_type, 'config.json')
+                model.results_save_path += f'sparsity_{int(percentage)}/'
+                model.model_save_path += f'sparsity_{int(percentage)}/'
+                fold_macro_metrics, fold_micro_metrics, test_metrics = train_presence_model(reduced_data, meal_type, wb_group_name, sparsity_model_train_log, config)
+                result = fold_macro_metrics, fold_micro_metrics, test_metrics
+                to_pickle(result, f'{respath}result.pkl')
+            else:
+                sparsity_model_train_log.info(f"{respath}result.pkl already exists, using cached data")            
+                fold_macro_metrics, fold_micro_metrics, test_metrics = pd.read_pickle(f'{respath}result.pkl')
+                
+            fold_macro_results.append(fold_macro_metrics)
+            fold_micro_results.append(fold_micro_metrics)
+            test_macro_results.append(test_metrics[0])
+            test_micro_results.append(test_metrics[1])
+
+        results_save_path = construct_save_path(meal_type, 'portion_model', 'results', config) 
+
+        preprocess_log.info(f"Visualizing and extracting ideal sparsity level...")
+        ideal_sparsity_percentage = sparsity_reduction_visualization(results_save_path, foods_per_sparse, meals_per_sparse, fold_micro_results, test_micro_results, preprocess_log)
+        preprocessed_data = remove_columns_and_rows(data, ideal_sparsity_percentage)
+        preprocess_log.info(f"Sparsity filtered dataset has {preprocessed_data.shape[0]} meals and {preprocessed_data.shape[1]} foods")
+        to_pickle(preprocessed_data, f'{outdir}_sparsity_filtered.pkl')
+    else:
+        preprocess_log.info(f'{outdir}_sparsity_filtered.pkl already exists, using cached data')
+
 def preprocessing(meal_type, preprocess_log):
     try:
         preprocess_log.info(f"Preprocessing for meal type: {meal_type}")
-        outlier_file = f'data/processed/meals/dataframes/{meal_type}_outliers_removed.pkl'
-        bci_file = f'data/processed/meals/dataframes/{meal_type}_bci_filtered.pkl'
-        sparsity_file = f'data/processed/meals/dataframes/{meal_type}_sparsity_filtered.pkl'
+        outlier_file = f'data/processed/real_meals/dataframes/{meal_type}_outliers_removed.pkl'
+        bci_file = f'data/processed/real_meals/dataframes/{meal_type}_bci_filtered.pkl'
+        sparsity_file = f'data/processed/real_meals/dataframes/{meal_type}_sparsity_filtered.pkl'
 
         if not os.path.exists(outlier_file):
-            meal_df = pd.read_pickle(f'data/processed/meals/dataframes/{meal_type}_food_codes_standardized.pkl')
+            meal_df = pd.read_pickle(f'data/processed/real_meals/dataframes/{meal_type}_food_codes_standardized.pkl')
             outlier_df  = remove_outliers(meal_df, meal_type, preprocess_log)
         else:
             preprocess_log.info(f'{outlier_file} exists, using cached results.')
@@ -298,14 +354,14 @@ def preprocessing(meal_type, preprocess_log):
 def create_meal_df(meal_type, preprocess_log):
     try:
         preprocess_log.info(f"Creating meal DataFrame for: {meal_type}")
-        meal_list = pd.read_pickle(f'data/processed/meals/{meal_type}_meals.pkl')
+        meal_list = pd.read_pickle(f'data/processed/real_meals/{meal_type}_meals.pkl')
         meal_data_dicts = []
         for meal in meal_list:
             meal_dict = dict(zip(meal.food_codes, meal.gram_portions))
             meal_data_dicts.append(meal_dict)
         meal_df = pd.DataFrame(meal_data_dicts)
         meal_df.fillna(0, inplace=True)
-        to_pickle(meal_df, f'data/processed/meals/dataframes/{meal_type}_food_codes_standardized.pkl')
+        to_pickle(meal_df, f'data/processed/real_meals/dataframes/{meal_type}_food_codes_standardized.pkl')
     except Exception as e:
         preprocess_log.error("Error in creating meal DataFrame: " + str(e))
 
@@ -327,7 +383,7 @@ def preprocessing_summary(meal_types, processing_filetypes, preprocess_log):
                 process_foods.append(len(unique_foods))
                 total_foods.extend(unique_foods)
             else:
-                data = pd.read_pickle(f'data/processed/meals/dataframes/{meal_type}_{processing_step}.pkl')
+                data = pd.read_pickle(f'data/processed/real_meals/dataframes/{meal_type}_{processing_step}.pkl')
                 unique_foods = data.columns
                 process_meals.append(data.shape[0])
                 process_foods.append(data.shape[1])
@@ -362,13 +418,13 @@ def standardize_food_codes(preprocess_log):
         preprocess_log.info("File exists, loading discontinued ID mapping")
         discontinued_id_map = pd.read_pickle('data/mappings/discontinued_food_codes.pkl')    
 
-    if not os.path.exists('data/processed/meals/dataframes/combined_food_codes_standardized.pkl'):
+    if not os.path.exists('data/processed/real_meals/dataframes/combined_food_codes_standardized.pkl'):
         combined_meal_data, breakfast_meals, lunch_meals, dinner_meals = load_and_process_meal_data(meal_survey_urls, discontinued_id_map, cache_dir, preprocess_log)
     else:
-        combined_meal_data  = pd.read_pickle("data/processed/meals/dataframes/combined_food_codes_standardized.pkl")
-        breakfast_meals     = pd.read_pickle("data/processed/meals/breakfast_meals.pkl")
-        lunch_meals         = pd.read_pickle("data/processed/meals/lunch_meals.pkl")
-        dinner_meals        = pd.read_pickle("data/processed/meals/dinner_meals.pkl")   
+        combined_meal_data  = pd.read_pickle("data/processed/real_meals/dataframes/combined_food_codes_standardized.pkl")
+        breakfast_meals     = pd.read_pickle("data/processed/real_meals/breakfast_meals.pkl")
+        lunch_meals         = pd.read_pickle("data/processed/real_meals/lunch_meals.pkl")
+        dinner_meals        = pd.read_pickle("data/processed/real_meals/dinner_meals.pkl")   
 
     preprocess_log.info(f"Processed a total of {len(breakfast_meals)} breakfast meals, {len(lunch_meals)} lunch meals, and {len(dinner_meals)} dinner meals")
     unique_food_codes = combined_meal_data['IFDCD'].nunique()
@@ -376,16 +432,17 @@ def standardize_food_codes(preprocess_log):
         
 def main():
     configure_gpu(-1)
-    preprocess_log = setup_logger('preprocess_log', 'logs/data_preprocessing.log')
+    preprocess_log = setup_logger('preprocess_log', 'logs/preprocessing/preprocessing.log')
     
     try:
         preprocess_log.info("Creating dataset...")
         standardize_food_codes(preprocess_log)
         
         meal_types = ['breakfast', 'lunch', 'dinner']
+        meal_types = ['lunch', 'dinner']
         processing_types = ['raw', 'food_codes_standardized', 'outliers_removed', 'bci_filtered', 'sparsity_filtered']
         for meal_type in meal_types:
-            if not os.path.exists(f'data/processed/meals/dataframes/{meal_type}_food_codes_standardized.pkl'):
+            if not os.path.exists(f'data/processed/real_meals/dataframes/{meal_type}_food_codes_standardized.pkl'):
                 create_meal_df(meal_type, preprocess_log)
             preprocessing(meal_type, preprocess_log)
         preprocessing_summary(meal_types, processing_types, preprocess_log)

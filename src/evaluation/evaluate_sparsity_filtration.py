@@ -36,17 +36,23 @@ def plot_sparsity_graphs(meal_type, plot_data, sparsity_info):
     ax1 = plt.subplot(gs[:, 0])
     ax2 = ax1.twinx()
     ax1.plot(plot_data['foods_per_sparse'], plot_data['fold_means_r_squared'], 'bo-')
-    ax2.plot(plot_data['foods_per_sparse'], plot_data['meals_per_sparse_normalized'], 'ro-')
+    ax2.plot(plot_data['foods_per_sparse'], plot_data['meals_per_sparse_normalized'], 'go-')
     ax1.fill_between(plot_data['foods_per_sparse'], 
                      [m - s for m, s in zip(plot_data['fold_means_r_squared'], plot_data['fold_stds_r_squared'])], 
                      [m + s for m, s in zip(plot_data['fold_means_r_squared'], plot_data['fold_stds_r_squared'])], 
                      color='gray', alpha=0.3)
     
     ax1.set_xlabel('Number of Foods')
-    ax1.set_ylabel('Cross-validated R-squared', color='b')
-    ax2.set_ylabel('Meal Coverage (%)', color='r')
+    ax1.set_ylabel('Predicted vs. actual portion size (R², 5-fold CV)', color='b')
+    ax2.set_ylabel('Meal Coverage (%)', color='g')
     ax1.tick_params(axis='y', colors='b')
-    ax2.tick_params(axis='y', colors='r')
+    ax2.tick_params(axis='y', colors='g')
+    
+    optimal_index = sparsity_info['closest_index']
+    optimal_foods_per_sparse = plot_data['foods_per_sparse'][optimal_index]
+    optimal_r_squared = plot_data['fold_means_r_squared'][optimal_index]
+    ax1.plot(optimal_foods_per_sparse, optimal_r_squared + 0.05 * optimal_r_squared, 'r*', markersize=10)
+
     y_low = 0.3 if meal_type == 'breakfast' else 0.1 # for publication results
     ax1.set_ylim([y_low, 1.1])
     ax2.set_ylim([y_low, 1.1])
@@ -56,7 +62,8 @@ def plot_sparsity_graphs(meal_type, plot_data, sparsity_info):
     ax3.plot(sparsity_info['corresponding_sparsity_level'], 
              plot_data['meals_per_sparse'][sparsity_info['closest_index']] + 0.15 * plot_data['meals_per_sparse'][sparsity_info['closest_index']], 
              'r*', markersize=10)
-    
+    ax3.set_ylabel('Number of Meals')
+
     ax4 = plt.subplot(gs[1, 1], sharex=ax3)
     ax4.plot(sparsity_info['sparsity_removed_levels'], plot_data['test_r_squared'], '-ko')
     ax4.plot(sparsity_info['corresponding_sparsity_level'], 
@@ -72,10 +79,10 @@ def sparsity_reduction_visualization(res_dir, foods_per_sparse, meals_per_sparse
     cv_stats = [aggregate_crossval_metrics(fold_metrics[i]) for i in range(len(fold_metrics))]
     cv_stats_list = aggregate_crossval_stats_to_list(cv_stats)
 
-    fold_means_r_squared = cv_stats_list['r2']['mean']
-    fold_stds_r_squared = cv_stats_list['r2']['std']
+    fold_means_r_squared = cv_stats_list['f1']['mean']
+    fold_stds_r_squared = cv_stats_list['f1']['std']
     test_stats_list = aggregate_test_metrics(test_metrics)
-    test_r_squared = test_stats_list['r2']
+    test_r_squared = test_stats_list['f1']
     sparsity_removed_levels = [i for i in range(0, 100, 5)]
     meals_per_sparse_normalized = get_meal_coverage(meals_per_sparse, meals_per_sparse[0])
     meal_type = res_dir.split("/")[2]

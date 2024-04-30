@@ -85,6 +85,7 @@ def cross_validation(X, y, model_configs, meal_type, model_type, config, project
     best_model = None
     best_score = 0
     
+    # TODO - make sure the optimal models are saved to models/<model_type>/<meal_type>/<logpath>/optimal/model.keras or decoder_model.keras/vae_model.keras
     for fold, (train_index, val_index) in enumerate(kfold.split(X)):
         wb_run_name = f"fold_{fold}"
         setup_wandb(
@@ -116,6 +117,9 @@ def cross_validation(X, y, model_configs, meal_type, model_type, config, project
         model.model_save_path += f'fold_{fold+1}_'
         model.results_save_path += f'fold_{fold+1}_'
 
-        model.save_model(log)
+        if model_type == 'portion_model':
+            model.save_model(log)
+        elif model_type == 'presence_model':
+            model.save_models(log)
 
     return fold_macro_metrics, fold_micro_metrics, best_model
